@@ -1,0 +1,607 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>Plan -73 kg</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap">
+<style>
+/* Layout: columna única de lectura; selector de bloque arriba, sesiones en grilla 2 col que pasa a 1 en celular */
+:root{
+  --bg:#f3f4f8; --surface:#ffffff; --ink:#18203a; --muted:#5b6380; --line:#dde0ea;
+  --indigo:#23306b; --indigo-soft:#e6e9f5; --aka:#c3312a; --aka-soft:#fbe9e7;
+  --display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0f1322; --surface:#171d33; --ink:#e7e9f3; --muted:#9aa1bd; --line:#2a3252;
+  --indigo:#9fb0ff; --indigo-soft:#222b4d; --aka:#ff7a6e; --aka-soft:#3a1f22; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1322; --surface:#171d33; --ink:#e7e9f3; --muted:#9aa1bd; --line:#2a3252;
+  --indigo:#9fb0ff; --indigo-soft:#222b4d; --aka:#ff7a6e; --aka-soft:#3a1f22; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55}
+.wrap{max-width:980px;margin:0 auto;padding-block:32px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:40px}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(2.4rem,7vw,3.6rem);font-weight:700;letter-spacing:.01em}
+h2{font-size:1.9rem;font-weight:600}
+h3{font-size:1.35rem;font-weight:600}
+p{margin:0;max-width:65ch}
+.eyebrow{font-family:var(--display);text-transform:uppercase;letter-spacing:.12em;font-size:.9rem;color:var(--aka);font-weight:600}
+header{display:flex;flex-direction:column;gap:12px}
+.stats{display:flex;flex-wrap:wrap;gap:8px 24px;margin-top:8px;font-variant-numeric:tabular-nums}
+.stat{display:flex;flex-direction:column}
+.stat b{font-family:var(--display);font-size:1.7rem;font-weight:700;color:var(--indigo)}
+.stat span{font-size:.85rem;color:var(--muted)}
+section{display:flex;flex-direction:column;gap:16px}
+.lead{color:var(--muted)}
+
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+.day{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:10px 8px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.day .d{font-family:var(--display);text-transform:uppercase;letter-spacing:.08em;font-size:.85rem;color:var(--muted)}
+.day .s{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--indigo)}
+.day .t{font-size:.85rem;line-height:1.3}
+.day.sprint .s{color:var(--aka)}
+.day.off .s{color:var(--muted)}
+@media (max-width:700px){.week{grid-template-columns:1fr}.day{flex-direction:row;align-items:baseline;gap:12px}.day .d{width:44px}.day .s{width:28px;font-size:1.2rem}}
+
+.rules{display:flex;flex-direction:column;gap:8px;padding:0;margin:0;list-style:none}
+.rules li{padding-left:18px;position:relative;max-width:70ch}
+.rules li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:2px;background:var(--aka)}
+
+.tabs{display:flex;flex-wrap:wrap;gap:6px;border-bottom:2px solid var(--line)}
+.tab{font:600 1.05rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;background:none;border:0;color:var(--muted);padding:12px 14px;cursor:pointer;border-bottom:3px solid transparent;margin-bottom:-2px}
+.tab small{display:block;font:500 .78rem/1.2 var(--body);text-transform:none;letter-spacing:0;margin-top:4px}
+.tab[aria-selected="true"]{color:var(--indigo);border-bottom-color:var(--aka)}
+.tab:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+.blockintro{background:var(--indigo-soft);border-radius:6px;padding:14px 16px;display:flex;flex-direction:column;gap:6px}
+.sessions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.sessions{grid-template-columns:1fr}}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column}
+.card-h{display:flex;align-items:baseline;gap:12px;padding:14px 16px 10px;border-bottom:1px solid var(--line)}
+.letter{font-family:var(--display);font-weight:700;font-size:2rem;line-height:1;color:var(--indigo)}
+.card.spec .letter{color:var(--aka)}
+.card-h h3{font-size:1.2rem}
+.card-h span{font-size:.85rem;color:var(--muted);display:block}
+.phase{font:600 .8rem/1 var(--display);text-transform:uppercase;letter-spacing:.12em;color:var(--muted);padding:10px 16px 6px;background:var(--bg)}
+.phase.str{color:var(--aka)}
+ol.ex{list-style:none;margin:0;padding:0}
+ol.ex li{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 12px;padding:9px 16px;border-top:1px solid var(--line)}
+ol.ex li:first-child{border-top:0}
+.ex .n{font-weight:600}
+.ex .rx{font-variant-numeric:tabular-nums;font-weight:600;color:var(--indigo);text-align:right;white-space:nowrap}
+.ex .note{grid-column:1/-1;font-size:.85rem;color:var(--muted);line-height:1.4}
+.ex li.key .n::after{content:"PRINCIPAL";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--aka);background:var(--aka-soft);padding:3px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
+
+.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums}
+.tbl{overflow-x:auto}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .8rem/1.2 var(--display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+td b{color:var(--indigo)}
+td.num{white-space:nowrap}
+.cue{border-left:3px solid var(--aka);padding:4px 0 4px 14px;display:flex;flex-direction:column;gap:6px}
+.tempo{display:flex;flex-wrap:wrap;gap:12px}
+.tempo div{flex:1 1 180px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
+.tempo b{font-family:var(--display);font-size:1.5rem;color:var(--indigo)}
+.tempo div:nth-child(2) b{color:var(--aka)}
+footer{color:var(--muted);font-size:.85rem}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">Judo · categoría -73 kg</div>
+  <h1>Plan -73 kg</h1>
+  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. Torso/pierna de 4 días: dos días de fuerza general y dos de fuerza aplicada al judo.</p>
+  <div class="stats">
+    <div class="stat"><b>65 kg</b><span>hoy, en ayunas</span></div>
+    <div class="stat"><b>75–76 kg</b><span>peso caminando (meta)</span></div>
+    <div class="stat"><b>73 kg</b><span>peso de competencia</span></div>
+    <div class="stat"><b>0,25–0,4</b><span>kg por semana</span></div>
+  </div>
+</header>
+
+<section>
+  <h2>Semana tipo</h2>
+  <div class="week">
+    <div class="day"><div class="d">Lun</div><div class="s">A</div><div class="t">Fuerza máxima, piernas</div></div>
+    <div class="day"><div class="d">Mar</div><div class="s">B</div><div class="t">Fuerza máxima, tren superior</div></div>
+    <div class="day sprint"><div class="d">Mié</div><div class="s">S</div><div class="t">Sprints + movilidad</div></div>
+    <div class="day"><div class="d">Jue</div><div class="s">C</div><div class="t">Potencia de judo: cadera y piernas</div></div>
+    <div class="day"><div class="d">Vie</div><div class="s">D</div><div class="t">Tirón, agarre y volumen</div></div>
+    <div class="day sprint"><div class="d">Sáb</div><div class="s">S</div><div class="t">Sprints (o randori fuerte)</div></div>
+    <div class="day off"><div class="d">Dom</div><div class="s">—</div><div class="t">Descanso + estiramiento largo</div></div>
+  </div>
+  <ul class="rules">
+    <li>Gimnasio a la mañana y judo a la noche el mismo día está bien: mejor días duros y días livianos que todos los días a medias.</li>
+    <li>Nada de sprints ni piernas pesadas en las 24 horas antes de un randori fuerte o una competencia.</li>
+    <li>Descarga cada 4ª o 5ª semana: mismos pesos, 40% menos de series. También la semana de cada competencia.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Cómo se ejecuta todo</h2>
+  <div class="tempo">
+    <div><span class="lead">Bajada</span><b>2–3 s controlada</b><span>Con tensión, sin rebotar.</span></div>
+    <div><span class="lead">Subida</span><b>Máxima velocidad</b><span>Siempre, aunque el peso sea alto y la barra se mueva lento.</span></div>
+    <div><span class="lead">Cortar la serie</span><b>Si se frena</b><span>Si una repetición sale claramente más lenta, esa es la última.</span></div>
+  </div>
+  <p class="lead">En cargadas, saltos y lanzamientos no hay bajada controlada: soltás o caés, te reacomodás y repetís.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Descansos entre series</h3>
+      <div class="tbl"><table><tbody>
+        <tr><td>Cargadas, saltos, contraste</td><td><b>2–3 min</b>. Cada repetición tiene que salir a máxima velocidad.</td></tr>
+        <tr><td>Ejercicios principales</td><td><b>2–3 min</b> (3–4 min en el bloque 3)</td></tr>
+        <tr><td>Accesorios</td><td><b>60–90 s</b></td></tr>
+        <tr><td>Superseries</td><td>Sin pausa entre los dos, <b>60–90 s</b> al terminar la ronda</td></tr>
+      </tbody></table></div>
+      <p class="lead">Cada sesión dura unos 60–80 min, contando calentamiento y estiramiento.</p>
+    </div>
+    <div class="panel">
+      <h3>Cómo subir de peso</h3>
+      <ul class="rules">
+        <li><b>Principales:</b> si todas las series salieron con el RPE indicado y buena técnica, la semana siguiente subís 2,5–5 kg.</li>
+        <li><b>Accesorios con rango</b> (por ejemplo 3×8–10): cuando llegás al número alto en todas las series, subís el peso y volvés al número bajo.</li>
+        <li><b>Anotá todo:</b> peso, series y repeticiones de cada ejercicio. Sin registro no sabés si estás progresando.</li>
+        <li>Si un día rendís mucho menos (mal sueño, judo muy duro), bajá un 10% y seguí. No pasa nada.</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tbl"><table>
+    <thead><tr><th>Sesión</th><th>Para qué sirve</th><th>Cómo se ve</th></tr></thead>
+    <tbody>
+      <tr><td><b>A · B</b><br>Fuerza general</td><td>Subir tus números en los básicos: el motor.</td><td>Barra pesada, 3–6 repeticiones, patrones simétricos.</td></tr>
+      <tr><td><b>C</b><br>Potencia de judo</td><td>Pasar esa fuerza a las entradas: giro de cadera, apoyo en una pierna, levantar al rival.</td><td>Hexagonal explosivo, saltos a una pierna, lanzamientos con giro, uchikomi con banda.</td></tr>
+      <tr><td><b>D</b><br>Tirón y agarre</td><td>Kumikata y kuzushi: ganar el agarre, romper la postura del rival y aguantar 4 minutos.</td><td>Dominadas y remos con judogi, tirones explosivos con banda, soga, volumen para masa.</td></tr>
+    </tbody>
+  </table></div>
+  <h3>Frecuencia por movimiento</h3>
+  <p class="lead">C y D no sacrifican nada de A y B: trabajan los mismos movimientos con otra variante y otra orientación. Todo se entrena 2 veces por semana.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Movimiento</th><th>Fuerza general</th><th>Aplicado al judo</th><th>Por semana</th></tr></thead>
+    <tbody>
+      <tr><td>Sentadilla</td><td>A · sentadilla trasera</td><td>C · frontal o contraste con saltos</td><td><b>2</b></td></tr>
+      <tr><td>Una pierna</td><td>A · sentadilla búlgara</td><td>C · step-up pesado + saltos a una pierna</td><td><b>2</b></td></tr>
+      <tr><td>Bisagra de cadera</td><td>A · peso muerto rumano</td><td>C · peso muerto hexagonal</td><td><b>2</b></td></tr>
+      <tr><td>Femoral</td><td>A · curl nórdico</td><td>C · curl nórdico</td><td><b>2</b></td></tr>
+      <tr><td>Pantorrilla</td><td>A</td><td>C</td><td><b>2</b></td></tr>
+      <tr><td>Potencia de piernas</td><td>A · cargada de potencia</td><td>C · saltos, contraste, giro de cadera</td><td><b>2</b> + sprints</td></tr>
+      <tr><td>Tirón vertical</td><td>B · dominadas con lastre</td><td>D · dominadas en judogi</td><td><b>2</b></td></tr>
+      <tr><td>Remo</td><td>B · remo con barra y mancuerna</td><td>D · remo con pecho apoyado + kuzushi con banda</td><td><b>2</b></td></tr>
+      <tr><td>Empuje horizontal</td><td>B · press de banca</td><td>D · press inclinado y fondos</td><td><b>2</b></td></tr>
+      <tr><td>Empuje vertical</td><td>B · press militar</td><td>D · press landmine a un brazo</td><td><b>2</b></td></tr>
+      <tr><td>Agarre</td><td>B · colgarse de toalla o judogi</td><td>D · soga, judogi, granjero</td><td><b>2</b> + judo</td></tr>
+      <tr><td>Cuello</td><td>B</td><td>D</td><td><b>2</b></td></tr>
+      <tr><td>Core</td><td>A · dead bug + plancha RKC</td><td>C · giro de cadera + uchikomi</td><td><b>2</b></td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead">El uchikomi con banda elástica es un clásico del judo japonés. Atás la banda a un poste o al rack, agarrás las puntas como manga y solapa y hacés la entrada completa de tu técnica a máxima velocidad: tsukuri, giro y apoyo. Usá tu técnica principal y alterná lados.</p>
+</section>
+
+<section>
+  <h2>Entrenar de mañana</h2>
+  <div class="two">
+    <div class="panel">
+      <h3>Antes del gimnasio</h3>
+      <ul class="rules">
+        <li>Si preferís el estómago liviano: una fruta y un vaso de leche (o una cucharada de miel) 30–45 min antes. Después desayunás fuerte.</li>
+        <li>Si tenés tiempo: desayuno completo 60–90 min antes.</li>
+        <li>Agua apenas te levantás (500 ml) y algo de sal.</li>
+      </ul>
+    </div>
+    <div class="panel">
+      <h3>En el gimnasio</h3>
+      <ul class="rules">
+        <li>Calentamiento más largo que a la tarde: 12–15 min. A la mañana el cuerpo está más rígido.</li>
+        <li>No cargues pesado la espalda en los primeros 30–45 min después de levantarte.</li>
+        <li>Después de entrenar: batido o comida fuerte dentro de la hora.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="plan">
+  <h2>Sesiones por bloque</h2>
+  <div class="tabs" role="tablist" id="tabs"></div>
+  <div class="blockintro" id="intro"></div>
+  <div class="sessions" id="sessions"></div>
+  <p class="lead"><b>Después de la semana 16:</b> una semana de descarga, estimás tus máximos con los pesos que anotaste y repetís desde el bloque 2 con los pesos nuevos. Si se acerca una competencia, metés las semanas de pre-competencia donde toque.</p>
+</section>
+
+<section>
+  <h2>Peso muerto y pelvis</h2>
+  <p class="lead">Usás <b>peso muerto con barra hexagonal</b> en vez del convencional. El torso queda más vertical, hay menos palanca sobre la espalda baja y es más fácil mantener la pelvis neutra. Además fortalece glúteos e isquiotibiales, que son los músculos que corrigen la anteversión pélvica.</p>
+  <div class="two">
+    <div class="panel cue">
+      <h3>Claves en cada levantamiento</h3>
+      <p><b>Costillas abajo.</b> Tomá aire y apretá el abdomen como si te fueran a pegar.</p>
+      <p><b>Terminá apretando glúteos,</b> con el cuerpo vertical. Nada de tirar el torso hacia atrás.</p>
+      <p>Lo mismo en sentadilla, peso muerto rumano y press militar.</p>
+    </div>
+    <div class="panel cue">
+      <h3>Si algo molesta</h3>
+      <p>Cualquier molestia en la espalda baja, aunque sea leve: bajá el peso y revisá técnica.</p>
+      <p>Filmate de costado las primeras sesiones de hexagonal y sentadilla para ver si arqueás de más.</p>
+      <p>En el estiramiento, priorizá flexores de cadera y cuádriceps.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Sprints de 20 segundos</h2>
+  <p class="lead">Primero 10 min de trote suave + técnica de carrera (skipping, talones a la cola, zancadas). Después 4 aceleraciones de 20 m con 1 min de pausa. Después el bloque principal según la etapa. Al final, estiramiento.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Etapa</th><th>Bloque principal</th><th>Dónde</th></tr></thead>
+    <tbody>
+      <tr><td><b>Semanas 1–4</b></td><td>6 × 20 s a fondo · 2:30 de pausa</td><td>Pista o pasto</td></tr>
+      <tr><td><b>Semanas 5–10</b></td><td>8 × 20 s · 2:00 de pausa</td><td>Pista, pasto o playa</td></tr>
+      <tr><td><b>Semanas 11–16</b></td><td>10 × 20 s · 1:30 de pausa</td><td>Cualquiera</td></tr>
+      <tr><td><b>Antes de competir</b></td><td>3 bloques de 6 × (20 s a fondo / 10–20 s de pausa) · 4 min entre bloques</td><td>Imita el ritmo de un combate</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section id="estiramiento">
+  <h2>Estiramiento y movilidad</h2>
+  <p class="lead">En judo necesitás rango de movimiento y fuerza en ese rango. Lo más efectivo es poco y todos los días: unos 10 minutos después de cada sesión, más una sesión larga por semana.</p>
+  <div class="panel cue">
+    <h3>Reglas</h3>
+    <ul class="rules">
+      <li><b>Antes de entrenar, solo dinámico.</b> Estirar estático mucho tiempo antes de saltos o cargadas te quita potencia.</li>
+      <li><b>Estático después de entrenar</b> o en una sesión aparte: 2 series de 30–45 s por posición.</li>
+      <li><b>Para ganar rango más rápido, contraer-relajar:</b> estirás 20 s, empujás contra el estiramiento 5 s al 50%, aflojás, exhalás y avanzás un poco. Repetís 3 veces. Usalo en isquiotibiales, aductores y flexores de cadera, 2–3 veces por semana.</li>
+      <li>Tensión fuerte pero tolerable, nunca dolor punzante. Respiración lenta, exhalando al avanzar.</li>
+      <li>Constancia antes que intensidad: los cambios se notan en 4–8 semanas.</li>
+    </ul>
+  </div>
+
+  <h3>Calentamiento dinámico (antes de cada sesión)</h3>
+  <p class="lead">Los 12–15 min se arman así: 5 min de bici, remo o trote suave, después estos 6 ejercicios, y al final series de aproximación del primer ejercicio (barra sola, 50%, 70% y 85% del peso de trabajo, con pocas repeticiones).</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Ejercicio</th><th>Dosis</th><th>Qué abre</th></tr></thead>
+    <tbody>
+      <tr><td><b>Balanceos de pierna</b>, frontal y lateral</td><td class="num">10 + 10 por pierna</td><td>Cadera, isquiotibiales, aductores</td></tr>
+      <tr><td><b>World's greatest stretch</b> (zancada + codo al piso + giro)</td><td class="num">5 por lado</td><td>Flexores de cadera, columna torácica</td></tr>
+      <tr><td><b>Sentadilla cosaca</b></td><td class="num">5 por lado</td><td>Aductores, tobillo</td></tr>
+      <tr><td><b>Rotación torácica en cuadrupedia</b></td><td class="num">8 por lado</td><td>Columna torácica</td></tr>
+      <tr><td><b>Dislocaciones con palo o banda</b></td><td class="num">10</td><td>Hombros</td></tr>
+      <tr><td><b>Sentadilla profunda con pausa</b></td><td class="num">30 s</td><td>Cadera y tobillos</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Los estiramientos (uno por zona)</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Zona</th><th>Estiramiento</th><th>Dosis</th><th>Clave</th></tr></thead>
+    <tbody>
+      <tr><td><b>Flexores de cadera y cuádriceps</b></td><td>Estiramiento de sofá: rodilla contra la pared, pie arriba</td><td class="num">2×45 s por lado</td><td>Glúteo apretado y pelvis metida. El más importante para tu anteversión pélvica.</td></tr>
+      <tr><td><b>Isquiotibiales</b></td><td>Acostado boca arriba, pierna arriba con banda o cinturón</td><td class="num">Contraer-relajar ×3</td><td>Rodilla extendida, la otra pierna pegada al piso.</td></tr>
+      <tr><td><b>Aductores</b></td><td>Rana: en cuadrupedia, rodillas abiertas, cadera atrás</td><td class="num">2×45 s</td><td>Clave para uchi-mata y la guardia en el suelo.</td></tr>
+      <tr><td><b>Glúteos y rotadores de cadera</b></td><td>90/90 sentado (o paloma)</td><td class="num">2×45 s por lado</td><td>Torso alto, inclinarse desde la cadera.</td></tr>
+      <tr><td><b>Columna torácica</b></td><td>Libro abierto: de costado, rodillas a 90°, abrís el brazo de arriba</td><td class="num">2×8 por lado, 3 s de pausa</td><td>Las rodillas no se separan. Ayuda a girar en las entradas.</td></tr>
+      <tr><td><b>Dorsales y hombros</b></td><td>Colgado pasivo de la barra</td><td class="num">2×30–45 s</td><td>Hombros relajados. Además descomprime la columna.</td></tr>
+      <tr><td><b>Pecho y hombro anterior</b></td><td>En el marco de una puerta, antebrazo apoyado a 90°</td><td class="num">2×30 s por lado</td><td>Compensa la banca y la postura cerrada del judo.</td></tr>
+      <tr><td><b>Antebrazos y dedos</b></td><td>Palmas en el piso con dedos hacia vos, después dorsos. Abrir dedos contra una gomita.</td><td class="num">30 s cada uno + 2×20</td><td>Recuperación del agarre después de judogi y soga.</td></tr>
+      <tr><td><b>Pantorrilla y tobillo</b></td><td>Contra la pared, rodilla extendida y después flexionada</td><td class="num">30 s cada uno</td><td>Talón apoyado.</td></tr>
+      <tr><td><b>Cuello</b></td><td>Inclinación lateral suave, oreja al hombro</td><td class="num">2×20 s por lado</td><td>Sin tirar con la mano. Nunca antes de trabajo pesado de cuello.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Cuándo hacer cada cosa</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Momento</th><th>Qué hacés</th><th>Tiempo</th></tr></thead>
+    <tbody>
+      <tr><td><b>Después de A y C</b></td><td>Flexores de cadera, isquiotibiales, aductores, glúteos, pantorrilla</td><td class="num">~10 min</td></tr>
+      <tr><td><b>Después de B y D</b></td><td>Dorsales, pecho, columna torácica, antebrazos, cuello</td><td class="num">~8 min</td></tr>
+      <tr><td><b>Después de los sprints</b></td><td>Flexores de cadera, isquiotibiales, pantorrilla</td><td class="num">~6 min</td></tr>
+      <tr><td><b>Después del judo</b></td><td>Antebrazos, cuello, flexores de cadera</td><td class="num">~5 min</td></tr>
+      <tr><td><b>Domingo y días libres</b></td><td>Sesión larga (abajo)</td><td class="num">30–60 min</td></tr>
+      <tr><td><b>Cuando estés quieto</b></td><td>Posiciones pasivas mientras mirás algo o usás el celular (abajo)</td><td class="num">Lo que puedas</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="two">
+    <div class="panel">
+      <h3>Sesión larga (30–60 min)</h3>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>1 · Entrada en calor</b><br><span class="lead">5 min</span></td><td>Bici o trote suave + el calentamiento dinámico. Estirar en frío rinde menos.</td></tr>
+        <tr><td><b>2 · Los 10 estiramientos</b><br><span class="lead">20–35 min</span></td><td>2–3 series de 45–60 s por posición. Contraer-relajar en isquiotibiales, aductores y flexores de cadera.</td></tr>
+        <tr><td><b>3 · Spagat</b><br><span class="lead">5–10 min</span></td><td>Pancake sentado (piernas abiertas, torso adelante) y medio spagat frontal. Para uchi-mata y harai.</td></tr>
+        <tr><td><b>4 · Rango con fuerza</b><br><span class="lead">10 min</span></td><td>Sentadilla cosaca lenta 3×5 por lado. Sentado con piernas rectas, levantar una pierna 3×10. En pancake, levantar las dos piernas del piso 3×8. Así el rango nuevo te sirve en el tatami.</td></tr>
+      </tbody></table></div>
+      <p class="lead">Con 30 min hacés 1, 2 y 4. Con 1 hora, todo con 3 series.</p>
+    </div>
+    <div class="panel">
+      <h3>Mientras descansás</h3>
+      <ul class="rules">
+        <li><b>Sentadilla profunda:</b> sumá 5–10 min por día en total, de a ratos.</li>
+        <li><b>Seiza</b> (sentado sobre los talones): tobillos y rodillas, tradición de judo.</li>
+        <li><b>Rana</b> o <b>mariposa</b> en el piso.</li>
+        <li><b>90/90</b> cambiando de lado cada minuto.</li>
+        <li><b>Pancake</b> sentado contra la pared.</li>
+        <li><b>Colgado pasivo</b> cada vez que pasás por la barra.</li>
+      </ul>
+      <p class="lead">Intensidad baja, cambiá de posición cada 1–2 min. Suma mucho con el tiempo. Lo intenso (contraer-relajar) dejalo para la sesión larga y no lo hagas en las 2 horas antes de entrenar potencia.</p>
+    </div>
+  </div>
+</section>
+
+<section id="acrobacias">
+  <h2>Acrobacias</h2>
+  <p class="lead">Mejoran el control del cuerpo en el aire, las caídas y la reacción cuando te proyectan. Hacelas descansado, 15–20 min, 1–2 veces por semana: antes de la clase de judo o el domingo antes de estirar. Nunca después de piernas pesadas. En tatami, pasto o arena, con las muñecas bien calentadas.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Nivel</th><th>Habilidades</th><th>Para pasar al siguiente</th></tr></thead>
+    <tbody>
+      <tr><td><b>1 · Base</b><br><span class="lead">Solo</span></td><td>Ukemi perfecto en todas las direcciones. Rol adelante y atrás en línea recta. Puente con manos y pies, 3×20 s. Vertical con el pecho contra la pared. Rueda (medialuna) de los dos lados.</td><td>Vertical contra la pared 60 s. Rueda limpia de los dos lados.</td></tr>
+      <tr><td><b>2 · Intermedio</b><br><span class="lead">Solo, con colchoneta</span></td><td>Vertical libre. Rondada. Kip-up (pararte desde la espalda sin manos, muy útil en judo). Rol atrás a vertical. Rol con zambullida sobre un obstáculo bajo.</td><td>Vertical libre 10–15 s. Kip-up 5 seguidos.</td></tr>
+      <tr><td><b>3 · Avanzado</b><br><span class="lead">Con entrenador y colchonetas</span></td><td>Paloma (front handspring). Flic-flac (back handspring). Mortal atrás. Mortal lateral.</td><td>Las primeras veces, siempre con alguien que te asista. Nunca solo.</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead">El puente de cuello del judo (apoyado en la cabeza) es otra cosa: hacelo solo con tu entrenador.</p>
+</section>
+
+<section>
+  <h2>Comida</h2>
+  <p class="lead">Carne, fruta, lácteos y huevos como base, todo lo menos procesado posible. Si comés bastante y te mantenés en 10% de grasa, tu cuerpo pide más de lo que parece: esto es lo que más define si llegás a 75.</p>
+  <div class="two">
+    <div class="panel">
+      <h3>Números diarios</h3>
+      <div class="tbl"><table><tbody>
+        <tr><td>Calorías</td><td><b>3300–3500 kcal</b></td></tr>
+        <tr><td>Proteína</td><td><b>140–150 g</b></td></tr>
+        <tr><td>Carbohidratos</td><td><b>5–6 g por kg</b>, sobre todo cerca del entrenamiento</td></tr>
+        <tr><td>Comidas</td><td><b>5</b>: desayuno, batido, almuerzo, merienda, cena</td></tr>
+        <tr><td>Creatina monohidrato</td><td><b>5 g</b>, todos los días</td></tr>
+        <tr><td>Agua</td><td><b>3–4 litros</b>, más en días de calor o judo</td></tr>
+        <tr><td>Sueño</td><td><b>8 h o más</b></td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="panel">
+      <h3>Carbohidratos que valen la pena</h3>
+      <ul class="rules">
+        <li><b>Fruta:</b> banana, mango, uvas, dátiles, fruta seca, kiwi, frutos rojos. Tu fuente principal.</li>
+        <li><b>Miel y leche:</b> carbohidratos naturales con algo más.</li>
+        <li><b>Avena, papa y boniato:</b> poco procesados, con potasio, vitamina C y fibra.</li>
+        <li><b>Arroz y pasta:</b> como complemento, no como base.</li>
+        <li><b>Sin vegetales:</b> hígado una vez por semana, huevos todos los días, kiwi y palta cubren casi todo lo que falta.</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3>Batidos</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Batido</th><th>Ingredientes</th><th>Con yogur griego</th><th>Sin yogur</th></tr></thead>
+    <tbody>
+      <tr><td><b>Banana y miel</b></td><td>500 ml de leche entera, 1 banana, 60 g de avena, 1 yogur griego (170 g), 1 cucharada grande de miel</td><td class="num">~900 kcal · 40 g</td><td class="num">~735 kcal · 25 g</td></tr>
+      <tr><td><b>Dátiles y cacao</b></td><td>500 ml de leche, 4 dátiles, 1 cucharada de cacao, 60 g de avena, 30 g de almendras</td><td class="num">~1000 kcal · 30 g</td><td class="num">No lleva</td></tr>
+      <tr><td><b>Frutos rojos</b></td><td>400 ml de leche, 150 g de frutos rojos congelados, 200 g de yogur griego, 50 g de avena, miel</td><td class="num">~780 kcal · 38 g</td><td class="num">~585 kcal · 20 g</td></tr>
+      <tr><td><b>Mango</b></td><td>400 ml de leche, 1 mango, 200 g de yogur griego, 30 g de nueces</td><td class="num">~850 kcal · 36 g</td><td class="num">~655 kcal · 18 g</td></tr>
+      <tr><td><b>Bomba</b></td><td>600 ml de leche, 2 bananas, 5 dátiles, 60 g de avena, 30 g de nueces, 1 cucharada de miel</td><td class="num">~1400 kcal · 36 g</td><td class="num">No lleva</td></tr>
+    </tbody>
+  </table></div>
+  <p class="lead">Sin yogur griego, reemplazalo por 150 g de ricota (la más parecida, ~260 kcal · 16 g), yogur natural entero + 200 ml más de leche, 3 cucharadas de leche en polvo entera o 1 medida de whey.</p>
+
+  <h3>Comidas rápidas para sumar calorías</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Comida</th><th>Qué lleva</th><th>Aprox.</th></tr></thead>
+    <tbody>
+      <tr><td><b>Avena de la noche</b></td><td>80 g de avena remojada en 300 ml de leche, banana, miel y nueces. La dejás lista antes de dormir.</td><td class="num">~850 kcal · 25 g</td></tr>
+      <tr><td><b>Huevos con queso</b></td><td>4 huevos revueltos con 30 g de queso, una fruta y un vaso de leche</td><td class="num">~670 kcal · 40 g</td></tr>
+      <tr><td><b>Carne picada con papa</b></td><td>200 g de carne picada y 300 g de papa o boniato al horno. Cocinala para 3 días.</td><td class="num">~760 kcal · 40 g</td></tr>
+      <tr><td><b>Tostadas con ricota</b></td><td>2 rebanadas de pan de masa madre, 100 g de ricota, miel y una banana</td><td class="num">~600 kcal · 20 g</td></tr>
+      <tr><td><b>Leche con dátiles</b></td><td>400 ml de leche, 4 dátiles y una banana</td><td class="num">~630 kcal · 15 g</td></tr>
+      <tr><td><b>Hígado con papa</b></td><td>150 g de hígado vacuno a la plancha con papa. Una vez por semana.</td><td class="num">~520 kcal · 45 g</td></tr>
+      <tr><td><b>Queso, manzana y nueces</b></td><td>50 g de queso, una manzana y un puñado chico de nueces</td><td class="num">~425 kcal · 14 g</td></tr>
+      <tr><td><b>Fruta seca y nueces</b></td><td>Un puñado grande (80 g). Para llevar en la mochila.</td><td class="num">~350 kcal · 7 g</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="two">
+    <div class="panel">
+      <h3>Un día de ejemplo (~3400 kcal)</h3>
+      <div class="tbl"><table><tbody>
+        <tr><td>Antes del gimnasio</td><td>Fruta + vaso de leche</td></tr>
+        <tr><td>Después del gimnasio</td><td>3–4 huevos, avena con leche y miel, fruta</td></tr>
+        <tr><td>Media mañana</td><td>Batido</td></tr>
+        <tr><td>Almuerzo</td><td>200–250 g de carne, papa o boniato, fruta</td></tr>
+        <tr><td>Merienda</td><td>Yogur griego con miel, fruta y nueces</td></tr>
+        <tr><td>Cena</td><td>Carne, pollo o pescado, papa o arroz, fruta</td></tr>
+      </tbody></table></div>
+    </div>
+    <div class="panel">
+      <h3>Control de peso</h3>
+      <ul class="rules">
+        <li>Pesate 3 veces por semana, en ayunas y después del baño. Usá el promedio semanal, no el número de un día.</li>
+        <li>Si en 2 semanas subiste menos de 0,25 kg por semana: agregá 250–300 kcal por día (una comida rápida más).</li>
+        <li>Si subís más de 0,5 kg por semana y te crece la cintura: bajá un poco.</li>
+        <li>No saltees comidas. Cenar y desayunar no es opcional en esta etapa.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Objetivos a 6–9 meses</h2>
+  <div class="tbl"><table>
+    <thead><tr><th>Ejercicio</th><th>Meta</th><th>A 75 kg sería</th></tr></thead>
+    <tbody>
+      <tr><td>Sentadilla trasera</td><td>1,8 × peso corporal</td><td><b>~135 kg</b></td></tr>
+      <tr><td>Peso muerto hexagonal</td><td>2,2 × peso corporal</td><td><b>~165 kg</b></td></tr>
+      <tr><td>Cargada de potencia</td><td>1,2–1,3 × peso corporal</td><td><b>~90–97 kg</b></td></tr>
+      <tr><td>Dominada con lastre</td><td>+40 kg o más</td><td><b>+40 kg</b> × 1</td></tr>
+      <tr><td>Peso muerto rumano</td><td>1,6–1,8 × a 5 repeticiones</td><td><b>~120–135 kg</b></td></tr>
+      <tr><td>Trepar soga</td><td>Sin piernas</td><td><b>4 m</b> × 3</td></tr>
+    </tbody>
+  </table></div>
+</section>
+
+<section>
+  <h2>Pesaje y categoría</h2>
+  <ul class="rules">
+    <li>En la IJF pesás la noche antes y a la mañana te pueden volver a pesar al azar, con un máximo de +5% (unos 76,6 kg en -73).</li>
+    <li>Caminar con 75–76 kg y bajar 2–3 kg con agua y sal para el pesaje es seguro. Nada de deshidratación extrema.</li>
+    <li>En torneos locales con pesaje el mismo día el margen es menor. Fijate el reglamento de cada uno.</li>
+  </ul>
+</section>
+
+<footer>Actualizado el 7 de noviembre de 2026. Revisalo cada 4 semanas según cómo vaya el peso y la fuerza.</footer>
+</div>
+
+<script>
+const W="Calentamiento dinámico · 12–15 min";
+const SS={A:"Estiramiento · piernas y cadera (~10 min)",B:"Estiramiento · tren superior (~8 min)",C:"Estiramiento · piernas y cadera (~10 min)",D:"Estiramiento · tren superior (~8 min)"};
+const T={A:"Fuerza máxima, piernas",B:"Fuerza máxima, tren superior",C:"Potencia de judo: cadera y piernas",D:"Tirón, agarre y volumen"};
+const DAY={A:"Lunes",B:"Martes",C:"Jueves",D:"Viernes"};
+const blocks=[
+ {id:"b1",name:"Bloque 1",weeks:"Semanas 1–4",title:"Base y técnica",
+  intro:"Sentadilla y hexagonal son nuevos para vos: acá aprendés el movimiento. Subida siempre explosiva, pero sin ir al límite: RPE 6–7. Subí 2,5–5 kg por semana en los principales si la técnica sale limpia. La semana 4 es de descarga.",
+  s:{
+   A:[["Cargada de potencia colgada","4×3","Técnica. Desde arriba de la rodilla."],
+      ["Sentadilla trasera","4×6","RPE 6–7. Empezá con unos 60 kg.",1],
+      ["Peso muerto rumano","3×8","Costillas abajo, cadera atrás, rodillas suaves."],
+      ["Sentadilla búlgara","3×8","Por pierna."],
+      ["Curl nórdico o curl femoral","3×6–8",""],
+      ["Pantorrilla + tibial","3×12","Cada uno."],
+      ["Dead bug","3×8","Por lado. Espalda baja pegada al piso."],
+      ["Plancha RKC","3×20 s","Glúteos y abdomen apretados al máximo."]],
+   B:[["Dominadas con lastre","4×5–6","",1],
+      ["Press de banca","4×6","Unos 90–95 kg. No hay apuro."],
+      ["Remo con barra","4×8",""],
+      ["Press militar de pie","3×8","Costillas abajo y glúteos apretados: no arquees."],
+      ["Remo con mancuerna","3×10","Por brazo."],
+      ["Colgarse de toalla o judogi","3×máx","Máximo tiempo."],
+      ["Cuello con disco o banda","2×15","Flexión, extensión y lateral. Liviano."]],
+   C:[["Saltos al cajón","4×3","Máxima intención en cada salto."],
+      ["Saltos a una pierna","3×3","Por pierna. Es la pierna de apoyo en uchi-mata, harai y o-uchi."],
+      ["Peso muerto con barra hexagonal","4×5","RPE 7. Empezá con unos 80–100 kg. Terminá vertical, apretando glúteos.",1],
+      ["Sentadilla frontal","3×5",""],
+      ["Lanzamiento con giro de cadera (balón medicinal)","4×4","Por lado. Mismo giro que la entrada de seoi o uchi-mata, contra la pared."],
+      ["Uchikomi con banda elástica","3×10","Por lado. Tu técnica principal, entrada a máxima velocidad."],
+      ["Step-up pesado","3×6","Por pierna. Cajón a la altura de la rodilla, subida explosiva."],
+      ["Hip thrust","3×8","Arriba: metés la pelvis y apretás glúteos 2 s."],
+      ["Curl nórdico + pantorrilla","2×6 + 2×12","En superserie."]],
+   D:[["Tirón de kuzushi con banda","3×8","Por brazo. Tirón explosivo de manga y solapa, como para romper la postura."],
+      ["Dominadas agarrado del judogi","4×máx","",1],
+      ["Remo con pecho apoyado","4×10",""],
+      ["Press inclinado con mancuernas","4×8–10",""],
+      ["Press landmine de pie a un brazo","3×8","Por brazo. Empuje hacia arriba y adelante, como despegar al rival."],
+      ["Fondos","3×8–12",""],
+      ["Trepar soga","3 subidas","Con ayuda de piernas al principio."],
+      ["Paseo del granjero","3×30 m","Pesado."],
+      ["Face pulls + cuello","3×15 + 2×15","En superserie. Salud de hombros y cuello."]]
+  }},
+ {id:"b2",name:"Bloque 2",weeks:"Semanas 5–10",title:"Fuerza + masa",
+  intro:"Más carga y una serie más en lo que construye masa. En la sesión C entra el contraste: 3 repeticiones de sentadilla pesada y enseguida 3 saltos. Descarga en la semana 8 o 9.",
+  s:{
+   A:[["Cargada de potencia desde la rodilla","5×3","Más pesado que el bloque 1."],
+      ["Sentadilla trasera","5×5 → 5×4","RPE 7–8. Pasá a 5×4 desde la semana 8.",1],
+      ["Peso muerto rumano","4×6",""],
+      ["Sentadilla búlgara","4×6–8","Por pierna. Con mancuernas pesadas."],
+      ["Curl nórdico","3×6",""],
+      ["Pantorrilla + tibial","3×12",""],
+      ["Dead bug + plancha RKC","3 rondas",""]],
+   B:[["Dominadas con lastre","5×5","",1],
+      ["Press de banca","5×5",""],
+      ["Remo con barra","4×6–8",""],
+      ["Press militar de pie","3×6–8","Costillas abajo."],
+      ["Remo con mancuerna","3×10",""],
+      ["Colgarse de toalla o judogi","4×máx",""],
+      ["Cuello con disco o banda","3×12",""]],
+   C:[["Contraste: sentadilla + saltos","4 rondas","3 reps de sentadilla al 80% y enseguida 3 saltos al cajón. 3 min entre rondas."],
+      ["Peso muerto con barra hexagonal","4×4","RPE 8.",1],
+      ["Saltos a una pierna","3×3","Por pierna, más distancia."],
+      ["Lanzamiento con giro de cadera (balón medicinal)","4×4","Por lado. Balón más pesado."],
+      ["Uchikomi con banda elástica","4×10","Por lado. Banda más dura."],
+      ["Step-up pesado","3×5","Por pierna. Con mancuernas pesadas."],
+      ["Hip thrust","3×6–8","Pausa de 2 s arriba."],
+      ["Curl nórdico + pantorrilla","3×5 + 3×12","En superserie."],
+      ["Dead bug + plancha RKC","2 rondas",""]],
+   D:[["Tirón de kuzushi con banda","4×8","Por brazo."],
+      ["Dominadas agarrado del judogi","4×máx","Agregá lastre cuando pases 10.",1],
+      ["Remo con pecho apoyado","5×10",""],
+      ["Press inclinado con mancuernas","4×8",""],
+      ["Press landmine de pie a un brazo","3×8","Por brazo."],
+      ["Fondos","3×8–10","Con lastre si pasás 12."],
+      ["Trepar soga","4 subidas",""],
+      ["Paseo del granjero","4×30 m",""],
+      ["Face pulls + cuello","3×15 + 3×12","En superserie."]]
+  }},
+ {id:"b3",name:"Bloque 3",weeks:"Semanas 11–16",title:"Fuerza máxima y potencia",
+  intro:"Pocas repeticiones, mucho peso, máxima velocidad. Los accesorios bajan a 2–3 series para que llegues fresco a lo principal. Descarga en la semana 14 o 15.",
+  s:{
+   A:[["Cargada de potencia","6×2","Pesado, cada rep rápida."],
+      ["Sentadilla trasera","4×3","RPE 8–9.",1],
+      ["Peso muerto rumano","3×5",""],
+      ["Sentadilla búlgara","3×6","Por pierna."],
+      ["Curl nórdico","2×6",""],
+      ["Pantorrilla + tibial","2×12",""],
+      ["Dead bug + plancha RKC","2 rondas",""]],
+   B:[["Dominadas con lastre","5×3","",1],
+      ["Press de banca","4×3",""],
+      ["Remo con barra","3×6",""],
+      ["Press militar de pie","3×5",""],
+      ["Colgarse de toalla o judogi","3×máx",""],
+      ["Cuello con disco o banda","2×12",""]],
+   C:[["Contraste: sentadilla + saltos","4 rondas","3 reps al 85% y enseguida 3 saltos largos."],
+      ["Peso muerto con barra hexagonal","3×3","RPE 8–9.",1],
+      ["Lanzamiento con giro de cadera (balón medicinal)","4×3","Por lado. Pesado y rápido."],
+      ["Uchikomi con banda elástica","3×20 s","Máxima cantidad de entradas en 20 s. Anotá y tratá de superarte."],
+      ["Saltos a una pierna","3×2","Por pierna, máxima distancia."],
+      ["Step-up pesado","3×4","Por pierna. Pesado y explosivo."],
+      ["Hip thrust","3×6",""],
+      ["Curl nórdico + pantorrilla","2×5 + 2×12","En superserie."]],
+   D:[["Tirón de kuzushi con banda","3×6","Por brazo. Lo más explosivo posible."],
+      ["Dominadas en judogi con lastre","3×6","",1],
+      ["Remo con pecho apoyado","3×10",""],
+      ["Press inclinado con mancuernas","3×8",""],
+      ["Press landmine de pie a un brazo","3×6","Por brazo, pesado."],
+      ["Fondos con lastre","3×6–8",""],
+      ["Trepar soga","3 subidas","Sin piernas."],
+      ["Paseo del granjero","3×30 m",""],
+      ["Face pulls + cuello","2×15 + 2×12","En superserie."]]
+  }},
+ {id:"pc",name:"Pre-competencia",weeks:"2–3 semanas antes",title:"Afinar para pelear",
+  intro:"Mantenés los ejercicios y pesos del bloque en el que estés, pero con la mitad de las series. Más velocidad, menos volumen. Cortás todo lo pesado 4–5 días antes de competir.",
+  s:{
+   A:[["Cargada de potencia","4×2","Rápido, no al máximo."],
+      ["Sentadilla trasera","2–3×3","Mismo peso del bloque, la mitad de series.",1],
+      ["Saltos al cajón","4×3",""],
+      ["Sentadilla búlgara","2×6",""]],
+   B:[["Dominadas con lastre","3×3","",1],
+      ["Press de banca","3×3",""],
+      ["Remo con barra","2×6",""]],
+   C:[["Contraste: sentadilla + saltos","3 rondas",""],
+      ["Peso muerto con barra hexagonal","2×3","Solo si faltan más de 7 días para competir.",1],
+      ["Lanzamiento con giro de cadera (balón medicinal)","3×4","Por lado."],
+      ["Uchikomi con banda elástica","3×15 s","Máxima velocidad."]],
+   D:[["Tirón de kuzushi con banda","3×6","Por brazo."],
+      ["Dominadas agarrado del judogi","2×6","",1],
+      ["Remo con pecho apoyado","2×10",""],
+      ["Face pulls","2×15",""]]
+  }}
+];
+const tabs=document.getElementById("tabs"),intro=document.getElementById("intro"),wrap=document.getElementById("sessions");
+function esc(s){return s.replace(/[&<>]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;"}[c]))}
+function render(id){
+  const b=blocks.find(x=>x.id===id)||blocks[0];
+  [...tabs.children].forEach(t=>t.setAttribute("aria-selected",t.dataset.id===b.id));
+  intro.innerHTML=`<h3>${esc(b.title)} · ${esc(b.weeks)}</h3><p>${esc(b.intro)}</p>`;
+  wrap.innerHTML=Object.keys(b.s).map(l=>`<article class="card${l==="C"||l==="D"?" spec":""}">
+    <div class="card-h"><div class="letter">${l}</div><div><h3>${esc(T[l])}</h3><span>${DAY[l]}</span></div></div>
+    <div class="phase">${W}</div>
+    <ol class="ex">${b.s[l].map(e=>`<li class="${e[3]?"key":""}"><span class="n">${esc(e[0])}</span><span class="rx">${esc(e[1])}</span>${e[2]?`<span class="note">${esc(e[2])}</span>`:""}</li>`).join("")}</ol>
+    <div class="phase str">${SS[l]}</div></article>`).join("");
+  try{localStorage.setItem("bloque",b.id)}catch(e){}
+}
+blocks.forEach(b=>{const t=document.createElement("button");t.className="tab";t.id="tab-"+b.id;t.setAttribute("role","tab");t.dataset.id=b.id;t.innerHTML=`${b.name}<small>${b.weeks}</small>`;t.onclick=()=>render(b.id);tabs.appendChild(t)});
+let start="b1";try{start=localStorage.getItem("bloque")||"b1"}catch(e){}
+render(start);
+</script>
+
+</body>
+</html>
