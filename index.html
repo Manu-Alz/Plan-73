@@ -96,6 +96,16 @@ td.num{white-space:nowrap}
 table.freq th.grp{font-size:1.05rem;color:var(--indigo);padding-top:14px;border-bottom:2px solid var(--indigo)}
 table.freq td:last-child{color:var(--muted);font-size:.92rem}
 .day .t b{font-weight:600}
+@media (max-width:640px){
+  table.stack,table.stack thead,table.stack tbody,table.stack tr,table.stack td{display:block;width:auto}
+  table.stack thead th:not(.grp){display:none}
+  table.stack th.grp{display:block;padding-left:0}
+  table.stack tr{padding:12px 0;border-bottom:1px solid var(--line)}
+  table.stack td{border:0;padding:3px 0;white-space:normal}
+  table.stack td::before{content:attr(data-label);display:block;font:600 .72rem/1.3 var(--display);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  table.stack td:first-child{font-family:var(--display);font-size:1.15rem}
+  table.stack td:first-child::before,table.gloss td::before,table.stack:not(.freq) td:nth-child(2)::before{display:none}
+}
 footer{color:var(--muted);font-size:.85rem}
 </style>
 
@@ -135,22 +145,22 @@ footer{color:var(--muted);font-size:.85rem}
   <p class="lead">Leé esto antes de la primera sesión y volvé cada tanto. Lo que separa a un atleta de élite de alguien que "va al gimnasio" no son los ejercicios, es cómo se hace cada repetición, cuánto se descansa y qué se anota.</p>
 
   <h3>1 · Cómo leer una sesión</h3>
-  <div class="tbl"><table>
+  <div class="tbl"><table class="stack gloss">
     <thead><tr><th>Lo que ves</th><th>Qué significa</th></tr></thead>
     <tbody>
-      <tr><td class="num"><b>4×6</b></td><td>4 series de 6 repeticiones. Hacés 6, descansás, otras 6, y así hasta completar 4 veces. Mismo peso en todas, salvo que diga otra cosa.</td></tr>
-      <tr><td class="num"><b>3×8–10</b></td><td>3 series de entre 8 y 10. Elegís un peso con el que llegues a 8; cuando logres 10 en las 3 series, subís el peso (ver punto 5).</td></tr>
-      <tr><td class="num"><b>5×5 → 5×4</b></td><td>Empezás el bloque con 5×5 y desde la semana indicada pasás a 5×4 con más peso.</td></tr>
-      <tr><td class="num"><b>4×máx</b></td><td>Todas las repeticiones (o segundos) que puedas con técnica limpia. Anotá el número y la próxima tratá de superarlo.</td></tr>
-      <tr><td class="num"><b>3×20 s</b></td><td>3 series de 20 segundos.</td></tr>
-      <tr><td class="num"><b>Por pierna / por lado / por brazo</b></td><td>El número es para cada lado. 3×8 por pierna = 8 con la derecha, 8 con la izquierda, eso es 1 serie.</td></tr>
-      <tr><td><b>RPE</b></td><td>Qué tan dura fue la serie, del 1 al 10. Se mide por cuántas repeticiones te quedaban "en el tanque" (tabla de abajo).</td></tr>
-      <tr><td><b>80%</b></td><td>80% de lo máximo que levantás para 1 repetición. Si tu máximo en sentadilla es 120 kg, el 80% es 96 kg.</td></tr>
-      <tr><td><b>Superserie</b></td><td>Dos ejercicios seguidos sin pausa entre ellos (por ejemplo curl nórdico y enseguida pantorrilla). Descansás al terminar los dos.</td></tr>
-      <tr><td><b>Contraste</b></td><td>Un ejercicio pesado y enseguida uno explosivo del mismo movimiento (3 sentadillas pesadas → 3 saltos). El pesado "despierta" al sistema nervioso y el salto sale más potente. Es de las herramientas más efectivas para potencia.</td></tr>
-      <tr><td><b>Lastre</b></td><td>Peso extra colgado del cinturón o en una mochila (dominadas y fondos).</td></tr>
-      <tr><td><b>PRINCIPAL</b></td><td>El ejercicio más importante del día. Va con la mejor energía y es el que más cuidás en la progresión.</td></tr>
-      <tr><td><b>Descarga</b></td><td>Semana con los mismos pesos pero 40% menos de series. No es "semana libre": es cuando el cuerpo asimila lo entrenado y te hacés más fuerte.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>4×6</b></td><td data-label="Qué significa">4 series de 6 repeticiones. Hacés 6, descansás, otras 6, y así hasta completar 4 veces. Mismo peso en todas, salvo que diga otra cosa.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>3×8–10</b></td><td data-label="Qué significa">3 series de entre 8 y 10. Elegís un peso con el que llegues a 8; cuando logres 10 en las 3 series, subís el peso (ver punto 5).</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>5×5 → 5×4</b></td><td data-label="Qué significa">Empezás el bloque con 5×5 y desde la semana indicada pasás a 5×4 con más peso.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>4×máx</b></td><td data-label="Qué significa">Todas las repeticiones (o segundos) que puedas con técnica limpia. Anotá el número y la próxima tratá de superarlo.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>3×20 s</b></td><td data-label="Qué significa">3 series de 20 segundos.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Por pierna / por lado / por brazo</b></td><td data-label="Qué significa">El número es para cada lado. 3×8 por pierna = 8 con la derecha, 8 con la izquierda, eso es 1 serie.</td></tr>
+      <tr><td data-label="Lo que ves"><b>RPE</b></td><td data-label="Qué significa">Qué tan dura fue la serie, del 1 al 10. Se mide por cuántas repeticiones te quedaban "en el tanque" (tabla de abajo).</td></tr>
+      <tr><td data-label="Lo que ves"><b>80%</b></td><td data-label="Qué significa">80% de lo máximo que levantás para 1 repetición. Si tu máximo en sentadilla es 120 kg, el 80% es 96 kg.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Superserie</b></td><td data-label="Qué significa">Dos ejercicios seguidos sin pausa entre ellos (por ejemplo curl nórdico y enseguida pantorrilla). Descansás al terminar los dos.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Contraste</b></td><td data-label="Qué significa">Un ejercicio pesado y enseguida uno explosivo del mismo movimiento (3 sentadillas pesadas → 3 saltos). El pesado "despierta" al sistema nervioso y el salto sale más potente. Es de las herramientas más efectivas para potencia.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Lastre</b></td><td data-label="Qué significa">Peso extra colgado del cinturón o en una mochila (dominadas y fondos).</td></tr>
+      <tr><td data-label="Lo que ves"><b>PRINCIPAL</b></td><td data-label="Qué significa">El ejercicio más importante del día. Va con la mejor energía y es el que más cuidás en la progresión.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Descarga</b></td><td data-label="Qué significa">Semana con los mismos pesos pero 40% menos de series. No es "semana libre": es cuando el cuerpo asimila lo entrenado y te hacés más fuerte.</td></tr>
     </tbody>
   </table></div>
 
@@ -217,45 +227,45 @@ footer{color:var(--muted);font-size:.85rem}
 
   <h3>6 · Los 4 días</h3>
   <p class="lead">Dos días de piernas y dos de tren superior. El primero de cada par (A, B) construye el motor con barra pesada. El segundo (C, D) usa los mismos músculos pero con movimientos parecidos al combate: un pie, giro, agarre del judogi, tirón explosivo. Es como trabajan los japoneses: base de fuerza bruta y después transferirla a la técnica.</p>
-  <div class="tbl"><table>
+  <div class="tbl"><table class="stack">
     <thead><tr><th>Día</th><th>Nombre</th><th>Objetivo</th><th>Herramientas</th></tr></thead>
     <tbody>
-      <tr><td><b>A</b><br>Lunes</td><td><b>Piernas · fuerza</b></td><td>Subir tus números en sentadilla y peso muerto rumano. Piernas grandes y fuertes: hoy son tu punto débil.</td><td>Barra pesada, 3–6 repeticiones, movimientos con las dos piernas.</td></tr>
-      <tr><td><b>B</b><br>Martes</td><td><b>Tren superior · fuerza</b></td><td>Subir dominadas, banca, remo y press militar. Masa en espalda y hombros.</td><td>Barra y lastre, 3–8 repeticiones.</td></tr>
-      <tr><td><b>C</b><br>Jueves</td><td><b>Piernas · judo</b></td><td>Pasar la fuerza de A a las entradas: explosión, giro de cadera, apoyo en una pierna, levantar al rival.</td><td>Hexagonal explosivo, contraste, saltos a una pierna, lanzamientos con giro, uchikomi con banda.</td></tr>
-      <tr><td><b>D</b><br>Viernes</td><td><b>Tren superior · judo</b></td><td>Kumikata y kuzushi: ganar el agarre, romper la postura del rival y aguantar 4 minutos tirando.</td><td>Dominadas en judogi, tirones explosivos con banda, soga, granjero, press a un brazo.</td></tr>
+      <tr><td data-label="Día"><b>A</b><br>Lunes</td><td data-label="Nombre"><b>Piernas · fuerza</b></td><td data-label="Objetivo">Subir tus números en sentadilla y peso muerto rumano. Piernas grandes y fuertes: hoy son tu punto débil.</td><td data-label="Herramientas">Barra pesada, 3–6 repeticiones, movimientos con las dos piernas.</td></tr>
+      <tr><td data-label="Día"><b>B</b><br>Martes</td><td data-label="Nombre"><b>Tren superior · fuerza</b></td><td data-label="Objetivo">Subir dominadas, banca, remo y press militar. Masa en espalda y hombros.</td><td data-label="Herramientas">Barra y lastre, 3–8 repeticiones.</td></tr>
+      <tr><td data-label="Día"><b>C</b><br>Jueves</td><td data-label="Nombre"><b>Piernas · judo</b></td><td data-label="Objetivo">Pasar la fuerza de A a las entradas: explosión, giro de cadera, apoyo en una pierna, levantar al rival.</td><td data-label="Herramientas">Hexagonal explosivo, contraste, saltos a una pierna, lanzamientos con giro, uchikomi con banda.</td></tr>
+      <tr><td data-label="Día"><b>D</b><br>Viernes</td><td data-label="Nombre"><b>Tren superior · judo</b></td><td data-label="Objetivo">Kumikata y kuzushi: ganar el agarre, romper la postura del rival y aguantar 4 minutos tirando.</td><td data-label="Herramientas">Dominadas en judogi, tirones explosivos con banda, soga, granjero, press a un brazo.</td></tr>
     </tbody>
   </table></div>
 
   <h3>7 · Cada movimiento, 2 veces por semana</h3>
   <p class="lead">Ningún movimiento se pierde: lo que hacés el día de fuerza, lo repetís el día de judo con otra variante. Dos veces por semana es lo óptimo para crecer en fuerza y masa; más que eso, con judo todas las noches, te pasás de cansancio.</p>
-  <div class="tbl"><table class="freq">
+  <div class="tbl"><table class="freq stack">
     <thead>
       <tr><th colspan="4" class="grp">Piernas</th></tr>
       <tr><th>Movimiento</th><th>A · Lunes (fuerza)</th><th>C · Jueves (judo)</th><th>Para qué te sirve en el tatami</th></tr>
     </thead>
     <tbody>
-      <tr><td><b>Potencia</b></td><td>Cargada de potencia</td><td>Contraste, saltos al cajón</td><td>La explosión de la entrada.</td></tr>
-      <tr><td><b>Sentadilla</b></td><td>Sentadilla trasera</td><td>Sentadilla frontal o contraste</td><td>Levantar al rival y tener base firme.</td></tr>
-      <tr><td><b>Una pierna</b></td><td>Sentadilla búlgara</td><td>Step-up pesado + saltos a una pierna</td><td>La pierna de apoyo en uchi-mata, harai-goshi, o-uchi.</td></tr>
-      <tr><td><b>Cadera y glúteo</b></td><td>Peso muerto rumano</td><td>Peso muerto hexagonal + hip thrust</td><td>Arrancar al rival del piso y terminar la proyección. Los glúteos fuertes corrigen la pelvis.</td></tr>
-      <tr><td><b>Femoral</b></td><td>Curl nórdico</td><td>Curl nórdico</td><td>Evita desgarros en sprints y entradas explosivas.</td></tr>
-      <tr><td><b>Pantorrilla y tibial</b></td><td>Pantorrilla + tibial</td><td>Pantorrilla</td><td>Tobillos firmes para barridas y apoyo en puntas.</td></tr>
-      <tr><td><b>Core</b></td><td>Dead bug + plancha RKC</td><td>Lanzamiento con giro + uchikomi</td><td>Pasar la fuerza de las piernas a los brazos. El dead bug evita arquear la espalda.</td></tr>
+      <tr><td data-label="Movimiento"><b>Potencia</b></td><td data-label="A · Lunes (fuerza)">Cargada de potencia</td><td data-label="C · Jueves (judo)">Contraste, saltos al cajón</td><td data-label="Para qué te sirve en el tatami">La explosión de la entrada.</td></tr>
+      <tr><td data-label="Movimiento"><b>Sentadilla</b></td><td data-label="A · Lunes (fuerza)">Sentadilla trasera</td><td data-label="C · Jueves (judo)">Sentadilla frontal o contraste</td><td data-label="Para qué te sirve en el tatami">Levantar al rival y tener base firme.</td></tr>
+      <tr><td data-label="Movimiento"><b>Una pierna</b></td><td data-label="A · Lunes (fuerza)">Sentadilla búlgara</td><td data-label="C · Jueves (judo)">Step-up pesado + saltos a una pierna</td><td data-label="Para qué te sirve en el tatami">La pierna de apoyo en uchi-mata, harai-goshi, o-uchi.</td></tr>
+      <tr><td data-label="Movimiento"><b>Cadera y glúteo</b></td><td data-label="A · Lunes (fuerza)">Peso muerto rumano</td><td data-label="C · Jueves (judo)">Peso muerto hexagonal + hip thrust</td><td data-label="Para qué te sirve en el tatami">Arrancar al rival del piso y terminar la proyección. Los glúteos fuertes corrigen la pelvis.</td></tr>
+      <tr><td data-label="Movimiento"><b>Femoral</b></td><td data-label="A · Lunes (fuerza)">Curl nórdico</td><td data-label="C · Jueves (judo)">Curl nórdico</td><td data-label="Para qué te sirve en el tatami">Evita desgarros en sprints y entradas explosivas.</td></tr>
+      <tr><td data-label="Movimiento"><b>Pantorrilla y tibial</b></td><td data-label="A · Lunes (fuerza)">Pantorrilla + tibial</td><td data-label="C · Jueves (judo)">Pantorrilla</td><td data-label="Para qué te sirve en el tatami">Tobillos firmes para barridas y apoyo en puntas.</td></tr>
+      <tr><td data-label="Movimiento"><b>Core</b></td><td data-label="A · Lunes (fuerza)">Dead bug + plancha RKC</td><td data-label="C · Jueves (judo)">Lanzamiento con giro + uchikomi</td><td data-label="Para qué te sirve en el tatami">Pasar la fuerza de las piernas a los brazos. El dead bug evita arquear la espalda.</td></tr>
     </tbody>
   </table></div>
-  <div class="tbl"><table class="freq">
+  <div class="tbl"><table class="freq stack">
     <thead>
       <tr><th colspan="4" class="grp">Tren superior</th></tr>
       <tr><th>Movimiento</th><th>B · Martes (fuerza)</th><th>D · Viernes (judo)</th><th>Para qué te sirve en el tatami</th></tr>
     </thead>
     <tbody>
-      <tr><td><b>Tirón vertical</b></td><td>Dominadas con lastre</td><td>Dominadas agarrado del judogi</td><td>Traer al rival hacia vos y ganar el agarre.</td></tr>
-      <tr><td><b>Remo</b></td><td>Remo con barra + remo con mancuerna</td><td>Remo con pecho apoyado + tirón de kuzushi con banda</td><td>Kuzushi: romper la postura del rival.</td></tr>
-      <tr><td><b>Empuje horizontal</b></td><td>Press de banca</td><td>Press inclinado + fondos</td><td>Mantener la distancia y frenar al rival.</td></tr>
-      <tr><td><b>Empuje vertical</b></td><td>Press militar de pie</td><td>Press landmine a un brazo</td><td>Despegar al rival; un brazo, como en el kumikata real.</td></tr>
-      <tr><td><b>Agarre</b></td><td>Colgarse de toalla o judogi</td><td>Trepar soga + paseo del granjero</td><td>Sostener el agarre 4 minutos. También se entrena en judo.</td></tr>
-      <tr><td><b>Cuello</b></td><td>Cuello con disco o banda</td><td>Cuello (en superserie con face pulls)</td><td>Protege en caídas y en puente.</td></tr>
+      <tr><td data-label="Movimiento"><b>Tirón vertical</b></td><td data-label="B · Martes (fuerza)">Dominadas con lastre</td><td data-label="D · Viernes (judo)">Dominadas agarrado del judogi</td><td data-label="Para qué te sirve en el tatami">Traer al rival hacia vos y ganar el agarre.</td></tr>
+      <tr><td data-label="Movimiento"><b>Remo</b></td><td data-label="B · Martes (fuerza)">Remo con barra + remo con mancuerna</td><td data-label="D · Viernes (judo)">Remo con pecho apoyado + tirón de kuzushi con banda</td><td data-label="Para qué te sirve en el tatami">Kuzushi: romper la postura del rival.</td></tr>
+      <tr><td data-label="Movimiento"><b>Empuje horizontal</b></td><td data-label="B · Martes (fuerza)">Press de banca</td><td data-label="D · Viernes (judo)">Press inclinado + fondos</td><td data-label="Para qué te sirve en el tatami">Mantener la distancia y frenar al rival.</td></tr>
+      <tr><td data-label="Movimiento"><b>Empuje vertical</b></td><td data-label="B · Martes (fuerza)">Press militar de pie</td><td data-label="D · Viernes (judo)">Press landmine a un brazo</td><td data-label="Para qué te sirve en el tatami">Despegar al rival; un brazo, como en el kumikata real.</td></tr>
+      <tr><td data-label="Movimiento"><b>Agarre</b></td><td data-label="B · Martes (fuerza)">Colgarse de toalla o judogi</td><td data-label="D · Viernes (judo)">Trepar soga + paseo del granjero</td><td data-label="Para qué te sirve en el tatami">Sostener el agarre 4 minutos. También se entrena en judo.</td></tr>
+      <tr><td data-label="Movimiento"><b>Cuello</b></td><td data-label="B · Martes (fuerza)">Cuello con disco o banda</td><td data-label="D · Viernes (judo)">Cuello (en superserie con face pulls)</td><td data-label="Para qué te sirve en el tatami">Protege en caídas y en puente.</td></tr>
     </tbody>
   </table></div>
 
