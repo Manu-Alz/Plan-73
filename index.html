@@ -99,6 +99,8 @@ table.freq td:last-child{color:var(--muted);font-size:.92rem}
 @media (max-width:640px){
   table.stack,table.stack thead,table.stack tbody,table.stack tr,table.stack td{display:block;width:auto}
   table.stack thead th:not(.grp){display:none}
+  table.stack thead tr:not(:has(.grp)){display:none}
+  table.stack thead tr:has(.grp){padding:0;border:0}
   table.stack th.grp{display:block;padding-left:0}
   table.stack tr{padding:12px 0;border-bottom:1px solid var(--line)}
   table.stack td{border:0;padding:3px 0;white-space:normal}
