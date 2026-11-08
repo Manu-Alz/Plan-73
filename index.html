@@ -77,6 +77,7 @@ ol.ex li:first-child{border-top:0}
 .ex li.key .n::after{content:"PRINCIPAL";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--aka);background:var(--aka-soft);padding:3px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
 .ex li.rfd .n::after,.ex li.plio .n::after{content:"RFD";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--indigo);background:var(--indigo-soft);padding:3px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
 .ex li.plio .n::after{content:"PLIOMETRÍA"}
+.ex li.iso .n::after{content:"ISOMETRÍA";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:2px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
 
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 @media (max-width:760px){.two{grid-template-columns:1fr}}
@@ -162,6 +163,7 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td data-label="Lo que ves"><b>RPE 7 · 8 · 9</b></td><td data-label="Qué significa">Una serie a cada RPE: la primera exigente, la segunda dura y la tercera muy dura, con 1 repetición en el tanque. Subís el peso entre series o hacés más repeticiones con el mismo.</td></tr>
       <tr><td data-label="Lo que ves"><b>RFD</b></td><td data-label="Qué significa">Rate of force development: producir fuerza lo más rápido posible. Cargadas, lanzamientos de balón, kuzushi y uchikomi con banda. Cada repetición al 100% de velocidad, siempre fresco.</td></tr>
       <tr><td data-label="Lo que ves"><b>PLIOMETRÍA</b></td><td data-label="Qué significa">Saltos y rebotes que usan el efecto resorte del músculo: se estira y enseguida se contrae, con el menor tiempo posible en el piso. Saltos al cajón, a una pierna, en profundidad y flexiones con aplauso.</td></tr>
+      <tr><td data-label="Lo que ves"><b>ISOMETRÍA</b></td><td data-label="Qué significa">Aguantar una posición con carga pesada sin moverte, 30–45 s. Es para los tendones de rodilla y tobillo. Va siempre al final de la sesión.</td></tr>
       <tr><td data-label="Lo que ves"><b>80%</b></td><td data-label="Qué significa">80% de lo máximo que levantás para 1 repetición. Si tu máximo en sentadilla es 120 kg, el 80% es 96 kg.</td></tr>
       <tr><td data-label="Lo que ves"><b>Superserie</b></td><td data-label="Qué significa">Dos ejercicios seguidos sin pausa entre ellos (por ejemplo curl nórdico y enseguida pantorrilla). Descansás al terminar los dos.</td></tr>
       <tr><td data-label="Lo que ves"><b>Contraste</b></td><td data-label="Qué significa">Un ejercicio pesado y enseguida uno explosivo del mismo movimiento (3 sentadillas pesadas → 3 saltos). El pesado "despierta" al sistema nervioso y el salto sale más potente. Es de las herramientas más efectivas para potencia.</td></tr>
@@ -187,7 +189,7 @@ footer{color:var(--muted);font-size:.85rem}
     </div>
     <div class="panel cue">
       <h3>Pocas series, casi al fallo, nunca al fallo</h3>
-      <p><b>Principales:</b> 3 series subiendo el esfuerzo, RPE 7 · 8 · 9. <b>Accesorios:</b> 2 series, la primera a RPE 8 y la segunda a RPE 9. <b>RFD y pliometría:</b> 3 series de pocas repeticiones, siempre frescas, nunca cansado.</p>
+      <p><b>Principales:</b> 3 series subiendo el esfuerzo, RPE 7 · 8 · 9. <b>Accesorios:</b> 2 series, la primera a RPE 8 y la segunda a RPE 9. <b>RFD y pliometría:</b> 3 series de pocas repeticiones, siempre frescas, nunca cansado. <b>Isometría:</b> 3–4 sostenes de 30–45 s, al final.</p>
       <p>Las series que terminan a 1–2 repeticiones del fallo son las que más hacen crecer. Por eso alcanzan pocas: máxima frecuencia, mínimo cansancio.</p>
       <p>El fallo (RPE 10) sí queda afuera: cansa el sistema nervioso durante días y te roba velocidad para el judo de la noche.</p>
     </div>
@@ -207,6 +209,7 @@ footer{color:var(--muted);font-size:.85rem}
     <li><b>Lo explosivo primero</b>, todo lo marcado RFD o PLIOMETRÍA. La potencia depende de un sistema nervioso fresco; si la hacés cansado, entrenás ser lento.</li>
     <li><b>El ejercicio PRINCIPAL.</b> Con la mejor energía que te queda. Es el que más mueve tu fuerza.</li>
     <li><b>Accesorios.</b> Construyen masa y tapan puntos débiles (femoral, glúteo, agarre, cuello). Más repeticiones, menos descanso.</li>
+    <li><b>Isometría para tendones</b>, lo marcado ISOMETRÍA. Al final, nunca antes de saltos o sprints: un tendón cansado rebota peor y se lesiona más fácil.</li>
     <li><b>Estiramiento, 8–10 min.</b> Al final, nunca antes de levantar pesado: estirar fuerte antes te quita fuerza.</li>
   </ol>
 
@@ -218,8 +221,9 @@ footer{color:var(--muted);font-size:.85rem}
         <tr><td>Ejercicio principal</td><td><b>2–3 min</b>, y <b>3–4 min</b> en el bloque 3, donde el peso es más alto.</td></tr>
         <tr><td>Accesorios</td><td><b>60–90 s</b>.</td></tr>
         <tr><td>Superseries</td><td>Sin pausa entre los dos ejercicios, <b>60–90 s</b> al terminar la ronda.</td></tr>
+        <tr><td>Isometría</td><td><b>1–2 min</b> entre sostenes.</td></tr>
       </tbody></table></div>
-      <p class="lead">Usá el cronómetro del celular. Descansar de menos es el error más común. Cada sesión dura unos 55–70 min en total.</p>
+      <p class="lead">Usá el cronómetro del celular. Descansar de menos es el error más común. Cada sesión dura unos 60–75 min en total.</p>
     </div>
     <div class="panel">
       <h3>5 · Cómo subir los pesos</h3>
@@ -246,7 +250,7 @@ footer{color:var(--muted);font-size:.85rem}
   </table></div>
 
   <h3>7 · Cada movimiento, 2 veces por semana</h3>
-  <p class="lead">Fila por fila, cada movimiento aparece una vez en cada día del par. Las etiquetas <b>RFD</b> y <b>PLIOMETRÍA</b> marcan el trabajo explosivo, que siempre va primero.</p>
+  <p class="lead">Fila por fila, cada movimiento aparece una vez en cada día del par. Las etiquetas <b>RFD</b> y <b>PLIOMETRÍA</b> marcan el trabajo explosivo, que siempre va primero. <b>ISOMETRÍA</b> marca el trabajo de tendones, que siempre va al final.</p>
   <div class="tbl"><table class="freq stack">
     <thead>
       <tr><th colspan="4" class="grp">Piernas</th></tr>
@@ -261,6 +265,7 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td data-label="Movimiento"><b>Femoral</b></td><td data-label="A · Lunes (fuerza)">Curl nórdico</td><td data-label="C · Jueves (judo)">Curl nórdico</td><td data-label="Para qué te sirve en el tatami">Evita desgarros en sprints y entradas explosivas.</td></tr>
       <tr><td data-label="Movimiento"><b>Pantorrilla y tibial</b></td><td data-label="A · Lunes (fuerza)">Pantorrilla + tibial</td><td data-label="C · Jueves (judo)">Pantorrilla</td><td data-label="Para qué te sirve en el tatami">Tobillos firmes para barridas y apoyo en puntas.</td></tr>
       <tr><td data-label="Movimiento"><b>Aductores y core</b></td><td data-label="A · Lunes (fuerza)">Copenhague + dead bug</td><td data-label="C · Jueves (judo)">Copenhague + Pallof press</td><td data-label="Para qué te sirve en el tatami">La lesión de ingle es de las más comunes en judo. El core pasa la fuerza de las piernas a los brazos y no te deja girar.</td></tr>
+      <tr><td data-label="Movimiento"><b>Tendones</b></td><td data-label="A · Lunes (fuerza)">Sentadilla española · ISOMETRÍA (tendón de la rodilla)</td><td data-label="C · Jueves (judo)">Pantorrilla isométrica pesada · ISOMETRÍA (tendón de Aquiles)</td><td data-label="Para qué te sirve en el tatami">Que los tendones aguanten saltos, sprints y judo todas las noches.</td></tr>
     </tbody>
   </table></div>
   <div class="tbl"><table class="freq stack">
@@ -287,7 +292,7 @@ footer{color:var(--muted);font-size:.85rem}
       <h3>Cómo se cuenta</h3>
       <ul class="rules">
         <li>Por <b>músculo entero</b>, no por cabeza. <b>1 serie</b> si el músculo es el que más trabaja (banca → pecho), <b>½ serie</b> si trabaja fuerte como ayudante (banca → hombro y tríceps; remo → bíceps y hombro).</li>
-        <li>Solo cuentan las series duras. <b>Lo marcado RFD o PLIOMETRÍA no cuenta:</b> es potencia, cansa poco al músculo y se hace siempre fresco.</li>
+        <li>Solo cuentan las series duras. <b>Lo marcado RFD, PLIOMETRÍA o ISOMETRÍA no cuenta:</b> lo primero es potencia y lo último es trabajo de tendón; cansan poco al músculo.</li>
         <li>Los números son del <b>bloque 2</b>. Los bloques 1 y 3 tienen las mismas series: el 1 a menor RPE, el 3 con más peso y menos repeticiones.</li>
       </ul>
     </div>
@@ -328,10 +333,19 @@ footer{color:var(--muted);font-size:.85rem}
     </tbody>
   </table></div>
   <p class="lead">Todo queda en 8–12 series duras, parejo entre los dos días. Arriba van <b>espalda (12,5)</b>, tu arma en judo, y <b>hombro, tríceps y cuádriceps (10,5–11)</b>. Isquios, aductores, pantorrilla y core quedan más abajo a propósito: los sprints, los saltos y el judo de todas las noches les suman mucho trabajo que no está en esta cuenta.</p>
+  <div class="two">
   <div class="panel cue">
     <h3>Uchikomi con banda elástica</h3>
     <p>Es un clásico del judo japonés. Atás una banda elástica fuerte a un poste o al rack, a la altura del pecho. Agarrás las dos puntas como si fueran manga y solapa, y hacés la entrada completa de tu técnica a máxima velocidad: tirón (kuzushi), giro y apoyo (tsukuri), y volvés. Usá tu técnica principal y alterná lados. Calidad antes que cantidad: cada entrada tiene que ser la que harías en un combate.</p>
   </div>
+  <div class="panel cue">
+    <h3>Isometría para tendones</h3>
+    <p><b>Por qué:</b> el músculo se adapta en semanas y el tendón en meses. Vos ganás fuerza rápido y el plan tiene mucho salto y sprint: sin esto, el músculo se pone fuerte antes que el tendón, que es como empiezan las tendinopatías de rodilla y de Aquiles.</p>
+    <p><b>Cómo:</b> aguantar una carga pesada 30–45 s sin moverte. Esa tensión larga es lo que engrosa y endurece el tendón. Un tendón más firme además transmite la fuerza más rápido: suma al RFD.</p>
+    <p><b>Sentadilla española:</b> banda gruesa o correa detrás de las rodillas, atada a un rack o poste. Te alejás hasta que tire, bajás a 60–90° con el torso vertical y empujás el piso. Sentís el frente del muslo y la rodilla trabajando, sin dolor.</p>
+    <p><b>Si un día te duele un tendón:</b> esto mismo, 5 × 45 s, calma el dolor. Avisá antes de seguir saltando.</p>
+  </div>
+</div>
 </section>
 
 <section>
@@ -688,7 +702,8 @@ const blocks=[
       ["Sentadilla búlgara","2×8","Por pierna."],
       ["Curl nórdico o curl femoral","2×6",""],
       ["Pantorrilla + tibial","3×12 + 2×15","En superserie."],
-      ["Plancha Copenhague + dead bug","2 rondas","20 s por lado + 8 por lado. Copenhague: aductores, la lesión de ingle es de las más comunes en judo. Dead bug: espalda baja pegada al piso."]],
+      ["Plancha Copenhague + dead bug","2 rondas","20 s por lado + 8 por lado. Copenhague: aductores, la lesión de ingle es de las más comunes en judo. Dead bug: espalda baja pegada al piso."],
+      ["Sentadilla española","3×30 s","Banda gruesa o correa detrás de las rodillas, atada a algo fijo. Bajás a 60–90°, torso vertical, y aguantás empujando el piso. Aprendé la posición: esfuerzo 6–7 de 10. 1–2 min de pausa.","iso"]],
    B:[["Face pulls","2×15","Liviano, parte del calentamiento: salud del hombro. No cuenta como volumen."],
       ["Flexiones con aplauso","3×5","Despegar las manos lo más alto posible: empujar y despegar al rival.","plio"],
       ["Dominadas con lastre","3×5–6","RPE 6 · 7 · 8.",1],
@@ -705,7 +720,8 @@ const blocks=[
       ["Sentadilla frontal","2×6","Torso vertical y codos altos: la posición de cargar al rival."],
       ["Step-up pesado","2×6","Por pierna. Cajón a la altura de la rodilla, subida explosiva."],
       ["Curl nórdico + pantorrilla","2×6 + 3×12","En superserie."],
-      ["Plancha Copenhague + Pallof press","2 rondas","20 s + 10 por lado. Pallof: con banda o polea, brazos estirados al frente, no dejás que te gire. Es el anti-giro del judo."]],
+      ["Plancha Copenhague + Pallof press","2 rondas","20 s + 10 por lado. Pallof: con banda o polea, brazos estirados al frente, no dejás que te gire. Es el anti-giro del judo."],
+      ["Pantorrilla isométrica pesada","3×30 s","En la máquina o la Smith, rodilla estirada. Subís a mitad de recorrido y aguantás. Aprendé la posición: esfuerzo 6–7 de 10. 1–2 min de pausa.","iso"]],
    D:[["Face pulls","2×15","Liviano, calentamiento de hombro. No cuenta como volumen."],
       ["Tirón de kuzushi con banda","3×8","Por brazo. Tirón explosivo de manga y solapa, como para romper la postura.","rfd"],
       ["Dominadas agarrado del judogi","3×máx","RPE 6 · 7 · 8: las dos primeras dejando repeticiones en el tanque, la última al máximo limpio.",1],
@@ -726,7 +742,8 @@ const blocks=[
       ["Sentadilla búlgara","2×6–8","Por pierna. Con mancuernas pesadas."],
       ["Curl nórdico","2×6",""],
       ["Pantorrilla + tibial","3×10–12 + 2×15","En superserie."],
-      ["Plancha Copenhague + dead bug","2 rondas","25 s + 8 por lado."]],
+      ["Plancha Copenhague + dead bug","2 rondas","25 s + 8 por lado."],
+      ["Sentadilla española","4×45 s","Banda gruesa o correa detrás de las rodillas, atada a algo fijo. Bajás a 60–90°, torso vertical, y aguantás empujando el piso. Esfuerzo 7–8 de 10. 1–2 min de pausa.","iso"]],
    B:[["Face pulls","2×15","Calentamiento de hombro."],
       ["Flexiones con aplauso","3×5","Más altura.","plio"],
       ["Dominadas con lastre","3×5","RPE 7 · 8 · 9.",1],
@@ -743,7 +760,8 @@ const blocks=[
       ["Sentadilla frontal","2×5",""],
       ["Step-up pesado","2×5","Por pierna. Con mancuernas pesadas."],
       ["Curl nórdico + pantorrilla","2×5 + 3×12","En superserie."],
-      ["Plancha Copenhague + Pallof press","2 rondas","25 s + 10 por lado."]],
+      ["Plancha Copenhague + Pallof press","2 rondas","25 s + 10 por lado."],
+      ["Pantorrilla isométrica pesada","4×45 s","En la máquina o la Smith, rodilla estirada. Subís a mitad de recorrido y aguantás. Esfuerzo 7–8 de 10. 1–2 min de pausa.","iso"]],
    D:[["Face pulls","2×15","Calentamiento de hombro."],
       ["Tirón de kuzushi con banda","3×8","Por brazo.","rfd"],
       ["Dominadas agarrado del judogi","3×máx","RPE 7 · 8 · 9. Agregá lastre cuando pases 10.",1],
@@ -764,7 +782,8 @@ const blocks=[
       ["Sentadilla búlgara","2×6","Por pierna."],
       ["Curl nórdico","2×5",""],
       ["Pantorrilla + tibial","3×12 + 2×15","En superserie."],
-      ["Plancha Copenhague + dead bug","2 rondas","30 s + 8 por lado."]],
+      ["Plancha Copenhague + dead bug","2 rondas","30 s + 8 por lado."],
+      ["Sentadilla española","4×45 s","Banda gruesa o correa detrás de las rodillas, atada a algo fijo. Bajás a 60–90°, torso vertical, y aguantás empujando el piso. Más carga: esfuerzo 8 de 10. 1–2 min de pausa.","iso"]],
    B:[["Face pulls","2×15","Calentamiento de hombro."],
       ["Flexiones con aplauso","3×5","Si salen fáciles, con los pies elevados.","plio"],
       ["Dominadas con lastre","3×3","RPE 7 · 8 · 9.",1],
@@ -781,7 +800,8 @@ const blocks=[
       ["Sentadilla frontal","2×4",""],
       ["Step-up pesado","2×4","Por pierna. Pesado y explosivo."],
       ["Curl nórdico + pantorrilla","2×5 + 3×12","En superserie."],
-      ["Plancha Copenhague + Pallof press","2 rondas","30 s + 10 por lado."]],
+      ["Plancha Copenhague + Pallof press","2 rondas","30 s + 10 por lado."],
+      ["Pantorrilla isométrica pesada","4×45 s","En la máquina o la Smith, rodilla estirada. Subís a mitad de recorrido y aguantás. Más carga: esfuerzo 8 de 10. 1–2 min de pausa.","iso"]],
    D:[["Face pulls","2×15","Calentamiento de hombro."],
       ["Tirón de kuzushi con banda","3×6","Por brazo. Lo más explosivo posible.","rfd"],
       ["Dominadas en judogi con lastre","3×5","RPE 7 · 8 · 9.",1],
@@ -798,7 +818,8 @@ const blocks=[
    A:[["Cargada de potencia","3×2","Rápido, no al máximo.","rfd"],
       ["Saltos al cajón","3×3","","plio"],
       ["Sentadilla trasera","2×3","Mismo peso del bloque, RPE 7–8.",1],
-      ["Sentadilla búlgara","1×6","Por pierna."]],
+      ["Sentadilla búlgara","1×6","Por pierna."],
+      ["Sentadilla española","3×30 s","Mantenimiento del tendón.","iso"]],
    B:[["Flexiones con aplauso","2×5","","plio"],
       ["Dominadas con lastre","2×3","RPE 7–8.",1],
       ["Press de banca","2×3","RPE 7–8.",1],
@@ -806,7 +827,8 @@ const blocks=[
    C:[["Lanzamiento con giro de cadera (balón medicinal)","3×4","Por lado.","rfd"],
       ["Uchikomi con banda elástica","3×15 s","Máxima velocidad.","rfd"],
       ["Saltos a una pierna","2×3","Por pierna.","plio"],
-      ["Peso muerto con barra hexagonal","2×3","Solo si faltan más de 7 días para competir.",1]],
+      ["Peso muerto con barra hexagonal","2×3","Solo si faltan más de 7 días para competir.",1],
+      ["Pantorrilla isométrica pesada","3×30 s","Mantenimiento del tendón.","iso"]],
    D:[["Face pulls","2×15",""],
       ["Tirón de kuzushi con banda","3×6","Por brazo.","rfd"],
       ["Dominadas agarrado del judogi","2×5","RPE 7–8.",1],
