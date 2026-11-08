@@ -90,6 +90,12 @@ td.num{white-space:nowrap}
 .tempo div{flex:1 1 180px;background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:14px 16px;display:flex;flex-direction:column;gap:4px}
 .tempo b{font-family:var(--display);font-size:1.5rem;color:var(--indigo)}
 .tempo div:nth-child(2) b{color:var(--aka)}
+.steps{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:8px}
+.steps li{max-width:70ch;padding-left:4px}
+.steps li::marker{font-family:var(--display);font-weight:700;color:var(--aka)}
+table.freq th.grp{font-size:1.05rem;color:var(--indigo);padding-top:14px;border-bottom:2px solid var(--indigo)}
+table.freq td:last-child{color:var(--muted);font-size:.92rem}
+.day .t b{font-weight:600}
 footer{color:var(--muted);font-size:.85rem}
 </style>
 
@@ -97,7 +103,7 @@ footer{color:var(--muted);font-size:.85rem}
 <header>
   <div class="eyebrow">Judo · categoría -73 kg</div>
   <h1>Plan -73 kg</h1>
-  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. Torso/pierna de 4 días: dos días de fuerza general y dos de fuerza aplicada al judo.</p>
+  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. 4 días de gimnasio: dos de piernas y dos de tren superior. El primero de cada par construye fuerza con barra; el segundo la convierte en judo.</p>
   <div class="stats">
     <div class="stat"><b>65 kg</b><span>hoy, en ayunas</span></div>
     <div class="stat"><b>75–76 kg</b><span>peso caminando (meta)</span></div>
@@ -109,12 +115,12 @@ footer{color:var(--muted);font-size:.85rem}
 <section>
   <h2>Semana tipo</h2>
   <div class="week">
-    <div class="day"><div class="d">Lun</div><div class="s">A</div><div class="t">Fuerza máxima, piernas</div></div>
-    <div class="day"><div class="d">Mar</div><div class="s">B</div><div class="t">Fuerza máxima, tren superior</div></div>
-    <div class="day sprint"><div class="d">Mié</div><div class="s">S</div><div class="t">Sprints + movilidad</div></div>
-    <div class="day"><div class="d">Jue</div><div class="s">C</div><div class="t">Potencia de judo: cadera y piernas</div></div>
-    <div class="day"><div class="d">Vie</div><div class="s">D</div><div class="t">Tirón, agarre y volumen</div></div>
-    <div class="day sprint"><div class="d">Sáb</div><div class="s">S</div><div class="t">Sprints (o randori fuerte)</div></div>
+    <div class="day"><div class="d">Lun</div><div class="s">A</div><div class="t"><b>Piernas · fuerza</b><br>Barra pesada</div></div>
+    <div class="day"><div class="d">Mar</div><div class="s">B</div><div class="t"><b>Tren superior · fuerza</b><br>Barra pesada</div></div>
+    <div class="day sprint"><div class="d">Mié</div><div class="s">S1</div><div class="t"><b>Sprints de velocidad</b><br>+ movilidad</div></div>
+    <div class="day"><div class="d">Jue</div><div class="s">C</div><div class="t"><b>Piernas · judo</b><br>Potencia y entradas</div></div>
+    <div class="day"><div class="d">Vie</div><div class="s">D</div><div class="t"><b>Tren superior · judo</b><br>Agarre y kuzushi</div></div>
+    <div class="day sprint"><div class="d">Sáb</div><div class="s">S2</div><div class="t"><b>Sprints a fondo</b><br>(o randori fuerte)</div></div>
     <div class="day off"><div class="d">Dom</div><div class="s">—</div><div class="t">Descanso + estiramiento largo</div></div>
   </div>
   <ul class="rules">
@@ -124,64 +130,139 @@ footer{color:var(--muted);font-size:.85rem}
   </ul>
 </section>
 
-<section>
+<section id="ejecucion">
   <h2>Cómo se ejecuta todo</h2>
-  <div class="tempo">
-    <div><span class="lead">Bajada</span><b>2–3 s controlada</b><span>Con tensión, sin rebotar.</span></div>
-    <div><span class="lead">Subida</span><b>Máxima velocidad</b><span>Siempre, aunque el peso sea alto y la barra se mueva lento.</span></div>
-    <div><span class="lead">Cortar la serie</span><b>Si se frena</b><span>Si una repetición sale claramente más lenta, esa es la última.</span></div>
-  </div>
-  <p class="lead">En cargadas, saltos y lanzamientos no hay bajada controlada: soltás o caés, te reacomodás y repetís.</p>
+  <p class="lead">Leé esto antes de la primera sesión y volvé cada tanto. Lo que separa a un atleta de élite de alguien que "va al gimnasio" no son los ejercicios, es cómo se hace cada repetición, cuánto se descansa y qué se anota.</p>
+
+  <h3>1 · Cómo leer una sesión</h3>
+  <div class="tbl"><table>
+    <thead><tr><th>Lo que ves</th><th>Qué significa</th></tr></thead>
+    <tbody>
+      <tr><td class="num"><b>4×6</b></td><td>4 series de 6 repeticiones. Hacés 6, descansás, otras 6, y así hasta completar 4 veces. Mismo peso en todas, salvo que diga otra cosa.</td></tr>
+      <tr><td class="num"><b>3×8–10</b></td><td>3 series de entre 8 y 10. Elegís un peso con el que llegues a 8; cuando logres 10 en las 3 series, subís el peso (ver punto 5).</td></tr>
+      <tr><td class="num"><b>5×5 → 5×4</b></td><td>Empezás el bloque con 5×5 y desde la semana indicada pasás a 5×4 con más peso.</td></tr>
+      <tr><td class="num"><b>4×máx</b></td><td>Todas las repeticiones (o segundos) que puedas con técnica limpia. Anotá el número y la próxima tratá de superarlo.</td></tr>
+      <tr><td class="num"><b>3×20 s</b></td><td>3 series de 20 segundos.</td></tr>
+      <tr><td class="num"><b>Por pierna / por lado / por brazo</b></td><td>El número es para cada lado. 3×8 por pierna = 8 con la derecha, 8 con la izquierda, eso es 1 serie.</td></tr>
+      <tr><td><b>RPE</b></td><td>Qué tan dura fue la serie, del 1 al 10. Se mide por cuántas repeticiones te quedaban "en el tanque" (tabla de abajo).</td></tr>
+      <tr><td><b>80%</b></td><td>80% de lo máximo que levantás para 1 repetición. Si tu máximo en sentadilla es 120 kg, el 80% es 96 kg.</td></tr>
+      <tr><td><b>Superserie</b></td><td>Dos ejercicios seguidos sin pausa entre ellos (por ejemplo curl nórdico y enseguida pantorrilla). Descansás al terminar los dos.</td></tr>
+      <tr><td><b>Contraste</b></td><td>Un ejercicio pesado y enseguida uno explosivo del mismo movimiento (3 sentadillas pesadas → 3 saltos). El pesado "despierta" al sistema nervioso y el salto sale más potente. Es de las herramientas más efectivas para potencia.</td></tr>
+      <tr><td><b>Lastre</b></td><td>Peso extra colgado del cinturón o en una mochila (dominadas y fondos).</td></tr>
+      <tr><td><b>PRINCIPAL</b></td><td>El ejercicio más importante del día. Va con la mejor energía y es el que más cuidás en la progresión.</td></tr>
+      <tr><td><b>Descarga</b></td><td>Semana con los mismos pesos pero 40% menos de series. No es "semana libre": es cuando el cuerpo asimila lo entrenado y te hacés más fuerte.</td></tr>
+    </tbody>
+  </table></div>
+
   <div class="two">
     <div class="panel">
-      <h3>Descansos entre series</h3>
+      <h3>La escala RPE</h3>
+      <div class="tbl"><table>
+        <thead><tr><th>RPE</th><th>Te quedaban…</th><th>Cómo se siente</th></tr></thead>
+        <tbody>
+          <tr><td><b>6</b></td><td>4 repeticiones</td><td>Firme pero cómodo. La barra vuela.</td></tr>
+          <tr><td><b>7</b></td><td>3 repeticiones</td><td>Exigente, todo rápido y limpio.</td></tr>
+          <tr><td><b>8</b></td><td>2 repeticiones</td><td>Duro. La última sale un poco más lenta.</td></tr>
+          <tr><td><b>9</b></td><td>1 repetición</td><td>Muy duro. Solo en el bloque 3.</td></tr>
+          <tr><td><b>10</b></td><td>Nada</td><td>Fallo. <b>Nunca</b> en este plan.</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div class="panel cue">
+      <h3>Por qué nunca al fallo</h3>
+      <p>Llegar al fallo cansa al sistema nervioso durante días y te roba velocidad, que es lo que más vale en judo. Además entrenás judo a la noche: si destruís las piernas a la mañana, la técnica de la noche sale peor.</p>
+      <p>Los mejores del mundo entrenan casi siempre a RPE 7–8. Se progresa más sumando semanas buenas que reventándose una vez.</p>
+    </div>
+  </div>
+
+  <h3>2 · Cómo se hace cada repetición</h3>
+  <div class="tempo">
+    <div><span class="lead">Bajada</span><b>2–3 s controlada</b><span>Contás "mil uno, mil dos" mientras baja la barra, con todo el cuerpo apretado. Sin rebotar abajo. Protege articulaciones y genera tensión, que es lo que hace crecer el músculo.</span></div>
+    <div><span class="lead">Subida</span><b>Máxima velocidad</b><span>Siempre intentás mover la barra lo más rápido posible, aunque sea pesada y se mueva lento. La <i>intención</i> de velocidad es lo que entrena las fibras rápidas: la explosividad del judo.</span></div>
+    <div><span class="lead">Cuándo cortar</span><b>Si se frena</b><span>Si una repetición sale claramente más lenta que las anteriores o se rompe la técnica, esa es la última de la serie, aunque falten repeticiones. Anotalo.</span></div>
+  </div>
+  <p class="lead"><b>Excepción:</b> en cargadas, saltos, lanzamientos de balón y uchikomi no hay bajada controlada. Soltás o caés, te reacomodás 2–3 segundos y repetís. Cada repetición es un intento aislado al 100%.</p>
+
+  <h3>3 · El orden de cada sesión (y por qué)</h3>
+  <ol class="steps">
+    <li><b>Calentamiento dinámico, 12–15 min.</b> Sube la temperatura del músculo y prepara las articulaciones. A la mañana es más largo porque el cuerpo está más rígido.</li>
+    <li><b>Lo explosivo primero</b> (cargadas, saltos, contraste, kuzushi con banda). La potencia depende de un sistema nervioso fresco; si la hacés cansado, entrenás ser lento.</li>
+    <li><b>El ejercicio PRINCIPAL.</b> Con la mejor energía que te queda. Es el que más mueve tu fuerza.</li>
+    <li><b>Accesorios.</b> Construyen masa y tapan puntos débiles (femoral, glúteo, agarre, cuello). Más repeticiones, menos descanso.</li>
+    <li><b>Estiramiento, 8–10 min.</b> Al final, nunca antes de levantar pesado: estirar fuerte antes te quita fuerza.</li>
+  </ol>
+
+  <div class="two">
+    <div class="panel">
+      <h3>4 · Descansos entre series</h3>
       <div class="tbl"><table><tbody>
-        <tr><td>Cargadas, saltos, contraste</td><td><b>2–3 min</b>. Cada repetición tiene que salir a máxima velocidad.</td></tr>
-        <tr><td>Ejercicios principales</td><td><b>2–3 min</b> (3–4 min en el bloque 3)</td></tr>
-        <tr><td>Accesorios</td><td><b>60–90 s</b></td></tr>
-        <tr><td>Superseries</td><td>Sin pausa entre los dos, <b>60–90 s</b> al terminar la ronda</td></tr>
+        <tr><td>Cargadas, saltos, contraste</td><td><b>2–3 min</b>. Si descansás menos, la siguiente repetición sale más lenta y deja de ser potencia.</td></tr>
+        <tr><td>Ejercicio principal</td><td><b>2–3 min</b>, y <b>3–4 min</b> en el bloque 3, donde el peso es más alto.</td></tr>
+        <tr><td>Accesorios</td><td><b>60–90 s</b>.</td></tr>
+        <tr><td>Superseries</td><td>Sin pausa entre los dos ejercicios, <b>60–90 s</b> al terminar la ronda.</td></tr>
       </tbody></table></div>
-      <p class="lead">Cada sesión dura unos 60–80 min, contando calentamiento y estiramiento.</p>
+      <p class="lead">Usá el cronómetro del celular. Descansar de menos es el error más común. Cada sesión dura unos 60–80 min en total.</p>
     </div>
     <div class="panel">
-      <h3>Cómo subir de peso</h3>
+      <h3>5 · Cómo subir los pesos</h3>
       <ul class="rules">
-        <li><b>Principales:</b> si todas las series salieron con el RPE indicado y buena técnica, la semana siguiente subís 2,5–5 kg.</li>
-        <li><b>Accesorios con rango</b> (por ejemplo 3×8–10): cuando llegás al número alto en todas las series, subís el peso y volvés al número bajo.</li>
-        <li><b>Anotá todo:</b> peso, series y repeticiones de cada ejercicio. Sin registro no sabés si estás progresando.</li>
-        <li>Si un día rendís mucho menos (mal sueño, judo muy duro), bajá un 10% y seguí. No pasa nada.</li>
+        <li><b>Primera semana:</b> empezá con los pesos sugeridos o más liviano. Es mejor quedarte corto y subir rápido que empezar pasado.</li>
+        <li><b>Ejercicios principales:</b> si completaste todas las series al RPE indicado y con buena técnica, la semana siguiente subís 2,5 kg (tren superior) o 5 kg (piernas).</li>
+        <li><b>Accesorios con rango</b> (3×8–10): cuando llegás a 10 en las 3 series, subís el peso y volvés a 8. Se llama doble progresión.</li>
+        <li><b>Anotá todo:</b> fecha, ejercicio, peso, series y repeticiones. Sin registro no sabés si progresás.</li>
+        <li><b>Día malo</b> (dormiste poco, judo muy duro): bajá un 10% y completá la sesión. Un día malo no arruina nada; saltearte sesiones sí.</li>
       </ul>
     </div>
   </div>
+
+  <h3>6 · Los 4 días</h3>
+  <p class="lead">Dos días de piernas y dos de tren superior. El primero de cada par (A, B) construye el motor con barra pesada. El segundo (C, D) usa los mismos músculos pero con movimientos parecidos al combate: un pie, giro, agarre del judogi, tirón explosivo. Es como trabajan los japoneses: base de fuerza bruta y después transferirla a la técnica.</p>
   <div class="tbl"><table>
-    <thead><tr><th>Sesión</th><th>Para qué sirve</th><th>Cómo se ve</th></tr></thead>
+    <thead><tr><th>Día</th><th>Nombre</th><th>Objetivo</th><th>Herramientas</th></tr></thead>
     <tbody>
-      <tr><td><b>A · B</b><br>Fuerza general</td><td>Subir tus números en los básicos: el motor.</td><td>Barra pesada, 3–6 repeticiones, patrones simétricos.</td></tr>
-      <tr><td><b>C</b><br>Potencia de judo</td><td>Pasar esa fuerza a las entradas: giro de cadera, apoyo en una pierna, levantar al rival.</td><td>Hexagonal explosivo, saltos a una pierna, lanzamientos con giro, uchikomi con banda.</td></tr>
-      <tr><td><b>D</b><br>Tirón y agarre</td><td>Kumikata y kuzushi: ganar el agarre, romper la postura del rival y aguantar 4 minutos.</td><td>Dominadas y remos con judogi, tirones explosivos con banda, soga, volumen para masa.</td></tr>
+      <tr><td><b>A</b><br>Lunes</td><td><b>Piernas · fuerza</b></td><td>Subir tus números en sentadilla y peso muerto rumano. Piernas grandes y fuertes: hoy son tu punto débil.</td><td>Barra pesada, 3–6 repeticiones, movimientos con las dos piernas.</td></tr>
+      <tr><td><b>B</b><br>Martes</td><td><b>Tren superior · fuerza</b></td><td>Subir dominadas, banca, remo y press militar. Masa en espalda y hombros.</td><td>Barra y lastre, 3–8 repeticiones.</td></tr>
+      <tr><td><b>C</b><br>Jueves</td><td><b>Piernas · judo</b></td><td>Pasar la fuerza de A a las entradas: explosión, giro de cadera, apoyo en una pierna, levantar al rival.</td><td>Hexagonal explosivo, contraste, saltos a una pierna, lanzamientos con giro, uchikomi con banda.</td></tr>
+      <tr><td><b>D</b><br>Viernes</td><td><b>Tren superior · judo</b></td><td>Kumikata y kuzushi: ganar el agarre, romper la postura del rival y aguantar 4 minutos tirando.</td><td>Dominadas en judogi, tirones explosivos con banda, soga, granjero, press a un brazo.</td></tr>
     </tbody>
   </table></div>
-  <h3>Frecuencia por movimiento</h3>
-  <p class="lead">C y D no sacrifican nada de A y B: trabajan los mismos movimientos con otra variante y otra orientación. Todo se entrena 2 veces por semana.</p>
-  <div class="tbl"><table>
-    <thead><tr><th>Movimiento</th><th>Fuerza general</th><th>Aplicado al judo</th><th>Por semana</th></tr></thead>
+
+  <h3>7 · Cada movimiento, 2 veces por semana</h3>
+  <p class="lead">Ningún movimiento se pierde: lo que hacés el día de fuerza, lo repetís el día de judo con otra variante. Dos veces por semana es lo óptimo para crecer en fuerza y masa; más que eso, con judo todas las noches, te pasás de cansancio.</p>
+  <div class="tbl"><table class="freq">
+    <thead>
+      <tr><th colspan="4" class="grp">Piernas</th></tr>
+      <tr><th>Movimiento</th><th>A · Lunes (fuerza)</th><th>C · Jueves (judo)</th><th>Para qué te sirve en el tatami</th></tr>
+    </thead>
     <tbody>
-      <tr><td>Sentadilla</td><td>A · sentadilla trasera</td><td>C · frontal o contraste con saltos</td><td><b>2</b></td></tr>
-      <tr><td>Una pierna</td><td>A · sentadilla búlgara</td><td>C · step-up pesado + saltos a una pierna</td><td><b>2</b></td></tr>
-      <tr><td>Bisagra de cadera</td><td>A · peso muerto rumano</td><td>C · peso muerto hexagonal</td><td><b>2</b></td></tr>
-      <tr><td>Femoral</td><td>A · curl nórdico</td><td>C · curl nórdico</td><td><b>2</b></td></tr>
-      <tr><td>Pantorrilla</td><td>A</td><td>C</td><td><b>2</b></td></tr>
-      <tr><td>Potencia de piernas</td><td>A · cargada de potencia</td><td>C · saltos, contraste, giro de cadera</td><td><b>2</b> + sprints</td></tr>
-      <tr><td>Tirón vertical</td><td>B · dominadas con lastre</td><td>D · dominadas en judogi</td><td><b>2</b></td></tr>
-      <tr><td>Remo</td><td>B · remo con barra y mancuerna</td><td>D · remo con pecho apoyado + kuzushi con banda</td><td><b>2</b></td></tr>
-      <tr><td>Empuje horizontal</td><td>B · press de banca</td><td>D · press inclinado y fondos</td><td><b>2</b></td></tr>
-      <tr><td>Empuje vertical</td><td>B · press militar</td><td>D · press landmine a un brazo</td><td><b>2</b></td></tr>
-      <tr><td>Agarre</td><td>B · colgarse de toalla o judogi</td><td>D · soga, judogi, granjero</td><td><b>2</b> + judo</td></tr>
-      <tr><td>Cuello</td><td>B</td><td>D</td><td><b>2</b></td></tr>
-      <tr><td>Core</td><td>A · dead bug + plancha RKC</td><td>C · giro de cadera + uchikomi</td><td><b>2</b></td></tr>
+      <tr><td><b>Potencia</b></td><td>Cargada de potencia</td><td>Contraste, saltos al cajón</td><td>La explosión de la entrada.</td></tr>
+      <tr><td><b>Sentadilla</b></td><td>Sentadilla trasera</td><td>Sentadilla frontal o contraste</td><td>Levantar al rival y tener base firme.</td></tr>
+      <tr><td><b>Una pierna</b></td><td>Sentadilla búlgara</td><td>Step-up pesado + saltos a una pierna</td><td>La pierna de apoyo en uchi-mata, harai-goshi, o-uchi.</td></tr>
+      <tr><td><b>Cadera y glúteo</b></td><td>Peso muerto rumano</td><td>Peso muerto hexagonal + hip thrust</td><td>Arrancar al rival del piso y terminar la proyección. Los glúteos fuertes corrigen la pelvis.</td></tr>
+      <tr><td><b>Femoral</b></td><td>Curl nórdico</td><td>Curl nórdico</td><td>Evita desgarros en sprints y entradas explosivas.</td></tr>
+      <tr><td><b>Pantorrilla y tibial</b></td><td>Pantorrilla + tibial</td><td>Pantorrilla</td><td>Tobillos firmes para barridas y apoyo en puntas.</td></tr>
+      <tr><td><b>Core</b></td><td>Dead bug + plancha RKC</td><td>Lanzamiento con giro + uchikomi</td><td>Pasar la fuerza de las piernas a los brazos. El dead bug evita arquear la espalda.</td></tr>
     </tbody>
   </table></div>
-  <p class="lead">El uchikomi con banda elástica es un clásico del judo japonés. Atás la banda a un poste o al rack, agarrás las puntas como manga y solapa y hacés la entrada completa de tu técnica a máxima velocidad: tsukuri, giro y apoyo. Usá tu técnica principal y alterná lados.</p>
+  <div class="tbl"><table class="freq">
+    <thead>
+      <tr><th colspan="4" class="grp">Tren superior</th></tr>
+      <tr><th>Movimiento</th><th>B · Martes (fuerza)</th><th>D · Viernes (judo)</th><th>Para qué te sirve en el tatami</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><b>Tirón vertical</b></td><td>Dominadas con lastre</td><td>Dominadas agarrado del judogi</td><td>Traer al rival hacia vos y ganar el agarre.</td></tr>
+      <tr><td><b>Remo</b></td><td>Remo con barra + remo con mancuerna</td><td>Remo con pecho apoyado + tirón de kuzushi con banda</td><td>Kuzushi: romper la postura del rival.</td></tr>
+      <tr><td><b>Empuje horizontal</b></td><td>Press de banca</td><td>Press inclinado + fondos</td><td>Mantener la distancia y frenar al rival.</td></tr>
+      <tr><td><b>Empuje vertical</b></td><td>Press militar de pie</td><td>Press landmine a un brazo</td><td>Despegar al rival; un brazo, como en el kumikata real.</td></tr>
+      <tr><td><b>Agarre</b></td><td>Colgarse de toalla o judogi</td><td>Trepar soga + paseo del granjero</td><td>Sostener el agarre 4 minutos. También se entrena en judo.</td></tr>
+      <tr><td><b>Cuello</b></td><td>Cuello con disco o banda</td><td>Cuello (en superserie con face pulls)</td><td>Protege en caídas y en puente.</td></tr>
+    </tbody>
+  </table></div>
+
+  <div class="panel cue">
+    <h3>Uchikomi con banda elástica</h3>
+    <p>Es un clásico del judo japonés. Atás una banda elástica fuerte a un poste o al rack, a la altura del pecho. Agarrás las dos puntas como si fueran manga y solapa, y hacés la entrada completa de tu técnica a máxima velocidad: tirón (kuzushi), giro y apoyo (tsukuri), y volvés. Usá tu técnica principal y alterná lados. Calidad antes que cantidad: cada entrada tiene que ser la que harías en un combate.</p>
+  </div>
 </section>
 
 <section>
@@ -233,18 +314,76 @@ footer{color:var(--muted);font-size:.85rem}
   </div>
 </section>
 
-<section>
-  <h2>Sprints de 20 segundos</h2>
-  <p class="lead">Primero 10 min de trote suave + técnica de carrera (skipping, talones a la cola, zancadas). Después 4 aceleraciones de 20 m con 1 min de pausa. Después el bloque principal según la etapa. Al final, estiramiento.</p>
-  <div class="tbl"><table>
-    <thead><tr><th>Etapa</th><th>Bloque principal</th><th>Dónde</th></tr></thead>
-    <tbody>
-      <tr><td><b>Semanas 1–4</b></td><td>6 × 20 s a fondo · 2:30 de pausa</td><td>Pista o pasto</td></tr>
-      <tr><td><b>Semanas 5–10</b></td><td>8 × 20 s · 2:00 de pausa</td><td>Pista, pasto o playa</td></tr>
-      <tr><td><b>Semanas 11–16</b></td><td>10 × 20 s · 1:30 de pausa</td><td>Cualquiera</td></tr>
-      <tr><td><b>Antes de competir</b></td><td>3 bloques de 6 × (20 s a fondo / 10–20 s de pausa) · 4 min entre bloques</td><td>Imita el ritmo de un combate</td></tr>
-    </tbody>
-  </table></div>
+<section id="sprints">
+  <h2>Sprints</h2>
+  <p class="lead">Dos sesiones distintas, cada una con un objetivo. El miércoles es <b>velocidad pura</b>: distancias cortas, frescura total, para la explosión. El sábado es <b>a fondo</b>: esfuerzos de 20–30 segundos al 100%, que es el estímulo que más dispara la hormona de crecimiento y la testosterona. Las dos tienen la misma regla: pocas repeticiones, todas al máximo, pausa completa.</p>
+
+  <div class="panel cue">
+    <h3>Por qué cambié el plan anterior</h3>
+    <p>Antes eran hasta 10 × 20 s con 1:30 de pausa. Eso es resistencia, no explosividad: con pausas cortas, las últimas repeticiones salen al 70–80% y suben más el cortisol (la hormona del estrés) que la de crecimiento. Además te quema calorías que necesitás para subir de peso, y la resistencia ya la entrena el judo de la noche.</p>
+    <p>Para hormonas y potencia lo que funciona es <b>intensidad máxima, poco volumen y pausa larga</b>. Después de 4–6 esfuerzos a fondo, la subida hormonal ya no aumenta: más series solo suman cansancio.</p>
+  </div>
+
+  <h3>Calentamiento (los dos días)</h3>
+  <ol class="steps">
+    <li><b>8–10 min</b> de trote suave.</li>
+    <li><b>Técnica de carrera</b>, 2 pasadas de 20 m de cada una: skipping, talones a la cola, zancadas, saltos con rodilla arriba.</li>
+    <li><b>3 pasadas progresivas</b> de 40 m al 60%, 80% y 90%, caminando de vuelta.</li>
+  </ol>
+
+  <div class="two">
+    <div class="panel">
+      <h3>S1 · Miércoles · Velocidad</h3>
+      <p class="lead">Objetivo: explosión y aceleración. Superficie firme (pista o pasto) y una subida si tenés.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Etapa</th><th>Qué hacés</th><th>Pausa</th></tr></thead>
+        <tbody>
+          <tr><td><b>Sem. 1–4</b></td><td>6 × 20 m arrancando parado<br>+ 4 × 10 s en subida</td><td class="num">2 min</td></tr>
+          <tr><td><b>Sem. 5–10</b></td><td>8 × 30 m<br>+ 4 × 10 s en subida</td><td class="num">2–3 min</td></tr>
+          <tr><td><b>Sem. 11–16</b></td><td>4 × 20 m arrastrando peso (trineo o compañero con banda)<br>+ 4 × 30 m libre</td><td class="num">3 min</td></tr>
+          <tr><td><b>Pre-comp.</b></td><td>5 × 20 m, nada más</td><td class="num">2 min</td></tr>
+        </tbody>
+      </table></div>
+      <p class="lead">Arrancá desde distintas posiciones para variar: parado, de rodillas, acostado boca abajo. Como en el judo, reaccionar desde cualquier posición.</p>
+    </div>
+    <div class="panel">
+      <h3>S2 · Sábado · A fondo</h3>
+      <p class="lead">Objetivo: el pico hormonal y la potencia sostenida. Ideal en la arena de la playa o en subida: más esfuerzo con menos impacto.</p>
+      <div class="tbl"><table>
+        <thead><tr><th>Etapa</th><th>Qué hacés</th><th>Pausa</th></tr></thead>
+        <tbody>
+          <tr><td><b>Sem. 1–4</b></td><td>4 × 20 s al 100%</td><td class="num">4 min</td></tr>
+          <tr><td><b>Sem. 5–10</b></td><td>5 × 25 s al 100%</td><td class="num">4 min</td></tr>
+          <tr><td><b>Sem. 11–16</b></td><td>6 × 30 s al 100%</td><td class="num">4 min</td></tr>
+          <tr><td><b>Pre-comp.</b></td><td>Formato de combate: 3 bloques de 6 × (20 s a fondo / 10 s de pausa), 4 min entre bloques. Última vez 7 días antes de competir.</td><td class="num">—</td></tr>
+        </tbody>
+      </table></div>
+      <p class="lead">Si llueve: bicicleta de aire (assault bike) o remo, mismo esquema. Si el sábado hay randori fuerte, el randori reemplaza los sprints.</p>
+    </div>
+  </div>
+
+  <div class="two">
+    <div class="panel">
+      <h3>Reglas</h3>
+      <ul class="rules">
+        <li><b>100% es 100%.</b> Un sprint al 85% no sirve ni para potencia ni para hormonas. Si no podés ir a fondo ese día, mejor no hagas la sesión.</li>
+        <li><b>Pausa completa caminando,</b> no trotando. Tenés que llegar a cada repetición recuperado.</li>
+        <li><b>Si te sentís claramente más lento,</b> cortá ahí aunque falten repeticiones.</li>
+        <li><b>Sin azúcar en la hora previa</b> (jugo, miel, dulces). El azúcar alto en sangre frena la subida de la hormona de crecimiento. Fruta entera o huevos y leche más temprano está bien.</li>
+        <li><b>Después:</b> comida con proteína y carbohidratos dentro de la hora.</li>
+        <li><b>Al final:</b> estiramiento de flexores de cadera, isquiotibiales y pantorrilla (~6 min).</li>
+      </ul>
+    </div>
+    <div class="panel cue">
+      <h3>Hormonas: lo que de verdad pesa</h3>
+      <p>Un sprint de 20–30 s a fondo multiplica la hormona de crecimiento durante 1–2 horas, y la testosterona sube un poco. Suma, pero el nivel que tenés todos los días depende de esto, en este orden:</p>
+      <p><b>1. Dormir 8–9 horas.</b> La mayor parte de la hormona de crecimiento del día se libera durmiendo. Una semana durmiendo 5–6 h baja la testosterona de forma medible.</p>
+      <p><b>2. Comer suficiente.</b> Comer de menos y tener muy poca grasa baja la testosterona. Por eso el superávit no es negociable.</p>
+      <p><b>3. Levantar pesado</b> con piernas y movimientos grandes, como en A y C.</p>
+      <p><b>4. No sobreentrenar.</b> Mucho volumen sin descanso sube el cortisol y baja todo lo demás.</p>
+      <p><b>5. Sol, carne roja, huevos y lácteos:</b> vitamina D, zinc y grasas que el cuerpo usa para fabricar hormonas.</p>
+    </div>
+  </div>
 </section>
 
 <section id="estiramiento">
@@ -460,13 +599,14 @@ footer{color:var(--muted);font-size:.85rem}
   </ul>
 </section>
 
-<footer>Actualizado el 7 de noviembre de 2026. Revisalo cada 4 semanas según cómo vaya el peso y la fuerza.</footer>
+<footer>Actualizado el 8 de noviembre de 2026. Revisalo cada 4 semanas según cómo vaya el peso y la fuerza.</footer>
 </div>
 
 <script>
 const W="Calentamiento dinámico · 12–15 min";
 const SS={A:"Estiramiento · piernas y cadera (~10 min)",B:"Estiramiento · tren superior (~8 min)",C:"Estiramiento · piernas y cadera (~10 min)",D:"Estiramiento · tren superior (~8 min)"};
-const T={A:"Fuerza máxima, piernas",B:"Fuerza máxima, tren superior",C:"Potencia de judo: cadera y piernas",D:"Tirón, agarre y volumen"};
+const T={A:"Piernas · fuerza",B:"Tren superior · fuerza",C:"Piernas · judo",D:"Tren superior · judo"};
+const SUB={A:"Barra pesada",B:"Barra pesada",C:"Potencia, cadera y entradas",D:"Agarre, kuzushi y masa"};
 const DAY={A:"Lunes",B:"Martes",C:"Jueves",D:"Viernes"};
 const blocks=[
  {id:"b1",name:"Bloque 1",weeks:"Semanas 1–4",title:"Base y técnica",
@@ -603,7 +743,7 @@ function render(id){
   [...tabs.children].forEach(t=>t.setAttribute("aria-selected",t.dataset.id===b.id));
   intro.innerHTML=`<h3>${esc(b.title)} · ${esc(b.weeks)}</h3><p>${esc(b.intro)}</p>`;
   wrap.innerHTML=Object.keys(b.s).map(l=>`<article class="card${l==="C"||l==="D"?" spec":""}">
-    <div class="card-h"><div class="letter">${l}</div><div><h3>${esc(T[l])}</h3><span>${DAY[l]}</span></div></div>
+    <div class="card-h"><div class="letter">${l}</div><div><h3>${esc(T[l])}</h3><span>${DAY[l]} · ${SUB[l]}</span></div></div>
     <div class="phase">${W}</div>
     <ol class="ex">${b.s[l].map(e=>`<li class="${e[3]?"key":""}"><span class="n">${esc(e[0])}</span><span class="rx">${esc(e[1])}</span>${e[2]?`<span class="note">${esc(e[2])}</span>`:""}</li>`).join("")}</ol>
     <div class="phase str">${SS[l]}</div></article>`).join("");
