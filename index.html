@@ -76,8 +76,8 @@ ol.ex li:first-child{border-top:0}
 .ex .note{grid-column:1/-1;font-size:.85rem;color:var(--muted);line-height:1.4}
 .ex li.key .n::after{content:"PRINCIPAL";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--aka);background:var(--aka-soft);padding:3px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
 .ex li.rfd .n::after,.ex li.plio .n::after{content:"RFD";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--indigo);background:var(--indigo-soft);padding:3px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
-.ex li.plio .n::after{content:"PLIOMETRÍA"}
-.ex li.iso .n::after{content:"ISOMETRÍA";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:2px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
+.ex li.plio .n::after{content:"SALTOS"}
+.ex li.prev .n::after{content:"PREVENCIÓN";font:600 .65rem/1 var(--display);letter-spacing:.1em;color:var(--muted);background:var(--bg);border:1px solid var(--line);padding:2px 5px;border-radius:3px;margin-left:8px;vertical-align:2px}
 
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
 @media (max-width:760px){.two{grid-template-columns:1fr}}
@@ -118,7 +118,7 @@ footer{color:var(--muted);font-size:.85rem}
 <header>
   <div class="eyebrow">Judo · categoría -73 kg</div>
   <h1>Plan -73 kg</h1>
-  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. 4 días de gimnasio: dos de piernas y dos de tren superior. El primero de cada par construye fuerza con barra; el segundo la convierte en judo.</p>
+  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. 4 días de gimnasio: dos de piernas y dos de tren superior. Pocos ejercicios, pesados y bien hechos, con un bloque corto de prevención de lesiones al final.</p>
   <div class="stats">
     <div class="stat"><b>65 kg</b><span>hoy, en ayunas</span></div>
     <div class="stat"><b>75–76 kg</b><span>peso caminando (meta)</span></div>
@@ -130,18 +130,18 @@ footer{color:var(--muted);font-size:.85rem}
 <section>
   <h2>Semana tipo</h2>
   <div class="week">
-    <div class="day"><div class="d">Lun</div><div class="s">A</div><div class="t"><b>Piernas · fuerza</b><br>Barra pesada</div></div>
-    <div class="day"><div class="d">Mar</div><div class="s">B</div><div class="t"><b>Tren superior · fuerza</b><br>Barra pesada</div></div>
+    <div class="day"><div class="d">Lun</div><div class="s">A</div><div class="t"><b>Piernas 1</b><br>Sentadilla libre</div></div>
+    <div class="day"><div class="d">Mar</div><div class="s">B</div><div class="t"><b>Tren superior 1</b><br>Banca y lastre</div></div>
     <div class="day sprint"><div class="d">Mié</div><div class="s">S1</div><div class="t"><b>Sprints de velocidad</b><br>+ movilidad</div></div>
-    <div class="day"><div class="d">Jue</div><div class="s">C</div><div class="t"><b>Piernas · judo</b><br>Potencia y entradas</div></div>
-    <div class="day"><div class="d">Vie</div><div class="s">D</div><div class="t"><b>Tren superior · judo</b><br>Agarre y kuzushi</div></div>
+    <div class="day"><div class="d">Jue</div><div class="s">C</div><div class="t"><b>Piernas 2</b><br>Hack y prevención</div></div>
+    <div class="day"><div class="d">Vie</div><div class="s">D</div><div class="t"><b>Tren superior 2</b><br>Inclinado y agarre</div></div>
     <div class="day sprint"><div class="d">Sáb</div><div class="s">S2</div><div class="t"><b>Sprints a fondo</b><br>(o randori fuerte)</div></div>
     <div class="day off"><div class="d">Dom</div><div class="s">—</div><div class="t">Descanso + estiramiento largo</div></div>
   </div>
   <ul class="rules">
     <li>Gimnasio a la mañana y judo a la noche el mismo día está bien: mejor días duros y días livianos que todos los días a medias.</li>
     <li>Nada de sprints ni piernas pesadas en las 24 horas antes de un randori fuerte o una competencia.</li>
-    <li>Descarga cada 4ª o 5ª semana: mismos pesos, una serie menos en cada ejercicio. También la semana de cada competencia.</li>
+    <li>Descarga cada 5ª o 6ª semana: mismos pesos, una serie menos en cada ejercicio. También la semana de cada competencia.</li>
   </ul>
 </section>
 
@@ -153,63 +153,57 @@ footer{color:var(--muted);font-size:.85rem}
   <div class="tbl"><table class="stack gloss">
     <thead><tr><th>Lo que ves</th><th>Qué significa</th></tr></thead>
     <tbody>
-      <tr><td class="num" data-label="Lo que ves"><b>3×6</b></td><td data-label="Qué significa">3 series de 6 repeticiones. Hacés 6, descansás, otras 6, y así hasta completar 3 veces. Mismo peso en todas, salvo que diga otra cosa.</td></tr>
-      <tr><td class="num" data-label="Lo que ves"><b>2×8–10</b></td><td data-label="Qué significa">2 series de entre 8 y 10. Elegís un peso con el que llegues a 8; cuando logres 10 en las 2 series, subís el peso (ver punto 5).</td></tr>
-      <tr><td class="num" data-label="Lo que ves"><b>3×5 → 3×4</b></td><td data-label="Qué significa">Empezás el bloque con 3×5 y desde la semana indicada pasás a 3×4 con más peso.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>3×3</b></td><td data-label="Qué significa">3 series de 3 repeticiones. Hacés 3, descansás, otras 3, y así hasta completar 3 veces.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>3×5–8</b></td><td data-label="Qué significa">3 series de entre 5 y 8 repeticiones, con el mismo peso. Elegís un peso con el que llegues a 5. Cuando logres 8 en las 3 series, subís el peso y volvés a 5 (ver punto 5).</td></tr>
       <tr><td class="num" data-label="Lo que ves"><b>3×máx</b></td><td data-label="Qué significa">Todas las repeticiones (o segundos) que puedas con técnica limpia. Anotá el número y la próxima tratá de superarlo.</td></tr>
-      <tr><td class="num" data-label="Lo que ves"><b>3×20 s</b></td><td data-label="Qué significa">3 series de 20 segundos.</td></tr>
-      <tr><td data-label="Lo que ves"><b>Por pierna / por lado / por brazo</b></td><td data-label="Qué significa">El número es para cada lado. 3×8 por pierna = 8 con la derecha, 8 con la izquierda, eso es 1 serie.</td></tr>
-      <tr><td data-label="Lo que ves"><b>RPE</b></td><td data-label="Qué significa">Qué tan dura fue la serie, del 1 al 10. Se mide por cuántas repeticiones te quedaban "en el tanque" (tabla de abajo).</td></tr>
-      <tr><td data-label="Lo que ves"><b>RPE 7 · 8 · 9</b></td><td data-label="Qué significa">Una serie a cada RPE: la primera exigente, la segunda dura y la tercera muy dura, con 1 repetición en el tanque. Subís el peso entre series o hacés más repeticiones con el mismo.</td></tr>
-      <tr><td data-label="Lo que ves"><b>RFD</b></td><td data-label="Qué significa">Rate of force development: producir fuerza lo más rápido posible. Cargadas, lanzamientos de balón, kuzushi y uchikomi con banda. Cada repetición al 100% de velocidad, siempre fresco.</td></tr>
-      <tr><td data-label="Lo que ves"><b>PLIOMETRÍA</b></td><td data-label="Qué significa">Saltos y rebotes que usan el efecto resorte del músculo: se estira y enseguida se contrae, con el menor tiempo posible en el piso. Saltos al cajón, a una pierna, en profundidad y flexiones con aplauso.</td></tr>
-      <tr><td data-label="Lo que ves"><b>ISOMETRÍA</b></td><td data-label="Qué significa">Aguantar una posición con carga pesada sin moverte, 30–45 s. Es para los tendones de rodilla y tobillo. Va siempre al final de la sesión.</td></tr>
-      <tr><td data-label="Lo que ves"><b>80%</b></td><td data-label="Qué significa">80% de lo máximo que levantás para 1 repetición. Si tu máximo en sentadilla es 120 kg, el 80% es 96 kg.</td></tr>
-      <tr><td data-label="Lo que ves"><b>Superserie</b></td><td data-label="Qué significa">Dos ejercicios seguidos sin pausa entre ellos (por ejemplo curl nórdico y enseguida pantorrilla). Descansás al terminar los dos.</td></tr>
-      <tr><td data-label="Lo que ves"><b>Contraste</b></td><td data-label="Qué significa">Un ejercicio pesado y enseguida uno explosivo del mismo movimiento (3 sentadillas pesadas → 3 saltos). El pesado "despierta" al sistema nervioso y el salto sale más potente. Es de las herramientas más efectivas para potencia.</td></tr>
-      <tr><td data-label="Lo que ves"><b>Lastre</b></td><td data-label="Qué significa">Peso extra colgado del cinturón o en una mochila (dominadas y fondos).</td></tr>
-      <tr><td data-label="Lo que ves"><b>PRINCIPAL</b></td><td data-label="Qué significa">El ejercicio más importante del día. En tren superior hay dos (un empuje y un tirón) porque son músculos distintos. Va con la mejor energía y es el que más cuidás en la progresión.</td></tr>
-      <tr><td data-label="Lo que ves"><b>Descarga</b></td><td data-label="Qué significa">Semana con los mismos pesos pero una serie menos en cada ejercicio (principales 2, accesorios 1). No es "semana libre": es cuando el cuerpo asimila lo entrenado y te hacés más fuerte.</td></tr>
+      <tr><td class="num" data-label="Lo que ves"><b>2×20–30 s</b></td><td data-label="Qué significa">2 series aguantando la posición entre 20 y 30 segundos.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Por pierna / por lado / por brazo</b></td><td data-label="Qué significa">El número es para cada lado. 2×8 por pierna = 8 con la derecha y 8 con la izquierda; eso es 1 serie.</td></tr>
+      <tr><td data-label="Lo que ves"><b>En el tanque</b></td><td data-label="Qué significa">Las repeticiones que te quedaban antes de fallar. "2 en el tanque" = cortás la serie cuando sentís que podrías hacer 2 más, no 3 ni 1.</td></tr>
+      <tr><td data-label="Lo que ves"><b>PRINCIPAL</b></td><td data-label="Qué significa">El ejercicio más importante del día. En tren superior hay dos, un empuje y un tirón. Va con la mejor energía y es el que más cuidás en la progresión.</td></tr>
+      <tr><td data-label="Lo que ves"><b>SALTOS</b></td><td data-label="Qué significa">El trabajo de potencia. Va primero, con las piernas frescas, y cada salto es al 100%. No cansa: son 5 minutos.</td></tr>
+      <tr><td data-label="Lo que ves"><b>PREVENCIÓN</b></td><td data-label="Qué significa">Ejercicios cortos y livianos que protegen una zona que el judo castiga: rodilla, ingle, hombro, cuello. Van al final para no quitarle fuerza a las pesas.</td></tr>
+      <tr><td data-label="Lo que ves"><b>Lastre</b></td><td data-label="Qué significa">Peso extra colgado del cinturón o una mancuerna entre los pies (dominadas).</td></tr>
+      <tr><td data-label="Lo que ves"><b>Descarga</b></td><td data-label="Qué significa">Semana con los mismos pesos pero una serie menos en cada ejercicio. No es "semana libre": es cuando el cuerpo asimila lo entrenado y te hacés más fuerte.</td></tr>
     </tbody>
   </table></div>
 
   <div class="two">
     <div class="panel">
-      <h3>La escala RPE</h3>
+      <h3>Qué tan dura es cada serie</h3>
       <div class="tbl"><table>
-        <thead><tr><th>RPE</th><th>Te quedaban…</th><th>Cómo se siente</th></tr></thead>
+        <thead><tr><th>En el tanque</th><th>Cómo se siente</th><th>Cuándo</th></tr></thead>
         <tbody>
-          <tr><td><b>6</b></td><td>4 repeticiones</td><td>Firme pero cómodo. La barra vuela.</td></tr>
-          <tr><td><b>7</b></td><td>3 repeticiones</td><td>Exigente, todo rápido y limpio.</td></tr>
-          <tr><td><b>8</b></td><td>2 repeticiones</td><td>Duro. La última sale un poco más lenta.</td></tr>
-          <tr><td><b>9</b></td><td>1 repetición</td><td>Muy duro. La última serie de cada ejercicio.</td></tr>
-          <tr><td><b>10</b></td><td>Nada</td><td>Fallo. <b>Nunca</b> en este plan.</td></tr>
+          <tr><td><b>3</b></td><td>Exigente, todo rápido y limpio.</td><td>Semana de vuelta y descarga.</td></tr>
+          <tr><td><b>2</b></td><td>Duro. La última sale un poco más lenta.</td><td>Las primeras series de cada ejercicio.</td></tr>
+          <tr><td><b>1</b></td><td>Muy duro. La última sale lenta pero limpia.</td><td>La última serie de cada ejercicio.</td></tr>
+          <tr><td><b>0</b></td><td>Fallo: no sale otra.</td><td>Solo en la última serie de máquinas y poleas chicas.</td></tr>
         </tbody>
       </table></div>
     </div>
     <div class="panel cue">
-      <h3>Pocas series, casi al fallo, nunca al fallo</h3>
-      <p><b>Principales:</b> 3 series subiendo el esfuerzo, RPE 7 · 8 · 9. <b>Accesorios:</b> 2 series, la primera a RPE 8 y la segunda a RPE 9 (las laterales, 3). <b>RFD y pliometría:</b> 3 series de pocas repeticiones, siempre frescas, nunca cansado. <b>Isometría:</b> 3–4 sostenes de 30–45 s, al final.</p>
+      <h3>Pocas series, duras</h3>
+      <p><b>La regla:</b> 2 ejercicios por músculo en cada sesión, 2–3 series cada uno, cada músculo 2 veces por semana.</p>
       <p>Las series que terminan a 1–2 repeticiones del fallo son las que más hacen crecer. Por eso alcanzan pocas: máxima frecuencia, mínimo cansancio.</p>
-      <p>El fallo (RPE 10) sí queda afuera: cansa el sistema nervioso durante días y te roba velocidad para el judo de la noche.</p>
+      <p><b>Al fallo solo en lo chico:</b> laterales, curl, tríceps, extensión de cuádriceps, abductora y aductora, y solo en la última serie. Ahí el fallo casi no cansa.</p>
+      <p><b>Nunca al fallo</b> en sentadilla, hack, rumano, banca ni dominadas: cansa el sistema nervioso durante días y te roba velocidad para el judo de la noche.</p>
     </div>
   </div>
 
   <h3>2 · Cómo se hace cada repetición</h3>
   <div class="tempo">
-    <div><span class="lead">Bajada</span><b>2–3 s controlada</b><span>Contás "mil uno, mil dos" mientras baja la barra, con todo el cuerpo apretado. Sin rebotar abajo. Protege articulaciones y genera tensión, que es lo que hace crecer el músculo.</span></div>
-    <div><span class="lead">Subida</span><b>Máxima velocidad</b><span>Siempre intentás mover la barra lo más rápido posible, aunque sea pesada y se mueva lento. La <i>intención</i> de velocidad es lo que entrena las fibras rápidas: la explosividad del judo.</span></div>
-    <div><span class="lead">Cuándo cortar</span><b>Si se frena</b><span>Si una repetición sale claramente más lenta que las anteriores o se rompe la técnica, esa es la última de la serie, aunque falten repeticiones. Anotalo.</span></div>
+    <div><span class="lead">Bajada</span><b>2–3 s controlada</b><span>Contás "mil uno, mil dos" mientras baja el peso, con todo el cuerpo apretado. Sin rebotar abajo. Protege articulaciones y genera tensión, que es lo que hace crecer el músculo.</span></div>
+    <div><span class="lead">Recorrido</span><b>Completo, bien estirado</b><span>Bajás hasta donde el músculo queda estirado del todo. Esa parte de abajo es la que más hace crecer y la que más rango te da para el judo. Medias repeticiones con más peso rinden menos.</span></div>
+    <div><span class="lead">Subida</span><b>Máxima velocidad</b><span>Siempre intentás mover el peso lo más rápido posible, aunque sea pesado y se mueva lento. La <i>intención</i> de velocidad es lo que entrena las fibras rápidas: la explosividad del judo.</span></div>
   </div>
-  <p class="lead"><b>Excepción:</b> en cargadas, saltos, lanzamientos de balón y uchikomi no hay bajada controlada. Soltás o caés, te reacomodás 2–3 segundos y repetís. Cada repetición es un intento aislado al 100%.</p>
+  <p class="lead"><b>Excepción:</b> en los saltos no hay bajada controlada. Caés suave, te reacomodás 2–3 segundos y repetís. Cada salto es un intento aislado al 100%.</p>
 
   <h3>3 · El orden de cada sesión (y por qué)</h3>
   <ol class="steps">
     <li><b>Calentamiento dinámico, 12–15 min.</b> Sube la temperatura del músculo y prepara las articulaciones. A la mañana es más largo porque el cuerpo está más rígido.</li>
-    <li><b>Lo explosivo primero</b>, todo lo marcado RFD o PLIOMETRÍA. La potencia depende de un sistema nervioso fresco; si la hacés cansado, entrenás ser lento.</li>
-    <li><b>El ejercicio PRINCIPAL.</b> Con la mejor energía que te queda. Es el que más mueve tu fuerza.</li>
-    <li><b>Accesorios.</b> Construyen masa y tapan puntos débiles (femoral, glúteo, agarre, cuello). Más repeticiones, menos descanso.</li>
-    <li><b>Isometría para tendones</b>, lo marcado ISOMETRÍA. Al final, nunca antes de saltos o sprints: un tendón cansado rebota peor y se lesiona más fácil.</li>
+    <li><b>Saltos</b> (solo en días de piernas). La potencia depende de piernas frescas. Si saltás cansado entrenás ser lento, y cansado es cuando la rodilla se va hacia adentro.</li>
+    <li><b>Los ejercicios PRINCIPALES.</b> Con la mejor energía. Son los que más mueven tu fuerza.</li>
+    <li><b>El resto de las pesas,</b> en el orden en que están escritas: primero lo grande, después máquinas y poleas.</li>
+    <li><b>PREVENCIÓN.</b> Al final, 5–8 minutos. Es liviano, así que no importa llegar cansado, y no le saca nada a lo anterior.</li>
     <li><b>Estiramiento, 8–10 min.</b> Al final, nunca antes de levantar pesado: estirar fuerte antes te quita fuerza.</li>
   </ol>
 
@@ -217,91 +211,89 @@ footer{color:var(--muted);font-size:.85rem}
     <div class="panel">
       <h3>4 · Descansos entre series</h3>
       <div class="tbl"><table><tbody>
-        <tr><td>RFD y pliometría</td><td><b>2–3 min</b>. Si descansás menos, la siguiente repetición sale más lenta y deja de ser potencia.</td></tr>
-        <tr><td>Ejercicio principal</td><td><b>2–3 min</b>, y <b>3–4 min</b> en el bloque 3, donde el peso es más alto.</td></tr>
-        <tr><td>Accesorios</td><td><b>60–90 s</b>.</td></tr>
-        <tr><td>Superseries</td><td>Sin pausa entre los dos ejercicios, <b>60–90 s</b> al terminar la ronda.</td></tr>
-        <tr><td>Isometría</td><td><b>1–2 min</b> entre sostenes.</td></tr>
+        <tr><td>Saltos</td><td><b>1–2 min</b>. Si descansás menos, el siguiente sale más bajo y deja de ser potencia.</td></tr>
+        <tr><td>Principales y rumano</td><td><b>2–3 min</b>.</td></tr>
+        <tr><td>El resto de las pesas</td><td><b>1,5–2 min</b>.</td></tr>
+        <tr><td>Prevención</td><td><b>45–60 s</b>.</td></tr>
       </tbody></table></div>
-      <p class="lead">Usá el cronómetro del celular. Descansar de menos es el error más común. Cada sesión dura unos 60–75 min en total.</p>
+      <p class="lead">Usá el cronómetro del celular. Descansar de menos es el error más común: te hace levantar menos peso y crecés menos. Cada sesión dura unos 60–75 min en total.</p>
     </div>
     <div class="panel">
       <h3>5 · Cómo subir los pesos</h3>
       <ul class="rules">
-        <li><b>Primera semana:</b> empezá con los pesos sugeridos o más liviano. Es mejor quedarte corto y subir rápido que empezar pasado.</li>
-        <li><b>Ejercicios principales:</b> si la tercera serie salió a RPE 9 o menos y con buena técnica, la semana siguiente subís 2,5 kg (tren superior) o 5 kg (piernas).</li>
-        <li><b>Accesorios con rango</b> (2×8–10): cuando llegás a 10 en las 2 series, subís el peso y volvés a 8. Se llama doble progresión.</li>
-        <li><b>Anotá todo:</b> fecha, ejercicio, peso, series y repeticiones. Sin registro no sabés si progresás.</li>
+        <li><b>Una sola regla para todo:</b> cuando llegás al tope del rango en todas las series (por ejemplo 8, 8 y 8 en un 3×5–8), la próxima vez subís el peso y volvés al piso del rango.</li>
+        <li><b>Cuánto subir:</b> 5 kg en sentadilla, hack y rumano; 2,5 kg en banca y dominadas; el salto más chico que haya en mancuernas, máquinas y poleas.</li>
+        <li><b>Semana de vuelta</b> (después de 2 semanas o más sin gimnasio): 2 series por ejercicio y 3 en el tanque. Arrancar a fondo después de un parate es lo que más lesiona y lo que da calambres.</li>
+        <li><b>Anotá todo:</b> fecha, ejercicio, peso y repeticiones de cada serie. Sin registro no sabés si progresás.</li>
         <li><b>Día malo</b> (dormiste poco, judo muy duro): bajá un 10% y completá la sesión. Un día malo no arruina nada; saltearte sesiones sí.</li>
       </ul>
     </div>
   </div>
 
   <h3>6 · Los 4 días</h3>
-  <p class="lead">Dos días de piernas y dos de tren superior. <b>Los dos días de cada par son espejo:</b> la misma estructura, en el mismo orden y con los mismos patrones de movimiento. Lo que cambia es la variante. El primero (A, B) usa la versión de barra pesada para construir el motor. El segundo (C, D) usa la versión más parecida al combate: un pie, giro, agarre del judogi, tirón explosivo. Así ningún músculo ni cualidad queda con un solo día por semana.</p>
+  <p class="lead">Dos días de piernas y dos de tren superior. <b>Los dos días de cada par son casi iguales:</b> la misma estructura, en el mismo orden. Cambia la variante de algunos ejercicios, para que el músculo reciba dos estímulos distintos, y cambia el trabajo de prevención.</p>
   <div class="tbl"><table class="stack">
-    <thead><tr><th>Día</th><th>Nombre</th><th>Objetivo</th><th>Herramientas</th></tr></thead>
+    <thead><tr><th>Día</th><th>Nombre</th><th>Objetivo</th><th>Lo que lo distingue</th></tr></thead>
     <tbody>
-      <tr><td data-label="Día"><b>A</b><br>Lunes</td><td data-label="Nombre"><b>Piernas · fuerza</b></td><td data-label="Objetivo">Subir tus números en sentadilla. Piernas grandes y fuertes: hoy son tu punto débil.</td><td data-label="Herramientas">Cargada, saltos al cajón, sentadilla trasera, rumano, búlgara.</td></tr>
-      <tr><td data-label="Día"><b>B</b><br>Martes</td><td data-label="Nombre"><b>Tren superior · fuerza</b></td><td data-label="Objetivo">Subir dominadas y banca. Masa en espalda, pecho y hombros.</td><td data-label="Herramientas">Flexiones con aplauso, barra y lastre, 3–8 repeticiones.</td></tr>
-      <tr><td data-label="Día"><b>C</b><br>Jueves</td><td data-label="Nombre"><b>Piernas · judo</b></td><td data-label="Objetivo">Pasar la fuerza a las entradas: explosión, giro de cadera, apoyo en una pierna, levantar al rival.</td><td data-label="Herramientas">Lanzamientos con giro, saltos a una pierna, uchikomi con banda, hexagonal, sentadilla frontal, step-up.</td></tr>
-      <tr><td data-label="Día"><b>D</b><br>Viernes</td><td data-label="Nombre"><b>Tren superior · judo</b></td><td data-label="Objetivo">Kumikata y kuzushi: ganar el agarre, romper la postura del rival y aguantar 4 minutos tirando.</td><td data-label="Herramientas">Tirón de kuzushi con banda, dominadas en judogi, press inclinado, soga, curl con toalla.</td></tr>
+      <tr><td data-label="Día"><b>A</b><br>Lunes</td><td data-label="Nombre"><b>Piernas 1</b></td><td data-label="Objetivo">Piernas grandes y fuertes: hoy son tu punto débil.</td><td data-label="Lo que lo distingue">Sentadilla libre, búlgara, aductora.</td></tr>
+      <tr><td data-label="Día"><b>B</b><br>Martes</td><td data-label="Nombre"><b>Tren superior 1</b></td><td data-label="Objetivo">Subir banca y dominadas. Masa en pecho, espalda y hombros.</td><td data-label="Lo que lo distingue">Banca, dominadas con lastre, paseo del granjero.</td></tr>
+      <tr><td data-label="Día"><b>C</b><br>Jueves</td><td data-label="Nombre"><b>Piernas 2</b></td><td data-label="Objetivo">El mismo trabajo con menos carga sobre la espalda, más prevención de rodilla e ingle.</td><td data-label="Lo que lo distingue">Hack, extensión de cuádriceps, caídas a una pierna, Copenhague.</td></tr>
+      <tr><td data-label="Día"><b>D</b><br>Viernes</td><td data-label="Nombre"><b>Tren superior 2</b></td><td data-label="Objetivo">El mismo trabajo con las variantes más parecidas al judo: agarre de judogi y tirón de un brazo.</td><td data-label="Lo que lo distingue">Press inclinado, dominadas en judogi, remo a un brazo.</td></tr>
     </tbody>
   </table></div>
 
-  <h3>7 · Cada movimiento, 2 veces por semana</h3>
-  <p class="lead">Fila por fila, cada movimiento aparece una vez en cada día del par. Las etiquetas <b>RFD</b> y <b>PLIOMETRÍA</b> marcan el trabajo explosivo, que siempre va primero. <b>ISOMETRÍA</b> marca el trabajo de tendones, que siempre va al final.</p>
+  <h3>7 · Los dos días de cada par, lado a lado</h3>
+  <p class="lead">Fila por fila, cada movimiento aparece una vez en cada día del par.</p>
   <div class="tbl"><table class="freq stack">
     <thead>
       <tr><th colspan="4" class="grp">Piernas</th></tr>
-      <tr><th>Movimiento</th><th>A · Lunes (fuerza)</th><th>C · Jueves (judo)</th><th>Para qué te sirve en el tatami</th></tr>
+      <tr><th>Movimiento</th><th>A · Lunes</th><th>C · Jueves</th><th>Para qué te sirve en el tatami</th></tr>
     </thead>
     <tbody>
-      <tr><td data-label="Movimiento"><b>RFD</b></td><td data-label="A · Lunes (fuerza)">Cargada de potencia</td><td data-label="C · Jueves (judo)">Lanzamiento con giro + uchikomi con banda</td><td data-label="Para qué te sirve en el tatami">Producir fuerza en el menor tiempo: la entrada sale antes de que el rival reaccione.</td></tr>
-      <tr><td data-label="Movimiento"><b>Pliometría</b></td><td data-label="A · Lunes (fuerza)">Saltos al cajón (bloque 3: saltos en profundidad + contraste)</td><td data-label="C · Jueves (judo)">Saltos a una pierna</td><td data-label="Para qué te sirve en el tatami">El efecto resorte de las piernas: cambiar de dirección y entrar explosivo.</td></tr>
-      <tr><td data-label="Movimiento"><b>Sentadilla</b></td><td data-label="A · Lunes (fuerza)">Sentadilla trasera · PRINCIPAL</td><td data-label="C · Jueves (judo)">Sentadilla frontal</td><td data-label="Para qué te sirve en el tatami">Levantar al rival y tener base firme. La frontal deja el torso vertical, como cuando cargás a alguien.</td></tr>
-      <tr><td data-label="Movimiento"><b>Bisagra de cadera</b></td><td data-label="A · Lunes (fuerza)">Peso muerto rumano</td><td data-label="C · Jueves (judo)">Peso muerto hexagonal · PRINCIPAL</td><td data-label="Para qué te sirve en el tatami">Arrancar al rival del piso y terminar la proyección. Glúteos e isquios fuertes corrigen la pelvis.</td></tr>
-      <tr><td data-label="Movimiento"><b>Una pierna</b></td><td data-label="A · Lunes (fuerza)">Sentadilla búlgara</td><td data-label="C · Jueves (judo)">Step-up pesado</td><td data-label="Para qué te sirve en el tatami">La pierna de apoyo en uchi-mata, harai-goshi, o-uchi.</td></tr>
-      <tr><td data-label="Movimiento"><b>Femoral</b></td><td data-label="A · Lunes (fuerza)">Curl nórdico</td><td data-label="C · Jueves (judo)">Curl nórdico</td><td data-label="Para qué te sirve en el tatami">Evita desgarros en sprints y entradas explosivas.</td></tr>
-      <tr><td data-label="Movimiento"><b>Pantorrilla y tibial</b></td><td data-label="A · Lunes (fuerza)">Pantorrilla + tibial</td><td data-label="C · Jueves (judo)">Pantorrilla</td><td data-label="Para qué te sirve en el tatami">Tobillos firmes para barridas y apoyo en puntas.</td></tr>
-      <tr><td data-label="Movimiento"><b>Aductores, abductores y core</b></td><td data-label="A · Lunes (fuerza)">Copenhague + abducción + dead bug</td><td data-label="C · Jueves (judo)">Copenhague + abducción + Pallof press</td><td data-label="Para qué te sirve en el tatami">La lesión de ingle es de las más comunes en judo. La abducción (glúteo medio) no deja que la rodilla se vaya hacia adentro en la pierna de apoyo: protege el ligamento cruzado. El core pasa la fuerza de las piernas a los brazos y no te deja girar.</td></tr>
-      <tr><td data-label="Movimiento"><b>Tendones</b></td><td data-label="A · Lunes (fuerza)">Sentadilla española · ISOMETRÍA (tendón de la rodilla)</td><td data-label="C · Jueves (judo)">Pantorrilla isométrica pesada · ISOMETRÍA (tendón de Aquiles)</td><td data-label="Para qué te sirve en el tatami">Que los tendones aguanten saltos, sprints y judo todas las noches.</td></tr>
+      <tr><td data-label="Movimiento"><b>Saltos</b></td><td data-label="A · Lunes">Saltos al cajón</td><td data-label="C · Jueves">Saltos a una pierna con caída clavada</td><td data-label="Para qué te sirve en el tatami">Explosión en la entrada. La caída clavada entrena la rodilla alineada: protege el ligamento cruzado.</td></tr>
+      <tr><td data-label="Movimiento"><b>Sentadilla</b></td><td data-label="A · Lunes">Sentadilla libre · PRINCIPAL</td><td data-label="C · Jueves">Sentadilla hack · PRINCIPAL</td><td data-label="Para qué te sirve en el tatami">Levantar al rival y tener base firme. La hack carga el cuádriceps sin cansar la espalda.</td></tr>
+      <tr><td data-label="Movimiento"><b>Bisagra de cadera</b></td><td data-label="A · Lunes">Peso muerto rumano en Smith</td><td data-label="C · Jueves">Peso muerto rumano en Smith</td><td data-label="Para qué te sirve en el tatami">Arrancar al rival del piso y terminar la proyección. Glúteos e isquios fuertes corrigen la pelvis.</td></tr>
+      <tr><td data-label="Movimiento"><b>Segundo de cuádriceps</b></td><td data-label="A · Lunes">Sentadilla búlgara</td><td data-label="C · Jueves">Extensión de cuádriceps</td><td data-label="Para qué te sirve en el tatami">La búlgara es la pierna de apoyo de uchi-mata y harai. La extensión entrena la parte del cuádriceps que la sentadilla no toca.</td></tr>
+      <tr><td data-label="Movimiento"><b>Femoral</b></td><td data-label="A · Lunes">Curl femoral</td><td data-label="C · Jueves">Curl femoral</td><td data-label="Para qué te sirve en el tatami">Evita desgarros en sprints y entradas explosivas, y protege la rodilla.</td></tr>
+      <tr><td data-label="Movimiento"><b>Glúteo medio</b></td><td data-label="A · Lunes">Abductora</td><td data-label="C · Jueves">Abductora</td><td data-label="Para qué te sirve en el tatami">No deja que la rodilla se vaya hacia adentro en la pierna de apoyo.</td></tr>
+      <tr><td data-label="Movimiento"><b>Aductores</b></td><td data-label="A · Lunes">Aductora</td><td data-label="C · Jueves">Plancha Copenhague · PREVENCIÓN</td><td data-label="Para qué te sirve en el tatami">La lesión de ingle es de las más comunes en judo.</td></tr>
+      <tr><td data-label="Movimiento"><b>Pantorrilla</b></td><td data-label="A · Lunes">Pantorrilla de pie</td><td data-label="C · Jueves">Pantorrilla + tibial</td><td data-label="Para qué te sirve en el tatami">Tobillos firmes para barridas y apoyo en puntas.</td></tr>
+      <tr><td data-label="Movimiento"><b>Core</b></td><td data-label="A · Lunes">Abdominales con peso</td><td data-label="C · Jueves">Pallof press · PREVENCIÓN</td><td data-label="Para qué te sirve en el tatami">Pasa la fuerza de las piernas a los brazos y no te deja girar.</td></tr>
     </tbody>
   </table></div>
   <div class="tbl"><table class="freq stack">
     <thead>
       <tr><th colspan="4" class="grp">Tren superior</th></tr>
-      <tr><th>Movimiento</th><th>B · Martes (fuerza)</th><th>D · Viernes (judo)</th><th>Para qué te sirve en el tatami</th></tr>
+      <tr><th>Movimiento</th><th>B · Martes</th><th>D · Viernes</th><th>Para qué te sirve en el tatami</th></tr>
     </thead>
     <tbody>
-      <tr><td data-label="Movimiento"><b>Explosivo</b></td><td data-label="B · Martes (fuerza)">Flexiones con aplauso · PLIOMETRÍA</td><td data-label="D · Viernes (judo)">Tirón de kuzushi con banda · RFD</td><td data-label="Para qué te sirve en el tatami">Empujar y despegar al rival; romperle la postura de un tirón.</td></tr>
-      <tr><td data-label="Movimiento"><b>Tirón vertical</b></td><td data-label="B · Martes (fuerza)">Dominadas con lastre · PRINCIPAL</td><td data-label="D · Viernes (judo)">Dominadas agarrado del judogi · PRINCIPAL</td><td data-label="Para qué te sirve en el tatami">Traer al rival hacia vos y ganar el agarre.</td></tr>
-      <tr><td data-label="Movimiento"><b>Empuje</b></td><td data-label="B · Martes (fuerza)">Press de banca · PRINCIPAL</td><td data-label="D · Viernes (judo)">Press inclinado con mancuernas · PRINCIPAL</td><td data-label="Para qué te sirve en el tatami">Mantener la distancia y frenar al rival.</td></tr>
-      <tr><td data-label="Movimiento"><b>Remo</b></td><td data-label="B · Martes (fuerza)">Remo con barra</td><td data-label="D · Viernes (judo)">Remo a un brazo</td><td data-label="Para qué te sirve en el tatami">Kuzushi: romper la postura del rival. El viernes, a un brazo: el tirón de judo es de un lado y el core frena el giro.</td></tr>
-      <tr><td data-label="Movimiento"><b>Fondos</b></td><td data-label="B · Martes (fuerza)">Fondos con lastre · versión pecho (torso adelante)</td><td data-label="D · Viernes (judo)">Fondos con lastre · versión tríceps (torso vertical) + aperturas en polea</td><td data-label="Para qué te sirve en el tatami">Pecho el martes, tríceps el viernes (y las aperturas dejan el pecho parejo). Bloquear al rival con el brazo estirado y cerrar los brazos para pegarlo a vos.</td></tr>
-      <tr><td data-label="Movimiento"><b>Hombro + cuello</b></td><td data-label="B · Martes (fuerza)">Laterales con mancuerna + cuello</td><td data-label="D · Viernes (judo)">Laterales en polea + cuello</td><td data-label="Para qué te sirve en el tatami">Hombros anchos y estables en las caídas; el cuello protege en caídas y puente. Las laterales llevan 3 series: los press casi no trabajan la cabeza lateral.</td></tr>
-      <tr><td data-label="Movimiento"><b>Brazos</b></td><td data-label="B · Martes (fuerza)">Curl inclinado + extensión de tríceps en polea</td><td data-label="D · Viernes (judo)">Curl martillo con toalla + extensión de tríceps sobre la cabeza</td><td data-label="Para qué te sirve en el tatami">Protege el tendón del bíceps en los tirones de agarre (lesión típica del judoka).</td></tr>
-      <tr><td data-label="Movimiento"><b>Agarre</b></td><td data-label="B · Martes (fuerza)">Colgarse de toalla + paseo del granjero</td><td data-label="D · Viernes (judo)">Trepar soga</td><td data-label="Para qué te sirve en el tatami">Sostener el agarre 4 minutos.</td></tr>
+      <tr><td data-label="Movimiento"><b>Empuje</b></td><td data-label="B · Martes">Press de banca · PRINCIPAL</td><td data-label="D · Viernes">Press inclinado con mancuernas · PRINCIPAL</td><td data-label="Para qué te sirve en el tatami">Mantener la distancia y frenar al rival.</td></tr>
+      <tr><td data-label="Movimiento"><b>Tirón vertical</b></td><td data-label="B · Martes">Dominadas con lastre · PRINCIPAL</td><td data-label="D · Viernes">Dominadas agarrado del judogi · PRINCIPAL</td><td data-label="Para qué te sirve en el tatami">Traer al rival hacia vos y ganar el agarre.</td></tr>
+      <tr><td data-label="Movimiento"><b>Segundo de pecho</b></td><td data-label="B · Martes">Press inclinado con mancuernas</td><td data-label="D · Viernes">Aperturas en polea o máquina</td><td data-label="Para qué te sirve en el tatami">Cerrar los brazos para pegar al rival a vos.</td></tr>
+      <tr><td data-label="Movimiento"><b>Remo</b></td><td data-label="B · Martes">Remo con pecho apoyado</td><td data-label="D · Viernes">Remo a un brazo</td><td data-label="Para qué te sirve en el tatami">Kuzushi: romper la postura del rival. El viernes, a un brazo: el tirón de judo es de un lado y el core frena el giro.</td></tr>
+      <tr><td data-label="Movimiento"><b>Hombro</b></td><td data-label="B · Martes">Elevaciones laterales</td><td data-label="D · Viernes">Elevaciones laterales en polea</td><td data-label="Para qué te sirve en el tatami">Hombros anchos y estables en las caídas. Llevan 3 series: los press casi no trabajan la cabeza lateral.</td></tr>
+      <tr><td data-label="Movimiento"><b>Bíceps</b></td><td data-label="B · Martes">Curl inclinado</td><td data-label="D · Viernes">Curl martillo</td><td data-label="Para qué te sirve en el tatami">Protege el tendón del bíceps en los tirones de agarre (lesión típica del judoka).</td></tr>
+      <tr><td data-label="Movimiento"><b>Tríceps</b></td><td data-label="B · Martes">Extensión sobre la cabeza</td><td data-label="D · Viernes">Extensión en polea</td><td data-label="Para qué te sirve en el tatami">Bloquear al rival con el brazo estirado.</td></tr>
+      <tr><td data-label="Movimiento"><b>Agarre</b></td><td data-label="B · Martes">Paseo del granjero</td><td data-label="D · Viernes">Colgarse del judogi o trepar soga</td><td data-label="Para qué te sirve en el tatami">Sostener el agarre 4 minutos.</td></tr>
+      <tr><td data-label="Movimiento"><b>Hombro y cuello</b></td><td data-label="B · Martes">Rotación externa + cuello · PREVENCIÓN</td><td data-label="D · Viernes">Rotación externa + cuello · PREVENCIÓN</td><td data-label="Para qué te sirve en el tatami">El manguito rotador mantiene el hombro en su lugar en caídas y agarres. El cuello protege en caídas y en el puente.</td></tr>
     </tbody>
   </table></div>
 
   <h3>8 · Series por músculo</h3>
-  <p class="lead">La regla del plan: <b>máxima frecuencia, mínimo cansancio.</b> Cada músculo 2 veces por semana, con <b>8–12 series duras en total (4–6 por sesión)</b>, casi todas a RPE 8–9. Las series que terminan a 1–2 repeticiones del fallo son las que más hacen crecer: 2 series a RPE 8–9 dan casi lo mismo que 3–4 a RPE 7, con menos cansancio para el judo de la noche y sesiones más cortas.</p>
+  <p class="lead">La regla del plan: <b>máxima frecuencia, mínimo cansancio.</b> Cada músculo 2 veces por semana, con <b>8–15 series duras en total</b>, repartidas parejo entre los dos días.</p>
   <div class="two">
     <div class="panel">
       <h3>Cómo se cuenta</h3>
       <ul class="rules">
         <li>Por <b>músculo entero</b>, no por cabeza. <b>1 serie</b> si el músculo es el que más trabaja (banca → pecho), <b>½ serie</b> si trabaja fuerte como ayudante (banca → hombro y tríceps; remo → bíceps y hombro).</li>
-        <li>Solo cuentan las series duras. <b>Lo marcado RFD, PLIOMETRÍA o ISOMETRÍA no cuenta:</b> lo primero es potencia y lo último es trabajo de tendón; cansan poco al músculo.</li>
-        <li>Los números son del <b>bloque 2</b>. Los bloques 1 y 3 tienen las mismas series: el 1 a menor RPE, el 3 con más peso y menos repeticiones.</li>
+        <li>Solo cuentan las series duras. Los saltos y la rotación externa no cuentan: cansan poco al músculo.</li>
       </ul>
     </div>
     <div class="panel cue">
-      <h3>Lo que cambió</h3>
-      <p><b>Principales: 3 series</b> subiendo el esfuerzo, RPE 7 · 8 · 9. Antes eran 4–5.</p>
-      <p><b>Accesorios: 2 series</b>, la primera a RPE 8 y la segunda a RPE 9. Antes eran 3 a RPE 7–8. <b>Excepción: laterales, 3 series.</b> Los press casi no trabajan la cabeza lateral del hombro (la del ancho), así que necesita más trabajo directo. Cansan muy poco.</p>
-      <p><b>Días espejo:</b> C copia la estructura de A y D la de B. Entró la sentadilla frontal en C (sale el hip thrust: el glúteo ya trabaja de sobra en hexagonal, rumano y frontal). El contraste pasa al bloque 3, dentro de la sentadilla.</p>
-      <p><b>Tres ajustes de judo:</b> remo a un brazo el viernes (el tirón de judo es de un lado), abducción de cadera los días de piernas (rodilla estable en la pierna de apoyo) y curl inclinado el martes (bíceps trabajando estirado, como el tríceps sobre la cabeza).</p>
+      <h3>Por qué quedó así</h3>
+      <p><b>Menos cosas, mejor hechas.</b> Salieron las cargadas, los lanzamientos, las bandas, las superseries y los tres bloques con números distintos. Quedó lo que hace crecer: pocos ejercicios pesados y estables, con recorrido completo.</p>
+      <p><b>Máquinas y Smith donde suman.</b> Un ejercicio estable deja que el músculo sea el límite y no el equilibrio, y cansa menos para el judo.</p>
+      <p><b>La potencia</b> sale de los saltos, los sprints y el judo de todas las noches. No hace falta más.</p>
     </div>
   </div>
   <div class="tbl"><table class="freq stack">
@@ -310,13 +302,13 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><th>Músculo</th><th>A · Lunes</th><th>C · Jueves</th><th>Por semana</th></tr>
     </thead>
     <tbody>
-      <tr><td data-label="Músculo"><b>Cuádriceps</b></td><td data-label="A · Lunes">5 · sentadilla 3, búlgara 2</td><td data-label="C · Jueves">5,5 · frontal 2, step-up 2, hexagonal ½×3</td><td data-label="Por semana"><b>10,5</b></td></tr>
-      <tr><td data-label="Músculo"><b>Glúteo</b></td><td data-label="A · Lunes">4,5 · rumano 2, sentadilla ½×3, búlgara ½×2</td><td data-label="C · Jueves">5 · hexagonal 3, frontal ½×2, step-up ½×2</td><td data-label="Por semana"><b>9,5</b> + sprints</td></tr>
-      <tr><td data-label="Músculo"><b>Isquiotibiales</b></td><td data-label="A · Lunes">4 · rumano 2, nórdico 2</td><td data-label="C · Jueves">3,5 · nórdico 2, hexagonal ½×3</td><td data-label="Por semana"><b>7,5</b> + sprints (los cargan fuerte)</td></tr>
-      <tr><td data-label="Músculo"><b>Aductores</b></td><td data-label="A · Lunes">4,5 · Copenhague 2, sentadilla ½×3, búlgara ½×2</td><td data-label="C · Jueves">3 · Copenhague 2, frontal ½×2</td><td data-label="Por semana"><b>7,5</b> + judo</td></tr>
-      <tr><td data-label="Músculo"><b>Glúteo medio (abductores)</b></td><td data-label="A · Lunes">2 · abducción 2</td><td data-label="C · Jueves">2 · abducción 2</td><td data-label="Por semana"><b>4</b> + estabilidad en saltos a una pierna</td></tr>
-      <tr><td data-label="Músculo"><b>Pantorrilla</b></td><td data-label="A · Lunes">3</td><td data-label="C · Jueves">3</td><td data-label="Por semana"><b>6</b> + cientos de contactos en saltos y sprints</td></tr>
-      <tr><td data-label="Músculo"><b>Core</b></td><td data-label="A · Lunes">2 · dead bug</td><td data-label="C · Jueves">3 · Pallof press 2, frontal ½×2</td><td data-label="Por semana"><b>5</b> + granjero, lanzamientos y judo</td></tr>
+      <tr><td data-label="Músculo"><b>Cuádriceps</b></td><td data-label="A · Lunes">5 · sentadilla 3, búlgara 2</td><td data-label="C · Jueves">5 · hack 3, extensión 2</td><td data-label="Por semana"><b>10</b></td></tr>
+      <tr><td data-label="Músculo"><b>Glúteo</b></td><td data-label="A · Lunes">5,5 · rumano 3, sentadilla ½×3, búlgara ½×2</td><td data-label="C · Jueves">4,5 · rumano 3, hack ½×3</td><td data-label="Por semana"><b>10</b> + sprints</td></tr>
+      <tr><td data-label="Músculo"><b>Isquiotibiales</b></td><td data-label="A · Lunes">5 · rumano 3, curl femoral 2</td><td data-label="C · Jueves">5 · rumano 3, curl femoral 2</td><td data-label="Por semana"><b>10</b> + sprints</td></tr>
+      <tr><td data-label="Músculo"><b>Aductores</b></td><td data-label="A · Lunes">4,5 · aductora 2, sentadilla ½×3, búlgara ½×2</td><td data-label="C · Jueves">3,5 · Copenhague 2, hack ½×3</td><td data-label="Por semana"><b>8</b> + judo</td></tr>
+      <tr><td data-label="Músculo"><b>Glúteo medio</b></td><td data-label="A · Lunes">2 · abductora</td><td data-label="C · Jueves">2 · abductora</td><td data-label="Por semana"><b>4</b> + búlgara y saltos a una pierna</td></tr>
+      <tr><td data-label="Músculo"><b>Pantorrilla</b></td><td data-label="A · Lunes">3</td><td data-label="C · Jueves">3</td><td data-label="Por semana"><b>6</b> + saltos y sprints</td></tr>
+      <tr><td data-label="Músculo"><b>Core</b></td><td data-label="A · Lunes">2 · abdominales</td><td data-label="C · Jueves">2 · Pallof press</td><td data-label="Por semana"><b>4</b> + granjero y judo</td></tr>
     </tbody>
   </table></div>
   <div class="tbl"><table class="freq stack">
@@ -325,27 +317,33 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><th>Músculo</th><th>B · Martes</th><th>D · Viernes</th><th>Por semana</th></tr>
     </thead>
     <tbody>
-      <tr><td data-label="Músculo"><b>Espalda</b></td><td data-label="B · Martes">6 · dominadas 3, remo con barra 2, granjero ½×2</td><td data-label="D · Viernes">6,5 · dominadas 3, remo a un brazo 2, soga ½×3</td><td data-label="Por semana"><b>12,5</b></td></tr>
-      <tr><td data-label="Músculo"><b>Hombro</b></td><td data-label="B · Martes">6,5 · laterales 3, banca ½×3, fondos ½×2, remo ½×2</td><td data-label="D · Viernes">6,5 · laterales 3, inclinado ½×3, fondos ½×2, remo ½×2</td><td data-label="Por semana"><b>13</b> · la cabeza lateral recibe 6 directas</td></tr>
-      <tr><td data-label="Músculo"><b>Pecho</b></td><td data-label="B · Martes">5 · banca 3, fondos (versión pecho) 2</td><td data-label="D · Viernes">6 · inclinado 3, aperturas 2, fondos (versión tríceps) ½×2</td><td data-label="Por semana"><b>11</b></td></tr>
-      <tr><td data-label="Músculo"><b>Tríceps</b></td><td data-label="B · Martes">4,5 · extensión en polea 2, fondos ½×2, banca ½×3</td><td data-label="D · Viernes">5,5 · extensión sobre la cabeza 2, fondos 2, inclinado ½×3</td><td data-label="Por semana"><b>10</b> · las tres cabezas cubiertas</td></tr>
-      <tr><td data-label="Músculo"><b>Bíceps</b></td><td data-label="B · Martes">4,5 · curl inclinado 2, dominadas ½×3, remo ½×2</td><td data-label="D · Viernes">6 · curl martillo 2, dominadas ½×3, remo ½×2, soga ½×3</td><td data-label="Por semana"><b>10,5</b></td></tr>
-      <tr><td data-label="Músculo"><b>Antebrazo y agarre</b></td><td data-label="B · Martes">4 · colgarse 2, granjero 2</td><td data-label="D · Viernes">5,5 · soga 3, curl martillo ½×2, dominadas en judogi ½×3</td><td data-label="Por semana"><b>9,5</b> + judo</td></tr>
+      <tr><td data-label="Músculo"><b>Espalda</b></td><td data-label="B · Martes">7,5 · dominadas 3, remo 3, granjero ½×3</td><td data-label="D · Viernes">7,5 · dominadas 3, remo 3, colgarse ½×3</td><td data-label="Por semana"><b>15</b></td></tr>
+      <tr><td data-label="Músculo"><b>Hombro</b></td><td data-label="B · Martes">7 · laterales 3, banca ½×3, inclinado ½×2, remo ½×3</td><td data-label="D · Viernes">6 · laterales 3, inclinado ½×3, remo ½×3</td><td data-label="Por semana"><b>13</b> · la cabeza lateral recibe 6 directas</td></tr>
+      <tr><td data-label="Músculo"><b>Pecho</b></td><td data-label="B · Martes">5 · banca 3, inclinado 2</td><td data-label="D · Viernes">5 · inclinado 3, aperturas 2</td><td data-label="Por semana"><b>10</b></td></tr>
+      <tr><td data-label="Músculo"><b>Bíceps</b></td><td data-label="B · Martes">5 · curl inclinado 2, dominadas ½×3, remo ½×3</td><td data-label="D · Viernes">5 · curl martillo 2, dominadas ½×3, remo ½×3</td><td data-label="Por semana"><b>10</b></td></tr>
+      <tr><td data-label="Músculo"><b>Tríceps</b></td><td data-label="B · Martes">4,5 · extensión sobre la cabeza 2, banca ½×3, inclinado ½×2</td><td data-label="D · Viernes">3,5 · extensión en polea 2, inclinado ½×3</td><td data-label="Por semana"><b>8</b></td></tr>
+      <tr><td data-label="Músculo"><b>Antebrazo y agarre</b></td><td data-label="B · Martes">3 · granjero</td><td data-label="D · Viernes">5,5 · colgarse o soga 3, dominadas en judogi ½×3, curl martillo ½×2</td><td data-label="Por semana"><b>8,5</b> + judo</td></tr>
+      <tr><td data-label="Músculo"><b>Manguito rotador</b></td><td data-label="B · Martes">2</td><td data-label="D · Viernes">2</td><td data-label="Por semana"><b>4</b>, livianas</td></tr>
       <tr><td data-label="Músculo"><b>Cuello</b></td><td data-label="B · Martes">2 rondas</td><td data-label="D · Viernes">2 rondas</td><td data-label="Por semana"><b>4 rondas</b> + puente en judo</td></tr>
     </tbody>
   </table></div>
-  <p class="lead">Todo queda en 8–13 series duras, parejo entre los dos días. Arriba van <b>hombro (13)</b>, porque querés ancho; <b>espalda (12,5)</b>, tu arma en judo; y después <b>pecho (11)</b>, <b>cuádriceps y bíceps (10,5)</b> y <b>tríceps (10)</b>. Isquios, aductores, pantorrilla y core quedan más abajo a propósito: los sprints, los saltos y el judo de todas las noches les suman mucho trabajo que no está en esta cuenta.</p>
+  <p class="lead">Arriba va la <b>espalda (15)</b>, tu arma en judo, y el <b>hombro (13)</b>, porque querés ancho. <b>Pecho, bíceps, cuádriceps, glúteo e isquios quedan en 10</b>. El tríceps queda en 8 porque la banca y el inclinado ya lo cargan pesado. Si en unos meses querés más brazo, se suma una tercera serie de tríceps y listo.</p>
   <div class="two">
   <div class="panel cue">
-    <h3>Uchikomi con banda elástica</h3>
-    <p>Es un clásico del judo japonés. Atás una banda elástica fuerte a un poste o al rack, a la altura del pecho. Agarrás las dos puntas como si fueran manga y solapa, y hacés la entrada completa de tu técnica a máxima velocidad: tirón (kuzushi), giro y apoyo (tsukuri), y volvés. Usá tu técnica principal y alterná lados. Calidad antes que cantidad: cada entrada tiene que ser la que harías en un combate.</p>
+    <h3>Prevención: qué protege cada cosa</h3>
+    <p><b>Rodilla (ligamento cruzado):</b> saltos con caída clavada, abductora, búlgara y curl femoral. Los isquios fuertes frenan la tibia y el glúteo medio mantiene la rodilla alineada.</p>
+    <p><b>Ingle:</b> aductora el lunes y plancha Copenhague el jueves.</p>
+    <p><b>Desgarro de isquios:</b> la bajada lenta del curl femoral y del rumano, más los sprints, que son en sí mismos la mejor protección si se hacen todas las semanas.</p>
+    <p><b>Hombro:</b> rotación externa. Banca y dominadas ya fortalecen la rotación interna; la externa es la que queda atrás.</p>
+    <p><b>Cuello, agarre y bíceps:</b> cuello directo, granjero, judogi y curl con recorrido completo.</p>
+    <p><b>En el tatami:</b> si te tiran, caé con ukemi. Clavar la pierna para salvar el punto es como se rompe una rodilla.</p>
   </div>
   <div class="panel cue">
-    <h3>Isometría para tendones</h3>
-    <p><b>Por qué:</b> el músculo se adapta en semanas y el tendón en meses. Vos ganás fuerza rápido y el plan tiene mucho salto y sprint: sin esto, el músculo se pone fuerte antes que el tendón, que es como empiezan las tendinopatías de rodilla y de Aquiles.</p>
-    <p><b>Cómo:</b> aguantar una carga pesada 30–45 s sin moverte. Esa tensión larga es lo que engrosa y endurece el tendón. Un tendón más firme además transmite la fuerza más rápido: suma al RFD.</p>
-    <p><b>Sentadilla española:</b> banda gruesa o correa detrás de las rodillas, atada a un rack o poste. Te alejás hasta que tire, bajás a 60–90° con el torso vertical y empujás el piso. Sentís el frente del muslo y la rodilla trabajando, sin dolor.</p>
-    <p><b>Si un día te duele un tendón:</b> esto mismo, 5 × 45 s, calma el dolor. Avisá antes de seguir saltando.</p>
+    <h3>Lo que quedó afuera y cuándo vuelve</h3>
+    <p><b>Curl nórdico:</b> necesita un compañero o un enganche para los pies. Si un día lo podés armar (por ejemplo, arrodillado en el asiento del jalón, con los tobillos debajo de las almohadillas), reemplaza al curl femoral del jueves.</p>
+    <p><b>Sentadilla española (isometría):</b> vuelve si te molesta el tendón debajo de la rótula. 5 × 45 s calma el dolor.</p>
+    <p><b>Cargada de potencia:</b> vuelve solo si algún día tenés un entrenador de levantamiento al lado. Los saltos dan una potencia parecida sin la técnica ni el cansancio.</p>
+    <p><b>Fondos:</b> quedan como reemplazo del press inclinado si las mancuernas te quedan chicas.</p>
   </div>
 </div>
 </section>
@@ -373,27 +371,27 @@ footer{color:var(--muted);font-size:.85rem}
 </section>
 
 <section id="plan">
-  <h2>Sesiones por bloque</h2>
+  <h2>Sesiones</h2>
   <div class="tabs" role="tablist" id="tabs"></div>
   <div class="blockintro" id="intro"></div>
   <div class="sessions" id="sessions"></div>
-  <p class="lead"><b>Después de la semana 16:</b> una semana de descarga, estimás tus máximos con los pesos que anotaste y repetís desde el bloque 2 con los pesos nuevos. Si se acerca una competencia, metés las semanas de pre-competencia donde toque.</p>
+  <p class="lead"><b>Si falta una máquina:</b> hack → prensa o sentadilla frontal. Curl femoral → el que haya (sentado, parado o acostado). Remo con pecho apoyado → remo en máquina o en polea sentado. Aperturas → mancuernas en banco plano. Si se acerca una competencia, pasás a las semanas de pre-competencia.</p>
 </section>
 
 <section>
-  <h2>Peso muerto y pelvis</h2>
-  <p class="lead">Usás <b>peso muerto con barra hexagonal</b> en vez del convencional. El torso queda más vertical, hay menos palanca sobre la espalda baja y es más fácil mantener la pelvis neutra. Además fortalece glúteos e isquiotibiales, que son los músculos que corrigen la anteversión pélvica.</p>
+  <h2>Peso muerto rumano y pelvis</h2>
+  <p class="lead">Usás <b>peso muerto rumano</b> los dos días de piernas, en vez del peso muerto desde el piso. Carga glúteos e isquiotibiales bien estirados, que es lo que más los hace crecer, y son los músculos que corrigen la anteversión pélvica. Además cansa mucho menos la espalda baja que levantar desde el piso, y eso importa porque a la noche hay judo. En Smith el recorrido es fijo y podés concentrarte en mover la cadera.</p>
   <div class="two">
     <div class="panel cue">
       <h3>Claves en cada levantamiento</h3>
       <p><b>Costillas abajo.</b> Tomá aire y apretá el abdomen como si te fueran a pegar.</p>
       <p><b>Terminá apretando glúteos,</b> con el cuerpo vertical. Nada de tirar el torso hacia atrás.</p>
-      <p>Lo mismo en sentadilla trasera y frontal, y en peso muerto rumano.</p>
+      <p>Lo mismo en la sentadilla libre y en la hack.</p>
     </div>
     <div class="panel cue">
       <h3>Si algo molesta</h3>
       <p>Cualquier molestia en la espalda baja, aunque sea leve: bajá el peso y revisá técnica.</p>
-      <p>Filmate de costado las primeras sesiones de hexagonal y sentadilla para ver si arqueás de más.</p>
+      <p>Filmate de costado las primeras sesiones de rumano y sentadilla para ver si arqueás de más.</p>
       <p>En el estiramiento, priorizá flexores de cadera y cuádriceps.</p>
     </div>
   </div>
@@ -477,7 +475,7 @@ footer{color:var(--muted);font-size:.85rem}
   <div class="panel cue">
     <h3>Reglas</h3>
     <ul class="rules">
-      <li><b>Antes de entrenar, solo dinámico.</b> Estirar estático mucho tiempo antes de saltos o cargadas te quita potencia.</li>
+      <li><b>Antes de entrenar, solo dinámico.</b> Estirar estático mucho tiempo antes de los saltos o de levantar pesado te quita potencia.</li>
       <li><b>Estático después de entrenar</b> o en una sesión aparte: 2 series de 30–45 s por posición.</li>
       <li><b>Para ganar rango más rápido, contraer-relajar:</b> estirás 20 s, empujás contra el estiramiento 5 s al 50%, aflojás, exhalás y avanzás un poco. Repetís 3 veces. Usalo en isquiotibiales, aductores y flexores de cadera, 2–3 veces por semana.</li>
       <li>Tensión fuerte pero tolerable, nunca dolor punzante. Respiración lenta, exhalando al avanzar.</li>
@@ -665,12 +663,12 @@ footer{color:var(--muted);font-size:.85rem}
   <div class="tbl"><table>
     <thead><tr><th>Ejercicio</th><th>Meta</th><th>A 75 kg sería</th></tr></thead>
     <tbody>
-      <tr><td>Sentadilla trasera</td><td>1,8 × peso corporal</td><td><b>~135 kg</b></td></tr>
-      <tr><td>Peso muerto hexagonal</td><td>2,2 × peso corporal</td><td><b>~165 kg</b></td></tr>
-      <tr><td>Cargada de potencia</td><td>1,2–1,3 × peso corporal</td><td><b>~90–97 kg</b></td></tr>
-      <tr><td>Dominada con lastre</td><td>+40 kg o más</td><td><b>+40 kg</b> × 1</td></tr>
-      <tr><td>Peso muerto rumano</td><td>1,6–1,8 × a 5 repeticiones</td><td><b>~120–135 kg</b></td></tr>
-      <tr><td>Trepar soga</td><td>Sin piernas</td><td><b>4 m</b> × 3</td></tr>
+      <tr><td>Sentadilla libre</td><td>1,8 × peso corporal</td><td><b>~135 kg</b> × 1, o 115 kg × 5</td></tr>
+      <tr><td>Peso muerto rumano</td><td>1,6–1,8 × peso corporal a 6 repeticiones</td><td><b>~120–135 kg</b> × 6</td></tr>
+      <tr><td>Press de banca</td><td>1,5 × peso corporal a 8 repeticiones</td><td><b>~112 kg</b> × 8</td></tr>
+      <tr><td>Dominada con lastre</td><td>+40 kg o más</td><td><b>+40 kg</b> × 1, o +25 kg × 5</td></tr>
+      <tr><td>Paseo del granjero</td><td>Tu peso corporal repartido en las dos manos</td><td><b>~37 kg por mano</b> × 30 m</td></tr>
+      <tr><td>Colgarse del judogi</td><td>Aguantar</td><td><b>60 s</b></td></tr>
     </tbody>
   </table></div>
 </section>
@@ -684,166 +682,80 @@ footer{color:var(--muted);font-size:.85rem}
   </ul>
 </section>
 
-<footer>Actualizado el 8 de noviembre de 2026. Revisalo cada 4 semanas según cómo vaya el peso y la fuerza.</footer>
+<footer>Actualizado el 11 de noviembre de 2026. Revisalo cada 4 semanas según cómo vaya el peso y la fuerza.</footer>
 </div>
 
 <script>
 const W="Calentamiento dinámico · 12–15 min";
 const SS={A:"Estiramiento · piernas y cadera (~10 min)",B:"Estiramiento · tren superior (~8 min)",C:"Estiramiento · piernas y cadera (~10 min)",D:"Estiramiento · tren superior (~8 min)"};
-const T={A:"Piernas · fuerza",B:"Tren superior · fuerza",C:"Piernas · judo",D:"Tren superior · judo"};
-const SUB={A:"Barra pesada",B:"Barra pesada",C:"Potencia, cadera y entradas",D:"Agarre, kuzushi y masa"};
+const T={A:"Piernas 1",B:"Tren superior 1",C:"Piernas 2",D:"Tren superior 2"};
+const SUB={A:"Sentadilla libre",B:"Banca y lastre",C:"Hack y prevención",D:"Inclinado y agarre"};
 const DAY={A:"Lunes",B:"Martes",C:"Jueves",D:"Viernes"};
+const ROT="Por brazo, liviano. En polea a la altura del codo: codo pegado al costado y doblado a 90°, llevás la mano hacia afuera y volvés lento. También sirve la versión acostado con mancuerna (brazo abierto a 90° del cuerpo, el antebrazo va de apuntar a los pies a apuntar a la cabeza): 3–5 kg, lento, sin forzar los extremos. Fortalece el manguito rotador, que mantiene el hombro en su lugar en caídas y agarres.";
+const CUE="Flexión, extensión y lateral, 12–15 de cada una, liviano: contra tu mano, con un disco o con banda.";
 const blocks=[
- {id:"b1",name:"Bloque 1",weeks:"Semanas 1–4",title:"Base y técnica",
-  intro:"Sentadilla y hexagonal son nuevos para vos: acá aprendés el movimiento. Principales a RPE 6 · 7 · 8 y accesorios a RPE 7 · 8: todavía no vas cerca del fallo. Subí 2,5–5 kg por semana en los principales si la técnica sale limpia. La semana 4 es de descarga.",
+ {id:"plan",name:"Plan",weeks:"Todas las semanas",title:"El plan",
+  intro:"Las mismas cuatro sesiones todas las semanas. Lo que cambia es el peso: cuando llegás al tope del rango en todas las series, subís. Las primeras series de cada ejercicio van con 2 repeticiones en el tanque y la última con 1. Descarga cada 5ª o 6ª semana: mismos pesos, una serie menos por ejercicio. Si volvés de un parate de 2 semanas o más, la primera semana son 2 series por ejercicio con 3 en el tanque.",
   s:{
-   A:[["Cargada de potencia colgada","3×3","Técnica. Desde arriba de la rodilla, cada rep rápida.","rfd"],
-      ["Saltos al cajón","3×3","Máxima altura en cada salto. Bajás del cajón caminando.","plio"],
-      ["Sentadilla trasera","3×6","RPE 6 · 7 · 8. Empezá con unos 60 kg.",1],
-      ["Peso muerto rumano","2×8","Costillas abajo, cadera atrás, rodillas suaves."],
-      ["Sentadilla búlgara","2×8","Por pierna."],
-      ["Curl nórdico o curl femoral","2×6",""],
-      ["Pantorrilla + tibial","3×12 + 2×15","En superserie."],
-      ["Plancha Copenhague + dead bug","2 rondas","20 s por lado + 8 por lado. Copenhague: aductores, la lesión de ingle es de las más comunes en judo. Dead bug: espalda baja pegada al piso."],
-      ["Abducción de cadera (polea o banda)","2×12–15","Por pierna. Va en circuito con la Copenhague: Copenhague → abducción → dead bug, 2 rondas. De costado a la polea (o banda en los tobillos), pierna estirada: la llevás hacia afuera sin inclinar el torso y bajás lento. Es el glúteo medio: no deja que la rodilla se vaya hacia adentro cuando todo tu peso está en una pierna (uchi-mata, harai, la caída de un salto). La rodilla hacia adentro es la causa típica de la rotura de ligamento cruzado."],
-      ["Sentadilla española","3×30 s","Banda gruesa o correa detrás de las rodillas, atada a algo fijo. Bajás a 60–90°, torso vertical, y aguantás empujando el piso. Aprendé la posición: esfuerzo 6–7 de 10. 1–2 min de pausa.","iso"]],
-   B:[["Face pulls","2×15","Liviano, parte del calentamiento: salud del hombro. No cuenta como volumen."],
-      ["Flexiones con aplauso","3×5","Despegar las manos lo más alto posible: empujar y despegar al rival.","plio"],
-      ["Dominadas con lastre","3×5–6","RPE 6 · 7 · 8.",1],
-      ["Press de banca","3×6","RPE 6 · 7 · 8. Unos 90–95 kg. No hay apuro.",1],
-      ["Remo con barra","2×8",""],
-      ["Fondos con lastre · pecho","2×8–10","Para que trabaje el pecho y no el tríceps: torso inclinado unos 30° hacia adelante (mirada al piso, rodillas dobladas y pies atrás) y codos abiertos a unos 45°. Si las barras se abren en V, agarrá la parte más ancha. Bajás lento hasta sentir el estiramiento en el pecho, con el hombro apenas debajo del codo. Subís pensando en juntar las barras y frenás justo antes de trabar los codos: así el pecho no descansa arriba. Lastre: cinturón o mancuerna entre los pies, empezá con unos 15–20 kg."],
-      ["Elevaciones laterales + cuello","3×12–15 + 2 rondas","En superserie. Última serie de laterales: bajás a la mitad del peso y seguís hasta casi el fallo. Cuello: flexión, extensión y lateral, 15 cada una, liviano."],
-      ["Curl inclinado con mancuernas + extensión de tríceps en polea","2×8–10 + 2×10–12","En superserie. Curl: banco a 45–60°, brazos colgando atrás del cuerpo; subís sin adelantar el codo y bajás lento hasta estirar del todo. Así el bíceps trabaja estirado, donde más crece, y se fortalece el tendón para los tirones de agarre. Alternativa: curl bayesiano en polea (de espaldas a la polea, brazo atrás). Extensión: codos pegados al costado, solo se mueve el antebrazo, abajo estirás del todo. Trabaja las cabezas lateral y medial del tríceps."],
-      ["Colgarse de toalla + paseo del granjero","2×máx + 2×30 m","Colgarse: máximo tiempo. Granjero: pesado."]],
-   C:[["Lanzamiento con giro de cadera (balón medicinal)","3×4","Por lado. Mismo giro que la entrada de seoi o uchi-mata, contra la pared.","rfd"],
-      ["Saltos a una pierna","3×3","Por pierna. Es la pierna de apoyo en uchi-mata, harai y o-uchi.","plio"],
-      ["Uchikomi con banda elástica","3×10","Por lado. Tu técnica principal, entrada a máxima velocidad.","rfd"],
-      ["Peso muerto con barra hexagonal","3×5","RPE 6 · 7 · 8. Empezá con unos 80–100 kg. Terminá vertical, apretando glúteos.",1],
-      ["Sentadilla frontal","2×6","Torso vertical y codos altos: la posición de cargar al rival."],
-      ["Step-up pesado","2×6","Por pierna. Cajón a la altura de la rodilla, subida explosiva."],
-      ["Curl nórdico + pantorrilla","2×6 + 3×12","En superserie."],
-      ["Plancha Copenhague + Pallof press","2 rondas","20 s + 10 por lado. Pallof: con banda o polea, brazos estirados al frente, no dejás que te gire. Es el anti-giro del judo."],
-      ["Abducción de cadera (polea o banda)","2×12–15","Por pierna. En circuito con la Copenhague y el Pallof, igual que el lunes."],
-      ["Pantorrilla isométrica pesada","3×30 s","En la máquina o la Smith, rodilla estirada. Subís a mitad de recorrido y aguantás. Aprendé la posición: esfuerzo 6–7 de 10. 1–2 min de pausa.","iso"]],
-   D:[["Face pulls","2×15","Liviano, calentamiento de hombro. No cuenta como volumen."],
-      ["Tirón de kuzushi con banda","3×8","Por brazo. Tirón explosivo de manga y solapa, como para romper la postura.","rfd"],
-      ["Dominadas agarrado del judogi","3×máx","RPE 6 · 7 · 8: las dos primeras dejando repeticiones en el tanque, la última al máximo limpio.",1],
-      ["Press inclinado con mancuernas","3×8","RPE 6 · 7 · 8. Banco a 30°, no más: más empinado pasa el trabajo al hombro. Escápulas juntas y abajo, codos a unos 45° del cuerpo, bajás hasta la altura del pecho.",1],
-      ["Remo a un brazo (mancuerna o polea)","2×10","Por brazo, de a un lado: empezá por el más débil y hacé las mismas repeticiones con el otro. Mano libre y rodilla apoyadas en un banco (o de pie frente a la polea), torso quieto: no dejás que gire. Tirás el codo hacia la cadera y bajás hasta estirar del todo. Es el tirón de manga real: un brazo tira y el core frena el giro."],
-      ["Fondos con lastre · tríceps","2×8–10","Versión tríceps: torso lo más vertical posible, codos pegados al cuerpo apuntando atrás. Bajás hasta que el hombro quede a la altura del codo y arriba estirás los brazos del todo."],
-      ["Aperturas en polea","2×12–15","Poleas a la altura del hombro o un poco más arriba, un paso adelante. Codos apenas flexionados y fijos: abrís hasta sentir un buen estiramiento en el pecho, sin que el hombro se vaya adelante, y cerrás apretando 1 s. Sin polea: con mancuernas en banco plano."],
-      ["Elevaciones laterales en polea + cuello","3×12–15 + 2 rondas","En superserie. Por brazo. Última serie descendente, como el martes."],
-      ["Curl martillo con toalla + extensión de tríceps sobre la cabeza","2×10 + 2×12","En superserie. Curl: toalla en la mancuerna, agarre de judogi. Extensión: en polea (de espaldas a ella) o con mancuerna, codos apuntando arriba; bajás hasta sentir el estiramiento atrás del brazo. Trabaja la cabeza larga, la más grande del tríceps."],
-      ["Trepar soga","3 subidas","Con ayuda de piernas al principio."]]
-  }},
- {id:"b2",name:"Bloque 2",weeks:"Semanas 5–10",title:"Fuerza + masa",
-  intro:"Más carga y más cerca del límite: principales a RPE 7 · 8 · 9 y accesorios a RPE 8 · 9. Acá se construye la masa. Descarga en la semana 8 o 9.",
-  s:{
-   A:[["Cargada de potencia desde la rodilla","3×3","Más pesado que el bloque 1.","rfd"],
-      ["Saltos al cajón","3×3","Cajón más alto.","plio"],
-      ["Sentadilla trasera","3×5 → 3×4","RPE 7 · 8 · 9. Pasá a 3×4 con más peso desde la semana 8.",1],
-      ["Peso muerto rumano","2×6",""],
-      ["Sentadilla búlgara","2×6–8","Por pierna. Con mancuernas pesadas."],
-      ["Curl nórdico","2×6",""],
-      ["Pantorrilla + tibial","3×10–12 + 2×15","En superserie."],
-      ["Plancha Copenhague + dead bug","2 rondas","25 s + 8 por lado."],
-      ["Abducción de cadera (polea o banda)","2×12–15","Por pierna. Va en circuito con la Copenhague: Copenhague → abducción → dead bug, 2 rondas. De costado a la polea (o banda en los tobillos), pierna estirada: la llevás hacia afuera sin inclinar el torso y bajás lento. Es el glúteo medio: no deja que la rodilla se vaya hacia adentro cuando todo tu peso está en una pierna (uchi-mata, harai, la caída de un salto). La rodilla hacia adentro es la causa típica de la rotura de ligamento cruzado."],
-      ["Sentadilla española","4×45 s","Banda gruesa o correa detrás de las rodillas, atada a algo fijo. Bajás a 60–90°, torso vertical, y aguantás empujando el piso. Esfuerzo 7–8 de 10. 1–2 min de pausa.","iso"]],
-   B:[["Face pulls","2×15","Calentamiento de hombro."],
-      ["Flexiones con aplauso","3×5","Más altura.","plio"],
-      ["Dominadas con lastre","3×5","RPE 7 · 8 · 9.",1],
-      ["Press de banca","3×5","RPE 7 · 8 · 9.",1],
-      ["Remo con barra","2×6–8",""],
-      ["Fondos con lastre · pecho","2×6–8","Para que trabaje el pecho y no el tríceps: torso inclinado unos 30° hacia adelante (mirada al piso, rodillas dobladas y pies atrás) y codos abiertos a unos 45°. Si las barras se abren en V, agarrá la parte más ancha. Bajás lento hasta sentir el estiramiento en el pecho, con el hombro apenas debajo del codo. Subís pensando en juntar las barras y frenás justo antes de trabar los codos: así el pecho no descansa arriba. Más lastre que en el bloque 1."],
-      ["Elevaciones laterales + cuello","3×12–15 + 2 rondas","En superserie. Última serie de laterales descendente."],
-      ["Curl inclinado con mancuernas + extensión de tríceps en polea","2×8–10 + 2×10–12","En superserie. Curl: banco a 45–60°, brazos colgando atrás del cuerpo; subís sin adelantar el codo y bajás lento hasta estirar del todo. Así el bíceps trabaja estirado, donde más crece, y se fortalece el tendón para los tirones de agarre. Alternativa: curl bayesiano en polea (de espaldas a la polea, brazo atrás). Extensión: codos pegados al costado, solo se mueve el antebrazo, abajo estirás del todo. Trabaja las cabezas lateral y medial del tríceps."],
-      ["Colgarse de toalla + paseo del granjero","2×máx + 2×30 m","Granjero más pesado que el bloque 1."]],
-   C:[["Lanzamiento con giro de cadera (balón medicinal)","3×4","Por lado. Balón más pesado.","rfd"],
-      ["Saltos a una pierna","3×3","Por pierna, más distancia.","plio"],
-      ["Uchikomi con banda elástica","3×10","Por lado. Banda más dura.","rfd"],
-      ["Peso muerto con barra hexagonal","3×4","RPE 7 · 8 · 9.",1],
-      ["Sentadilla frontal","2×5",""],
-      ["Step-up pesado","2×5","Por pierna. Con mancuernas pesadas."],
-      ["Curl nórdico + pantorrilla","2×5 + 3×12","En superserie."],
-      ["Plancha Copenhague + Pallof press","2 rondas","25 s + 10 por lado."],
-      ["Abducción de cadera (polea o banda)","2×12–15","Por pierna. En circuito con la Copenhague y el Pallof, igual que el lunes."],
-      ["Pantorrilla isométrica pesada","4×45 s","En la máquina o la Smith, rodilla estirada. Subís a mitad de recorrido y aguantás. Esfuerzo 7–8 de 10. 1–2 min de pausa.","iso"]],
-   D:[["Face pulls","2×15","Calentamiento de hombro."],
-      ["Tirón de kuzushi con banda","3×8","Por brazo.","rfd"],
-      ["Dominadas agarrado del judogi","3×máx","RPE 7 · 8 · 9. Agregá lastre cuando pases 10.",1],
-      ["Press inclinado con mancuernas","3×8","RPE 7 · 8 · 9. Banco a 30°, no más: más empinado pasa el trabajo al hombro. Escápulas juntas y abajo, codos a unos 45° del cuerpo, bajás hasta la altura del pecho.",1],
-      ["Remo a un brazo (mancuerna o polea)","2×8–10","Por brazo, de a un lado: empezá por el más débil y hacé las mismas repeticiones con el otro. Mano libre y rodilla apoyadas en un banco (o de pie frente a la polea), torso quieto: no dejás que gire. Tirás el codo hacia la cadera y bajás hasta estirar del todo. Es el tirón de manga real: un brazo tira y el core frena el giro."],
-      ["Fondos con lastre · tríceps","2×6–8","Versión tríceps: torso lo más vertical posible, codos pegados al cuerpo apuntando atrás. Bajás hasta que el hombro quede a la altura del codo y arriba estirás los brazos del todo."],
-      ["Aperturas en polea","2×12–15","Poleas a la altura del hombro o un poco más arriba, un paso adelante. Codos apenas flexionados y fijos: abrís hasta sentir un buen estiramiento en el pecho, sin que el hombro se vaya adelante, y cerrás apretando 1 s. Sin polea: con mancuernas en banco plano."],
-      ["Elevaciones laterales en polea + cuello","3×12–15 + 2 rondas","En superserie. Última serie descendente."],
-      ["Curl martillo con toalla + extensión de tríceps sobre la cabeza","2×10 + 2×12","En superserie. Curl: toalla en la mancuerna, agarre de judogi. Extensión: en polea (de espaldas a ella) o con mancuerna, codos apuntando arriba; bajás hasta sentir el estiramiento atrás del brazo. Trabaja la cabeza larga, la más grande del tríceps."],
-      ["Trepar soga","4 subidas",""]]
-  }},
- {id:"b3",name:"Bloque 3",weeks:"Semanas 11–16",title:"Fuerza máxima y potencia",
-  intro:"Pocas repeticiones, mucho peso, máxima velocidad. Las series quedan iguales; lo que sube es el peso. Entran los saltos en profundidad y el contraste: después de cada serie de sentadilla, 3 saltos al cajón. Descarga en la semana 14 o 15.",
-  s:{
-   A:[["Cargada de potencia","3×2","Pesado, cada rep rápida.","rfd"],
-      ["Saltos en profundidad","3×3","Te dejás caer de un cajón de 30–40 cm y rebotás hacia arriba lo más rápido posible, como si el piso quemara.","plio"],
-      ["Sentadilla trasera + saltos (contraste)","3×3 + 3 saltos","RPE 7 · 8 · 9. A los 15–20 s de terminar cada serie, 3 saltos al cajón a máxima altura.",1],
-      ["Peso muerto rumano","2×5",""],
-      ["Sentadilla búlgara","2×6","Por pierna."],
-      ["Curl nórdico","2×5",""],
-      ["Pantorrilla + tibial","3×12 + 2×15","En superserie."],
-      ["Plancha Copenhague + dead bug","2 rondas","30 s + 8 por lado."],
-      ["Abducción de cadera (polea o banda)","2×12–15","Por pierna. Va en circuito con la Copenhague: Copenhague → abducción → dead bug, 2 rondas. De costado a la polea (o banda en los tobillos), pierna estirada: la llevás hacia afuera sin inclinar el torso y bajás lento. Es el glúteo medio: no deja que la rodilla se vaya hacia adentro cuando todo tu peso está en una pierna (uchi-mata, harai, la caída de un salto). La rodilla hacia adentro es la causa típica de la rotura de ligamento cruzado."],
-      ["Sentadilla española","4×45 s","Banda gruesa o correa detrás de las rodillas, atada a algo fijo. Bajás a 60–90°, torso vertical, y aguantás empujando el piso. Más carga: esfuerzo 8 de 10. 1–2 min de pausa.","iso"]],
-   B:[["Face pulls","2×15","Calentamiento de hombro."],
-      ["Flexiones con aplauso","3×5","Si salen fáciles, con los pies elevados.","plio"],
-      ["Dominadas con lastre","3×3","RPE 7 · 8 · 9.",1],
-      ["Press de banca","3×3","RPE 7 · 8 · 9.",1],
-      ["Remo con barra","2×6",""],
-      ["Fondos con lastre · pecho","2×5","Para que trabaje el pecho y no el tríceps: torso inclinado unos 30° hacia adelante (mirada al piso, rodillas dobladas y pies atrás) y codos abiertos a unos 45°. Si las barras se abren en V, agarrá la parte más ancha. Bajás lento hasta sentir el estiramiento en el pecho, con el hombro apenas debajo del codo. Subís pensando en juntar las barras y frenás justo antes de trabar los codos: así el pecho no descansa arriba. Pesado."],
-      ["Elevaciones laterales + cuello","3×12–15 + 2 rondas","En superserie. Última serie de laterales descendente."],
-      ["Curl inclinado con mancuernas + extensión de tríceps en polea","2×8 + 2×10","En superserie. Curl: banco a 45–60°, brazos colgando atrás del cuerpo; subís sin adelantar el codo y bajás lento hasta estirar del todo. Así el bíceps trabaja estirado, donde más crece, y se fortalece el tendón para los tirones de agarre. Alternativa: curl bayesiano en polea (de espaldas a la polea, brazo atrás). Extensión: codos pegados al costado, solo se mueve el antebrazo, abajo estirás del todo. Trabaja las cabezas lateral y medial del tríceps."],
-      ["Colgarse de toalla + paseo del granjero","2×máx + 2×30 m","Granjero pesado."]],
-   C:[["Lanzamiento con giro de cadera (balón medicinal)","3×3","Por lado. Pesado y rápido.","rfd"],
-      ["Saltos laterales a una pierna","3×3","Por lado. Saltás hacia el costado y caés firme en la otra pierna, como al esquivar y contraatacar.","plio"],
-      ["Uchikomi con banda elástica","3×20 s","Máxima cantidad de entradas en 20 s. Anotá y tratá de superarte.","rfd"],
-      ["Peso muerto con barra hexagonal","3×3","RPE 7 · 8 · 9.",1],
-      ["Sentadilla frontal","2×4",""],
-      ["Step-up pesado","2×4","Por pierna. Pesado y explosivo."],
-      ["Curl nórdico + pantorrilla","2×5 + 3×12","En superserie."],
-      ["Plancha Copenhague + Pallof press","2 rondas","30 s + 10 por lado."],
-      ["Abducción de cadera (polea o banda)","2×12–15","Por pierna. En circuito con la Copenhague y el Pallof, igual que el lunes."],
-      ["Pantorrilla isométrica pesada","4×45 s","En la máquina o la Smith, rodilla estirada. Subís a mitad de recorrido y aguantás. Más carga: esfuerzo 8 de 10. 1–2 min de pausa.","iso"]],
-   D:[["Face pulls","2×15","Calentamiento de hombro."],
-      ["Tirón de kuzushi con banda","3×6","Por brazo. Lo más explosivo posible.","rfd"],
-      ["Dominadas en judogi con lastre","3×5","RPE 7 · 8 · 9.",1],
-      ["Press inclinado con mancuernas","3×6","RPE 7 · 8 · 9. Banco a 30°, no más: más empinado pasa el trabajo al hombro. Escápulas juntas y abajo, codos a unos 45° del cuerpo, bajás hasta la altura del pecho.",1],
-      ["Remo a un brazo (mancuerna o polea)","2×8","Por brazo, de a un lado: empezá por el más débil y hacé las mismas repeticiones con el otro. Mano libre y rodilla apoyadas en un banco (o de pie frente a la polea), torso quieto: no dejás que gire. Tirás el codo hacia la cadera y bajás hasta estirar del todo. Es el tirón de manga real: un brazo tira y el core frena el giro."],
-      ["Fondos con lastre · tríceps","2×5","Versión tríceps: torso lo más vertical posible, codos pegados al cuerpo apuntando atrás. Bajás hasta que el hombro quede a la altura del codo y arriba estirás los brazos del todo."],
-      ["Aperturas en polea","2×10–12","Poleas a la altura del hombro o un poco más arriba, un paso adelante. Codos apenas flexionados y fijos: abrís hasta sentir un buen estiramiento en el pecho, sin que el hombro se vaya adelante, y cerrás apretando 1 s. Sin polea: con mancuernas en banco plano."],
-      ["Elevaciones laterales en polea + cuello","3×12–15 + 2 rondas","En superserie. Última serie descendente."],
-      ["Curl martillo con toalla + extensión de tríceps sobre la cabeza","2×10 + 2×10","En superserie. Curl: toalla en la mancuerna, agarre de judogi. Extensión: en polea (de espaldas a ella) o con mancuerna, codos apuntando arriba; bajás hasta sentir el estiramiento atrás del brazo. Trabaja la cabeza larga, la más grande del tríceps."],
-      ["Trepar soga","3 subidas","Sin piernas."]]
+   A:[["Saltos al cajón","3×3","Máxima altura en cada salto. Caés suave, con las rodillas sobre los pies, y bajás del cajón caminando. 1–2 min de pausa.","plio"],
+      ["Sentadilla libre","3×5–8","Dos series con 2 en el tanque y la última con 1. Bajada de 2–3 s, costillas abajo, rodillas en la línea de los pies.",1],
+      ["Peso muerto rumano en Smith","3×6–8","Cadera atrás, rodillas apenas flexionadas, espalda recta. Bajás hasta sentir el estiramiento fuerte atrás del muslo (más o menos a media canilla) y subís apretando glúteos. Con barra libre también sirve."],
+      ["Sentadilla búlgara","2×8–10","Por pierna. En Smith para cargar más, o con mancuernas para entrenar además el equilibrio. Alterná una semana y otra."],
+      ["Curl femoral","2×8–12","Sentado si hay máquina: el músculo trabaja más estirado y crece más. Si no, parado o acostado. Bajada lenta de 3 s: esa bajada es la que protege del desgarro en los sprints."],
+      ["Abductora","2×10–15","Glúteo medio: mantiene la rodilla alineada cuando todo el peso está en una pierna. Pausa de 1 s con las piernas abiertas."],
+      ["Aductora","2×10–15","Abrís hasta sentir el estiramiento en la ingle y cerrás controlado."],
+      ["Pantorrilla de pie","3×8–12","Pausa de 2 s abajo, bien estirado, y subís hasta la punta."],
+      ["Abdominales con peso","2×10–15","En polea de rodillas, o elevación de piernas colgado de la barra. Enrollás la columna; no tirás con la cadera."]],
+   B:[["Press de banca","3×5–8","Dos series con 2 en el tanque y la última con 1. Escápulas juntas y abajo, pies firmes en el piso.",1],
+      ["Dominadas con lastre","3×5–8","Desde colgado del todo hasta el mentón sobre la barra. Lastre: cinturón o mancuerna entre los pies.",1],
+      ["Press inclinado con mancuernas","2×8–10","Banco a 30°, no más: más empinado pasa el trabajo al hombro. Codos a unos 45° del cuerpo, bajás hasta la altura del pecho."],
+      ["Remo con pecho apoyado","3×8–10","En máquina, o boca abajo en un banco inclinado con mancuernas. El pecho apoyado deja descansar a la espalda baja, que ya trabajó el lunes. Estirás del todo adelante y tirás los codos atrás."],
+      ["Elevaciones laterales","3×10–15","Con mancuernas. Subís hasta la altura del hombro, sin impulso. La última serie puede ir al fallo."],
+      ["Curl inclinado con mancuernas","2×8–12","Banco a 45–60°, brazos colgando atrás del cuerpo. Subís sin adelantar el codo y bajás lento hasta estirar del todo."],
+      ["Extensión de tríceps sobre la cabeza","2×8–12","En polea, de espaldas a ella, codos apuntando arriba. Bajás hasta sentir el estiramiento atrás del brazo. Trabaja la cabeza larga, la más grande del tríceps."],
+      ["Paseo del granjero","3×30 m","Pesado: una mancuerna o pesa rusa en cada mano, pecho arriba, pasos cortos. Agarre, trapecios y core a la vez. Si no hay espacio para caminar, quedate parado sosteniéndolas 30–40 s."],
+      ["Rotación externa de hombro","2×12–15",ROT,"prev"],
+      ["Cuello","2 rondas",CUE,"prev"]],
+   C:[["Saltos a una pierna con caída clavada","3×3","Por pierna. Saltás hacia adelante y caés en la misma pierna, suave, con la rodilla sobre el pie, sin que se vaya hacia adentro. Aguantás 2 s quieto antes del siguiente. Es el trabajo con más evidencia para prevenir la rotura de ligamento cruzado. Cuando salga fácil, alterná con saltos hacia el costado.","plio"],
+      ["Sentadilla hack","3×6–10","Dos series con 2 en el tanque y la última con 1. Pies a mitad de la plataforma, bajás profundo y sin rebotar.",1],
+      ["Peso muerto rumano en Smith","3×6–8","Igual que el lunes."],
+      ["Extensión de cuádriceps","2×10–15","Trabaja el recto femoral, la parte del cuádriceps que la sentadilla y la hack casi no entrenan. Si el respaldo se inclina, llevalo hacia atrás. La última serie puede ir al fallo."],
+      ["Curl femoral","2×8–12","Igual que el lunes, con bajada de 3 s."],
+      ["Abductora","2×10–15","Pausa de 1 s con las piernas abiertas."],
+      ["Pantorrilla + tibial","3×10–15 + 2×15","Pantorrilla sentado si hay máquina; si no, de pie. Tibial: espalda contra la pared, talones a 30 cm de ella, levantás las puntas de los pies."],
+      ["Plancha Copenhague","2×20–30 s","Por lado. De costado, apoyado en el antebrazo, la pierna de arriba sobre un banco y la de abajo en el aire. Reemplaza a la aductora del lunes: es el ejercicio con más evidencia contra la lesión de ingle.","prev"],
+      ["Pallof press","2×10","Por lado. Polea o banda a la altura del pecho, vos de costado: estirás los brazos al frente y no dejás que te gire. Es el anti-giro del judo.","prev"]],
+   D:[["Press inclinado con mancuernas","3×6–10","Dos series con 2 en el tanque y la última con 1. Banco a 30°. Más pesado que el martes, porque hoy va primero.",1],
+      ["Dominadas agarrado del judogi","3×máx","Un judogi viejo o dos toallas colgados de la barra, una mano en cada punta. Es el agarre más específico que existe. Cuando pases 10 repeticiones, agregá lastre. Sin judogi a mano: dominadas con agarre neutro.",1],
+      ["Aperturas en polea o máquina","2×10–15","Codos apenas flexionados y fijos. Abrís hasta sentir un buen estiramiento en el pecho, sin que el hombro se vaya adelante, y cerrás apretando 1 s."],
+      ["Remo a un brazo","3×8–10","Por brazo, con mancuerna o polea. Empezá por el más débil y hacé las mismas repeticiones con el otro. Mano libre apoyada en un banco, torso quieto: no dejás que gire. Tirás el codo hacia la cadera. Es el tirón de manga real."],
+      ["Elevaciones laterales en polea","3×10–15","Por brazo. La polea mantiene la tensión abajo, donde la mancuerna no pesa. La última serie puede ir al fallo."],
+      ["Curl martillo","2×8–12","Con mancuernas, palmas enfrentadas. Trabaja el braquial y el antebrazo: el agarre de manga."],
+      ["Extensión de tríceps en polea","2×8–12","Codos pegados al costado, solo se mueve el antebrazo. Abajo estirás del todo."],
+      ["Colgarse del judogi o trepar soga","3×máx","Colgarse: máximo tiempo en cada una. Si hay soga: 3 subidas, con ayuda de piernas al principio."],
+      ["Rotación externa de hombro","2×12–15",ROT,"prev"],
+      ["Cuello","2 rondas",CUE,"prev"]]
   }},
  {id:"pc",name:"Pre-competencia",weeks:"2–3 semanas antes",title:"Afinar para pelear",
-  intro:"Mantenés los pesos del bloque en el que estés, pero con menos series y nada a RPE 9. Más velocidad, menos volumen. Cortás todo lo pesado 4–5 días antes de competir.",
+  intro:"Mantenés los pesos que venís usando, pero con menos series y siempre con 2–3 repeticiones en el tanque. Menos volumen, la misma fuerza. Cortás todo lo pesado 4–5 días antes de competir.",
   s:{
-   A:[["Cargada de potencia","3×2","Rápido, no al máximo.","rfd"],
-      ["Saltos al cajón","3×3","","plio"],
-      ["Sentadilla trasera","2×3","Mismo peso del bloque, RPE 7–8.",1],
-      ["Sentadilla búlgara","1×6","Por pierna."],
-      ["Sentadilla española","3×30 s","Mantenimiento del tendón.","iso"]],
-   B:[["Flexiones con aplauso","2×5","","plio"],
-      ["Dominadas con lastre","2×3","RPE 7–8.",1],
-      ["Press de banca","2×3","RPE 7–8.",1],
-      ["Remo con barra","1×6–8",""]],
-   C:[["Lanzamiento con giro de cadera (balón medicinal)","3×4","Por lado.","rfd"],
-      ["Uchikomi con banda elástica","3×15 s","Máxima velocidad.","rfd"],
-      ["Saltos a una pierna","2×3","Por pierna.","plio"],
-      ["Peso muerto con barra hexagonal","2×3","Solo si faltan más de 7 días para competir.",1],
-      ["Pantorrilla isométrica pesada","3×30 s","Mantenimiento del tendón.","iso"]],
-   D:[["Face pulls","2×15",""],
-      ["Tirón de kuzushi con banda","3×6","Por brazo.","rfd"],
-      ["Dominadas agarrado del judogi","2×5","RPE 7–8.",1],
-      ["Remo a un brazo (mancuerna o polea)","1×10","Por brazo, de a un lado: empezá por el más débil y hacé las mismas repeticiones con el otro. Mano libre y rodilla apoyadas en un banco (o de pie frente a la polea), torso quieto: no dejás que gire. Tirás el codo hacia la cadera y bajás hasta estirar del todo. Es el tirón de manga real: un brazo tira y el core frena el giro."]]
+   A:[["Saltos al cajón","3×3","","plio"],
+      ["Sentadilla libre","2×5","Mismo peso de siempre, 2–3 en el tanque.",1],
+      ["Peso muerto rumano en Smith","1×6",""],
+      ["Sentadilla búlgara","1×8","Por pierna."]],
+   B:[["Press de banca","2×5","2–3 en el tanque.",1],
+      ["Dominadas con lastre","2×5","2–3 en el tanque.",1],
+      ["Remo con pecho apoyado","1×8",""],
+      ["Elevaciones laterales","2×12",""],
+      ["Rotación externa de hombro","2×12–15","","prev"]],
+   C:[["Saltos a una pierna con caída clavada","2×3","Por pierna.","plio"],
+      ["Sentadilla hack","2×6","Solo si faltan más de 7 días para competir.",1],
+      ["Curl femoral","1×10",""],
+      ["Plancha Copenhague","2×20 s","Por lado.","prev"]],
+   D:[["Press inclinado con mancuernas","2×6","2–3 en el tanque.",1],
+      ["Dominadas agarrado del judogi","2×5","Sin llegar al máximo.",1],
+      ["Remo a un brazo","1×8","Por brazo."],
+      ["Rotación externa de hombro","2×12–15","","prev"]]
   }}
 ];
 const tabs=document.getElementById("tabs"),intro=document.getElementById("intro"),wrap=document.getElementById("sessions");
@@ -860,7 +772,7 @@ function render(id){
   try{localStorage.setItem("bloque",b.id)}catch(e){}
 }
 blocks.forEach(b=>{const t=document.createElement("button");t.className="tab";t.id="tab-"+b.id;t.setAttribute("role","tab");t.dataset.id=b.id;t.innerHTML=`${b.name}<small>${b.weeks}</small>`;t.onclick=()=>render(b.id);tabs.appendChild(t)});
-let start="b1";try{start=localStorage.getItem("bloque")||"b1"}catch(e){}
+let start="plan";try{start=localStorage.getItem("bloque")||"plan"}catch(e){}
 render(start);
 </script>
 
