@@ -95,6 +95,16 @@ td.num{white-space:nowrap}
 .tempo div:nth-child(2) b{color:var(--aka)}
 .toc{display:flex;flex-wrap:wrap;gap:6px}
 .toc a{font:600 .85rem/1 var(--display);letter-spacing:.06em;text-transform:uppercase;text-decoration:none;color:var(--indigo);background:var(--indigo-soft);padding:8px 10px;border-radius:4px}
+details.dia{background:var(--surface);border:1px solid var(--line);border-radius:8px}
+details.dia summary{cursor:pointer;list-style:none;padding:12px 16px;font:600 1.15rem/1.2 var(--display);color:var(--indigo);display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+details.dia summary::-webkit-details-marker{display:none}
+details.dia summary::before{content:"+";color:var(--aka);font-weight:700;width:12px}
+details.dia[open] summary::before{content:"–"}
+details.dia[open] summary{border-bottom:1px solid var(--line)}
+details.dia summary span{font:500 .85rem/1.3 var(--body);color:var(--muted)}
+details.dia summary:focus-visible{outline:2px solid var(--indigo);outline-offset:2px}
+details.dia .tbl{padding:4px 6px 8px}
+.dias{display:flex;flex-direction:column;gap:8px}
 .divider{font:600 .8rem/1.3 var(--display);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-top:2px solid var(--line);padding-top:14px}
 section{scroll-margin-top:12px}
 .steps{margin:0;padding-left:1.4em;display:flex;flex-direction:column;gap:8px}
@@ -122,7 +132,7 @@ footer{color:var(--muted);font-size:.85rem}
 <header>
   <div class="eyebrow">Judo · categoría -73 kg</div>
   <h1>Plan -73 kg</h1>
-  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. 4 días de gimnasio, 2 de sprints y 2 de flexibilidad. En el gimnasio, pocos ejercicios, pesados y bien hechos, con un bloque corto de prevención de lesiones al final.</p>
+  <p class="lead">Fuerza, potencia y masa para subir de categoría. Gimnasio siempre a la mañana, judo a la noche. 4 días de gimnasio y 2 días atléticos: velocidad, agilidad, acrobacias y flexibilidad. En el gimnasio, pocos ejercicios, pesados y bien hechos, con un bloque corto de prevención de lesiones al final.</p>
   <div class="stats">
     <div class="stat"><b>65 kg</b><span>hoy, en ayunas</span></div>
     <div class="stat"><b>75–76 kg</b><span>peso caminando (meta)</span></div>
@@ -131,23 +141,23 @@ footer{color:var(--muted);font-size:.85rem}
   </div>
 </header>
 
-<nav class="toc" aria-label="Índice"><a href="#semana">Semana</a><a href="#plan">Gimnasio</a><a href="#sprints">Sprints</a><a href="#estiramiento">Movilidad</a><a href="#acrobacias">Acrobacias</a><a href="#comida">Comida</a><a href="#ejecucion">Cómo se ejecuta</a><a href="#manana">De mañana</a><a href="#pelvis">Pelvis</a><a href="#objetivos">Objetivos</a><a href="#pesaje">Pesaje</a></nav>
+<nav class="toc" aria-label="Índice"><a href="#semana">Semana</a><a href="#plan">Gimnasio</a><a href="#sprints">Días atléticos</a><a href="#estiramiento">Movilidad</a><a href="#acrobacias">Acrobacias</a><a href="#comida">Comida</a><a href="#ejecucion">Cómo se ejecuta</a><a href="#manana">De mañana</a><a href="#pelvis">Pelvis</a><a href="#objetivos">Objetivos</a><a href="#pesaje">Pesaje</a></nav>
 
 <section id="semana">
   <h2>Semana tipo</h2>
   <div class="week">
     <div class="day"><div class="d">Lun</div><div class="s">A</div><div class="t"><b>Piernas 1</b><br>Gimnasio</div></div>
     <div class="day"><div class="d">Mar</div><div class="s">B</div><div class="t"><b>Tren superior 1</b><br>Gimnasio</div></div>
-    <div class="day sprint"><div class="d">Mié</div><div class="s">S</div><div class="t"><b>Sprints completos</b><br>+ flexibilidad (25 min)</div></div>
+    <div class="day sprint"><div class="d">Mié</div><div class="s">S</div><div class="t"><b>Atlético 1</b><br>Velocidad, agilidad y flexibilidad</div></div>
     <div class="day"><div class="d">Jue</div><div class="s">C</div><div class="t"><b>Piernas 2</b><br>Gimnasio</div></div>
     <div class="day"><div class="d">Vie</div><div class="s">D</div><div class="t"><b>Tren superior 2</b><br>Gimnasio</div></div>
-    <div class="day sprint"><div class="d">Sáb</div><div class="s">M</div><div class="t"><b>Sprints cortos</b><br>+ movilidad larga (60 min)</div></div>
+    <div class="day sprint"><div class="d">Sáb</div><div class="s">M</div><div class="t"><b>Atlético 2</b><br>Explosividad, acrobacias y movilidad larga</div></div>
     <div class="day off"><div class="d">Dom</div><div class="s">—</div><div class="t">Descanso total</div></div>
   </div>
   <ul class="rules">
     <li>Gimnasio a la mañana y judo a la noche el mismo día está bien: mejor días duros y días livianos que todos los días a medias.</li>
     <li>Nada de sprints ni piernas pesadas en las 24 horas antes de un randori fuerte o una competencia.</li>
-    <li>Miércoles y sábado tienen las dos cosas: primero sprints, después flexibilidad. El sábado los sprints son cortos y la movilidad es larga. El domingo no se entrena.</li>
+    <li>Miércoles y sábado son los días atléticos: primero lo explosivo (saltos y sprints), después lo de control (agilidad o acrobacias) y al final la flexibilidad. El domingo no se entrena.</li>
     <li>Descarga cada 5ª o 6ª semana: mismos pesos, una serie menos en cada ejercicio. También la semana de cada competencia.</li>
   </ul>
 </section>
@@ -161,17 +171,41 @@ footer{color:var(--muted);font-size:.85rem}
 </section>
 
 <section id="sprints">
-  <h2>Sprints</h2>
-  <p class="lead">Dos días por semana. El <b>miércoles</b> es la sesión completa, de unos 45 minutos, con tres cosas que el gimnasio no da: <b>velocidad máxima</b>, <b>frenar y cambiar de dirección</b>, y <b>potencia de giro</b>. El <b>sábado</b> son solo sprints cortos de 30 m: mantienen la explosividad sin cansarte, porque en total corrés menos de 200 m. Los dos días empiezan con <b>saltos</b> (canguro bajos y en largo) y terminan con flexibilidad.</p>
+  <h2>Días atléticos · miércoles y sábado</h2>
+  <p class="lead">Son los dos días que te hacen atleta y no solo fuerte. Los dos siguen el mismo orden: <b>preparación</b> (pies, cadera y pelvis), <b>saltos</b>, <b>sprints</b>, una parte de <b>control del cuerpo</b> y, al final, <b>flexibilidad</b>. El <b>miércoles (Atlético 1)</b> la parte de control es agilidad: frenar, cambiar de dirección y girar. El <b>sábado (Atlético 2)</b> son las acrobacias, los sprints son cortos y la movilidad es la sesión larga.</p>
+  <div class="tbl"><table>
+    <thead><tr><th>Qué trabaja</th><th>Miércoles</th><th>Sábado</th></tr></thead>
+    <tbody>
+      <tr><td><b>Explosividad</b></td><td>Saltos, 6 sprints, lanzamientos</td><td>Saltos, 6 sprints de 30 m</td></tr>
+      <tr><td><b>Agilidad</b></td><td>Frenadas y cambios de dirección</td><td>Movimientos de piso</td></tr>
+      <tr><td><b>Acrobacias</b></td><td>—</td><td>15–20 min, por niveles</td></tr>
+      <tr><td><b>Flexibilidad</b></td><td>Sesión corta, ~30 min</td><td>Sesión larga, ~70 min</td></tr>
+      <tr><td><b>Prevención</b></td><td colspan="2">Pies y tobillos, cadera, pelvis, frenadas con la rodilla alineada, tendón de Aquiles</td></tr>
+      <tr><td><b>Resistencia</b></td><td>Esfuerzos a fondo de 20–25 s</td><td>—</td></tr>
+    </tbody>
+  </table></div>
 
   <h3>Calentamiento</h3>
   <ol class="steps">
     <li><b>8–10 min</b> de trote suave.</li>
     <li><b>Técnica de carrera</b>, 2 pasadas de 20 m de cada una: skipping, talones a la cola, zancadas, saltos con rodilla arriba.</li>
+    <li><b>Movimientos de piso</b>, 1 pasada de 8–10 m de cada uno: oso, cangrejo, ebi y rol de hombro (ver Acrobacias).</li>
     <li><b>3 pasadas progresivas</b> de 40 m al 60%, 80% y 90%, caminando de vuelta.</li>
   </ol>
 
-  <h3>Miércoles · Sesión completa, en este orden</h3>
+  <h3>Preparación · pies, cadera y pelvis (5 min, los dos días)</h3>
+  <p class="lead">Va después del calentamiento y antes de los saltos. Descalzo si el piso lo permite.</p>
+  <div class="tbl"><table class="stack">
+    <thead><tr><th>Ejercicio</th><th>Cómo se hace</th><th>Dosis</th><th>Para qué</th></tr></thead>
+    <tbody>
+      <tr><td data-label="Ejercicio"><b>Pie corto</b></td><td data-label="Cómo se hace">Parado, sin doblar los dedos: acercás la base del dedo gordo al talón, como queriendo acortar el pie. El arco sube. Aguantás 5 s y soltás.</td><td data-label="Dosis" class="num">2 × 8 por pie</td><td data-label="Para qué">Fortalece los músculos que sostienen el arco. Un arco firme es mejor apoyo para girar y empujar.</td></tr>
+      <tr><td data-label="Ejercicio"><b>Equilibrio en un pie</b></td><td data-label="Cómo se hace">Rodilla apenas doblada, sin que el arco se caiga hacia adentro. Cuando sea fácil, con los ojos cerrados.</td><td data-label="Dosis" class="num">2 × 30 s por pie</td><td data-label="Para qué">Es lo que mejor previene el esguince de tobillo, la lesión más común del judo.</td></tr>
+      <tr><td data-label="Ejercicio"><b>Círculos de cadera</b> (hip CARs)</td><td data-label="Cómo se hace">Parado, agarrado de algo. Subís la rodilla, la abrís al costado, rotás y la llevás atrás: el círculo más grande y lento que puedas, sin mover la pelvis ni la espalda. Después al revés.</td><td data-label="Dosis" class="num">3 por lado en cada sentido</td><td data-label="Para qué">Te da control en el rango que ganás estirando. Un rango sin control no se usa en el tatami.</td></tr>
+      <tr><td data-label="Ejercicio"><b>Bicho muerto</b></td><td data-label="Cómo se hace">Boca arriba, espalda baja pegada al piso, brazos y rodillas arriba. Bajás un brazo y la pierna contraria, lento, sin que la espalda se despegue.</td><td data-label="Dosis" class="num">2 × 8 por lado</td><td data-label="Para qué">Enseña al abdomen a sostener la pelvis en su lugar: es el trabajo directo contra la anteversión.</td></tr>
+    </tbody>
+  </table></div>
+
+  <h3>Miércoles · Atlético 1: velocidad y agilidad (~1 h 40 con la flexibilidad)</h3>
   <div class="tbl"><table class="stack">
     <thead><tr><th>Parte</th><th>Qué hacés</th><th>Dosis</th><th>Pausa</th><th>Para qué</th></tr></thead>
     <tbody>
@@ -183,24 +217,24 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td data-label="Parte"><b>5 · Velocidad</b></td><td data-label="Qué hacés">Sprints cortos al 100%, arrancando parado. Cada tanto arrancá de rodillas o acostado boca abajo.</td><td data-label="Dosis" class="num">Mes 1: 6 × 20 m<br>Después: 6 × 30 m</td><td data-label="Pausa" class="num">2 min</td><td data-label="Para qué">Aceleración y explosión: es la misma cualidad que la entrada.</td></tr>
       <tr><td data-label="Parte"><b>6 · Lanzamientos con giro</b></td><td data-label="Qué hacés">Balón medicinal de 3–5 kg. De costado a una pared, girás la cadera y lo tirás lo más fuerte posible, como la entrada de seoi o uchi-mata.</td><td data-label="Dosis" class="num">3 × 4 por lado</td><td data-label="Pausa" class="num">1 min</td><td data-label="Para qué">Potencia de giro de cadera. Es lo único que saqué del gimnasio y vale la pena tener. Sin balón, salteala.</td></tr>
       <tr><td data-label="Parte"><b>7 · A fondo</b></td><td data-label="Qué hacés">Esfuerzos largos al 100%. Ideal en subida o en la arena: más esfuerzo con menos impacto.</td><td data-label="Dosis" class="num">Mes 1: 3 × 20 s<br>Mes 2: 4 × 20 s<br>Después: 4 × 25 s</td><td data-label="Pausa" class="num">4 min</td><td data-label="Para qué">Sostener la potencia cuando ya estás cansado: el final del combate.</td></tr>
-      <tr><td data-label="Parte"><b>8 · Flexibilidad</b></td><td data-label="Qué hacés">Los bloques 2 y 3 de la sesión larga: split frontal, y split lateral y pancake (ver Movilidad y flexibilidad).</td><td data-label="Dosis" class="num">~25 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">Es tu segunda sesión de flexibilidad de la semana: con dos llegás al split bastante antes que con una. Si andás corto de tiempo, hacé solo el bloque 2.</td></tr>
+      <tr><td data-label="Parte"><b>8 · Flexibilidad</b></td><td data-label="Qué hacés">Los bloques 2, 3 y 4 de la sesión larga: split frontal, split lateral y pancake, y rotación de cadera (ver Movilidad y flexibilidad).</td><td data-label="Dosis" class="num">~30 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">Es tu segunda sesión de flexibilidad de la semana: con dos llegás al split bastante antes que con una. Si andás corto de tiempo, hacé solo el bloque 2.</td></tr>
     </tbody>
   </table></div>
 
-  <h3>Sábado · Sprints cortos + movilidad larga</h3>
+  <h3>Sábado · Atlético 2: acrobacias y movilidad larga (~2 h)</h3>
   <div class="tbl"><table class="stack">
     <thead><tr><th>Parte</th><th>Qué hacés</th><th>Dosis</th><th>Pausa</th><th>Para qué</th></tr></thead>
     <tbody>
-      <tr><td data-label="Parte"><b>1 · Calentamiento</b></td><td data-label="Qué hacés">El mismo del miércoles.</td><td data-label="Dosis" class="num">~15 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">También sirve de entrada en calor para la movilidad.</td></tr>
+      <tr><td data-label="Parte"><b>1 · Calentamiento</b></td><td data-label="Qué hacés">El mismo del miércoles, con la preparación de pies, cadera y pelvis.</td><td data-label="Dosis" class="num">~20 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">También sirve de entrada en calor para la movilidad.</td></tr>
       <tr><td data-label="Parte"><b>2 · Saltos canguro bajos</b></td><td data-label="Qué hacés">Igual que el miércoles.</td><td data-label="Dosis" class="num">2 × 10</td><td data-label="Pausa" class="num">45 s</td><td data-label="Para qué">Tobillos y tendón de Aquiles como resorte.</td></tr>
       <tr><td data-label="Parte"><b>3 · Saltos en largo</b></td><td data-label="Qué hacés">Igual que el miércoles.</td><td data-label="Dosis" class="num">3 × 3</td><td data-label="Pausa" class="num">1,5 min</td><td data-label="Para qué">Potencia hacia adelante.</td></tr>
       <tr><td data-label="Parte"><b>4 · Sprints de 30 m</b>
 </td><td data-label="Qué hacés">Al 100%, arrancando parado.</td><td data-label="Dosis" class="num">6 × 30 m</td><td data-label="Pausa" class="num">2 min</td><td data-label="Para qué">Explosividad con el mínimo cansancio. Sin frenadas ni esfuerzos largos.</td></tr>
-      <tr><td data-label="Parte"><b>5 · Acrobacias</b> (opcional)</td><td data-label="Qué hacés">Movimientos de piso y el nivel de acrobacias en el que estés.</td><td data-label="Dosis" class="num">15–20 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">Van acá porque todavía estás fresco.</td></tr>
-      <tr><td data-label="Parte"><b>6 · Movilidad larga</b></td><td data-label="Qué hacés">La sesión larga, desde el bloque 2 (ver Movilidad y flexibilidad).</td><td data-label="Dosis" class="num">~50 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">Siempre después de correr: estirar fuerte antes te quita velocidad.</td></tr>
+      <tr><td data-label="Parte"><b>5 · Movimientos de piso y acrobacias</b></td><td data-label="Qué hacés">2 pasadas de cada movimiento de piso y después el nivel de acrobacias en el que estés (ver Acrobacias).</td><td data-label="Dosis" class="num">20–25 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">Agilidad y control del cuerpo. Van acá porque todavía estás fresco. Si venís muy cargado de la semana, hacé solo los movimientos de piso.</td></tr>
+      <tr><td data-label="Parte"><b>6 · Movilidad larga</b></td><td data-label="Qué hacés">La sesión larga, desde el bloque 2 (ver Movilidad y flexibilidad).</td><td data-label="Dosis" class="num">~60 min</td><td data-label="Pausa" class="num">—</td><td data-label="Para qué">Siempre después de correr: estirar fuerte antes te quita velocidad.</td></tr>
     </tbody>
   </table></div>
-  <p class="lead">Si el sábado hay randori fuerte o torneo, salteá los sprints y hacé solo la movilidad.</p>
+  <p class="lead">Si el sábado hay randori fuerte o torneo, salteá los saltos, los sprints y las acrobacias: hacé solo la preparación y la movilidad. Si un día tenés poco tiempo, lo último que se saca es la preparación y lo explosivo; se acorta la flexibilidad.</p>
 
   <div class="two">
     <div class="panel">
@@ -231,7 +265,7 @@ footer{color:var(--muted);font-size:.85rem}
 
 <section id="estiramiento">
   <h2>Movilidad y flexibilidad</h2>
-  <p class="lead">Dos objetivos. El primero, que el gimnasio no te deje duro: eso lo cubren el recorrido completo en las pesas y 8–10 minutos de estiramiento después de cada sesión. El segundo, volverte muy flexible: split, puente, acrobacias. Para eso hay dos sesiones por semana: la <b>larga del sábado</b> y una <b>corta el miércoles</b>, las dos después de los sprints.</p>
+  <p class="lead">Dos objetivos. El primero, que el gimnasio no te deje duro: eso lo cubren el recorrido completo en las pesas y 8–10 minutos de estiramiento después de cada sesión. El segundo, volverte muy flexible: split, puente, acrobacias. Para eso hay dos sesiones por semana, al final de los días atléticos: la <b>larga del sábado</b> y una <b>corta el miércoles</b>.</p>
   <div class="two">
     <div class="panel cue">
       <h3>Cómo se gana flexibilidad</h3>
@@ -274,8 +308,8 @@ footer{color:var(--muted);font-size:.85rem}
     <tbody>
       <tr><td><b>Después de A y C</b></td><td>Flexores de cadera, isquiotibiales, aductores, glúteos, pantorrilla</td><td class="num">~10 min</td></tr>
       <tr><td><b>Después de B y D</b></td><td>Dorsales, pecho, columna torácica, antebrazos, cuello</td><td class="num">~8 min</td></tr>
-      <tr><td><b>Miércoles, después de los sprints</b></td><td>Sesión corta: bloques 2 y 3 de la sesión larga</td><td class="num">~25 min</td></tr>
-      <tr><td><b>Sábado, después de los sprints</b></td><td>Sesión larga completa</td><td class="num">~50–60 min</td></tr>
+      <tr><td><b>Miércoles, después de los sprints</b></td><td>Sesión corta: bloques 2, 3 y 4 de la sesión larga</td><td class="num">~30 min</td></tr>
+      <tr><td><b>Sábado, después de los sprints</b></td><td>Sesión larga completa</td><td class="num">~60–70 min</td></tr>
       <tr><td><b>Después del judo</b></td><td>Antebrazos, cuello, flexores de cadera</td><td class="num">~5 min</td></tr>
       <tr><td><b>Cuando estés quieto</b></td><td>Posiciones pasivas mientras mirás algo o usás el celular (más abajo)</td><td class="num">Lo que puedas</td></tr>
     </tbody>
@@ -288,7 +322,8 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td><b>Flexores de cadera y cuádriceps</b></td><td>Estiramiento de sofá: rodilla contra la pared, pie arriba</td><td class="num">2×45 s por lado</td><td>Glúteo apretado y pelvis metida. El más importante para tu anteversión pélvica.</td></tr>
       <tr><td><b>Isquiotibiales</b></td><td>Acostado boca arriba, pierna arriba con banda o cinturón</td><td class="num">Contraer-relajar ×3</td><td>Una pierna por vez: la de arriba con la rodilla extendida, la otra estirada y pegada al piso. Así el estiramiento va al isquio y no a la espalda baja. El cinturón del judo sirve perfecto.</td></tr>
       <tr><td><b>Aductores</b></td><td>Rana: en cuadrupedia, rodillas abiertas, cadera atrás</td><td class="num">2×45 s</td><td>Clave para uchi-mata y la guardia en el suelo.</td></tr>
-      <tr><td><b>Glúteos y rotadores de cadera</b></td><td>90/90 sentado (o paloma)</td><td class="num">2×45 s por lado</td><td>Torso alto, inclinarse desde la cadera.</td></tr>
+      <tr><td><b>Glúteos y rotadores de cadera</b></td><td>90/90 sentado. Después de piernas, sumá la paloma.</td><td class="num">2×45 s por lado</td><td>Torso alto, inclinarse desde la cadera. El 90/90 trabaja las dos rotaciones de la cadera; la paloma estira más profundo el glúteo.</td></tr>
+      <tr><td><b>Costado del tronco</b></td><td>Inclinación lateral: de rodillas, un brazo arriba, te inclinás al otro lado</td><td class="num">2×30 s por lado</td><td>Estira el costado de la espalda baja y los oblicuos, que se acortan con la anteversión. Sin girar el torso.</td></tr>
       <tr><td><b>Columna torácica</b></td><td>Libro abierto: de costado, rodillas a 90°, abrís el brazo de arriba</td><td class="num">2×8 por lado, 3 s de pausa</td><td>Las rodillas no se separan. Ayuda a girar en las entradas.</td></tr>
       <tr><td><b>Dorsales y hombros</b></td><td>Colgado pasivo de la barra</td><td class="num">2×30–45 s</td><td>Hombros relajados. Además descomprime la columna.</td></tr>
       <tr><td><b>Pecho y hombro anterior</b></td><td>En el marco de una puerta, antebrazo apoyado a 90°</td><td class="num">2×30 s por lado</td><td>Compensa la banca y la postura cerrada del judo.</td></tr>
@@ -298,8 +333,8 @@ footer{color:var(--muted);font-size:.85rem}
     </tbody>
   </table></div>
 
-  <h3>Sábado · Sesión larga (60 min)</h3>
-  <p class="lead">Es el día que te lleva al split y al puente. Va después de los sprints cortos, que ya te dejan caliente: en ese caso arrancás directo en el bloque 2. Sin apuro.</p>
+  <h3>Sábado · Sesión larga (70 min)</h3>
+  <p class="lead">Es el día que te lleva al split y al puente. Va al final del día atlético, que ya te deja caliente: en ese caso arrancás directo en el bloque 2. Sin apuro.</p>
   <div class="tbl"><table class="stack">
     <thead><tr><th>Bloque</th><th>Ejercicio</th><th>Dosis</th><th>Clave</th></tr></thead>
     <tbody>
@@ -312,18 +347,22 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td data-label="Bloque"><b>3 · Split lateral y pancake</b><br><span class="lead">15 min</span></td><td data-label="Ejercicio">Sentadilla cosaca lenta, con una mancuerna liviana al pecho</td><td data-label="Dosis" class="num">3×5 por lado</td><td data-label="Clave">3 s de bajada. Talón apoyado en la pierna doblada.</td></tr>
       <tr><td data-label="Bloque"><b>3 · Split lateral y pancake</b><br><span class="lead">15 min</span></td><td data-label="Ejercicio">Pancake: sentado con las piernas abiertas, torso adelante</td><td data-label="Dosis" class="num">Contraer-relajar ×3</td><td data-label="Clave">Sentate sobre un almohadón para que la pelvis vaya adelante. La contracción es empujar los talones contra el piso.</td></tr>
       <tr><td data-label="Bloque"><b>3 · Split lateral y pancake</b><br><span class="lead">15 min</span></td><td data-label="Ejercicio">Postura del caballo: piernas bien abiertas, puntas afuera, muslos paralelos al piso</td><td data-label="Dosis" class="num">3×30 s</td><td data-label="Clave">Fuerza de aductores con el músculo estirado. Cada mes, abrí un poco más.</td></tr>
-      <tr><td data-label="Bloque"><b>4 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Libro abierto</td><td data-label="Dosis" class="num">2×8 por lado</td><td data-label="Clave">Pausa de 3 s abierto.</td></tr>
-      <tr><td data-label="Bloque"><b>4 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Colgado pasivo</td><td data-label="Dosis" class="num">2×45 s</td><td data-label="Clave">Hombros relajados, costillas abajo.</td></tr>
-      <tr><td data-label="Bloque"><b>4 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Dorsales: de rodillas, codos sobre un banco, pecho hacia el piso</td><td data-label="Dosis" class="num">2×45 s</td><td data-label="Clave">Abre el hombro hacia arriba: lo que necesita el puente.</td></tr>
-      <tr><td data-label="Bloque"><b>4 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Puente. Empezá con puente de glúteos; después puente completo con manos y pies</td><td data-label="Dosis" class="num">3×15–20 s</td><td data-label="Clave">Empujá el pecho hacia las manos y estirá los brazos. Es la base de los flips hacia atrás.</td></tr>
-      <tr><td data-label="Bloque"><b>5 · Tobillos y muñecas</b><br><span class="lead">5 min</span></td><td data-label="Ejercicio">Rodilla a la pared: pie a 10 cm, llevás la rodilla a tocar la pared sin levantar el talón</td><td data-label="Dosis" class="num">2×10 por lado</td><td data-label="Clave">Cada mes, alejá el pie 1 cm. Mejora la sentadilla profunda.</td></tr>
-      <tr><td data-label="Bloque"><b>5 · Tobillos y muñecas</b><br><span class="lead">5 min</span></td><td data-label="Ejercicio">Seiza (sentado sobre los talones) + muñecas: palmas y dorsos en el piso</td><td data-label="Dosis" class="num">60 s + 30 s cada una</td><td data-label="Clave">Las muñecas tienen que aguantar tu peso para la vertical.</td></tr>
-      <tr><td data-label="Bloque"><b>6 · Fuerza en el rango</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">Sentado con las piernas rectas, manos al lado de las rodillas: levantás una pierna estirada</td><td data-label="Dosis" class="num">3×10 por pierna</td><td data-label="Clave">Sin tirarte hacia atrás.</td></tr>
-      <tr><td data-label="Bloque"><b>6 · Fuerza en el rango</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">En pancake, levantás las dos piernas del piso</td><td data-label="Dosis" class="num">3×8</td><td data-label="Clave">Aunque sea 1 cm.</td></tr>
-      <tr><td data-label="Bloque"><b>6 · Fuerza en el rango</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">En el split frontal más bajo que tengas, levantás las manos del apoyo</td><td data-label="Dosis" class="num">3×5 s por lado</td><td data-label="Clave">Apretás las piernas contra el piso, como queriendo cerrarlas.</td></tr>
+      <tr><td data-label="Bloque"><b>4 · Rotación de cadera</b><br><span class="lead">8 min</span></td><td data-label="Ejercicio">90/90: sentado, una pierna doblada adelante y la otra al costado. Te inclinás sobre la de adelante.</td><td data-label="Dosis" class="num">2×60 s por lado + 10 cambios de lado sin manos</td><td data-label="Clave">Torso alto. Los cambios de lado sin apoyar las manos son la parte activa.</td></tr>
+      <tr><td data-label="Bloque"><b>4 · Rotación de cadera</b><br><span class="lead">8 min</span></td><td data-label="Ejercicio">Paloma: pierna de adelante doblada y cruzada, la de atrás estirada, torso hacia adelante</td><td data-label="Dosis" class="num">2×60 s por lado</td><td data-label="Clave">Cadera de frente al piso. Si la rodilla de adelante molesta, hacé la versión boca arriba (figura de 4).</td></tr>
+      <tr><td data-label="Bloque"><b>5 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Inclinación lateral: de rodillas, un brazo arriba, te inclinás al otro lado</td><td data-label="Dosis" class="num">2×30 s por lado</td><td data-label="Clave">Sin girar el torso. Estira el costado de la espalda baja.</td></tr>
+      <tr><td data-label="Bloque"><b>5 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Libro abierto</td><td data-label="Dosis" class="num">2×8 por lado</td><td data-label="Clave">Pausa de 3 s abierto.</td></tr>
+      <tr><td data-label="Bloque"><b>5 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Colgado pasivo</td><td data-label="Dosis" class="num">2×45 s</td><td data-label="Clave">Hombros relajados, costillas abajo.</td></tr>
+      <tr><td data-label="Bloque"><b>5 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Dorsales: de rodillas, codos sobre un banco, pecho hacia el piso</td><td data-label="Dosis" class="num">2×45 s</td><td data-label="Clave">Abre el hombro hacia arriba: lo que necesita el puente.</td></tr>
+      <tr><td data-label="Bloque"><b>5 · Columna y hombros</b><br><span class="lead">10 min</span></td><td data-label="Ejercicio">Puente. Empezá con puente de glúteos; después puente completo con manos y pies</td><td data-label="Dosis" class="num">3×15–20 s</td><td data-label="Clave">Empujá el pecho hacia las manos y estirá los brazos. Es la base de los flips hacia atrás.</td></tr>
+      <tr><td data-label="Bloque"><b>6 · Pies, tobillos y muñecas</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">Rodilla a la pared: pie a 10 cm, llevás la rodilla a tocar la pared sin levantar el talón</td><td data-label="Dosis" class="num">2×10 por lado</td><td data-label="Clave">Cada mes, alejá el pie 1 cm. Mejora la sentadilla profunda.</td></tr>
+      <tr><td data-label="Bloque"><b>6 · Pies, tobillos y muñecas</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">Sentado sobre los talones con los dedos de los pies doblados hacia adelante</td><td data-label="Dosis" class="num">2×30 s</td><td data-label="Clave">Estira la planta y el arco. Al principio molesta: descargá peso con las manos.</td></tr>
+      <tr><td data-label="Bloque"><b>6 · Pies, tobillos y muñecas</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">Seiza (sentado sobre los talones) + muñecas: palmas y dorsos en el piso</td><td data-label="Dosis" class="num">60 s + 30 s cada una</td><td data-label="Clave">Las muñecas tienen que aguantar tu peso para la vertical.</td></tr>
+      <tr><td data-label="Bloque"><b>7 · Fuerza en el rango</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">Sentado con las piernas rectas, manos al lado de las rodillas: levantás una pierna estirada</td><td data-label="Dosis" class="num">3×10 por pierna</td><td data-label="Clave">Sin tirarte hacia atrás.</td></tr>
+      <tr><td data-label="Bloque"><b>7 · Fuerza en el rango</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">En pancake, levantás las dos piernas del piso</td><td data-label="Dosis" class="num">3×8</td><td data-label="Clave">Aunque sea 1 cm.</td></tr>
+      <tr><td data-label="Bloque"><b>7 · Fuerza en el rango</b><br><span class="lead">7 min</span></td><td data-label="Ejercicio">En el split frontal más bajo que tengas, levantás las manos del apoyo</td><td data-label="Dosis" class="num">3×5 s por lado</td><td data-label="Clave">Apretás las piernas contra el piso, como queriendo cerrarlas.</td></tr>
     </tbody>
   </table></div>
-  <p class="lead"><b>Miércoles · sesión corta (25 min):</b> después de los sprints, repetís los bloques 2 y 3. Con dos sesiones por semana el avance hacia el split es mucho mayor que con una.</p>
+  <p class="lead"><b>Miércoles · sesión corta (30 min):</b> al final del día atlético, repetís los bloques 2, 3 y 4. Con dos sesiones por semana el avance hacia el split es mucho mayor que con una.</p>
 
   <div class="panel">
     <h3>Mientras descansás</h3>
@@ -331,7 +370,7 @@ footer{color:var(--muted);font-size:.85rem}
       <li><b>Sentadilla profunda:</b> sumá 5–10 min por día en total, de a ratos.</li>
       <li><b>Seiza</b> (sentado sobre los talones): tobillos y rodillas, tradición de judo.</li>
       <li><b>Rana</b> o <b>mariposa</b> en el piso.</li>
-      <li><b>90/90</b> cambiando de lado cada minuto.</li>
+      <li><b>90/90</b> cambiando de lado cada minuto. Si te viene bien, es de lo mejor para hacer todos los días.</li>
       <li><b>Pancake</b> sentado contra la pared.</li>
       <li><b>Colgado pasivo</b> cada vez que pasás por una barra.</li>
     </ul>
@@ -341,7 +380,7 @@ footer{color:var(--muted);font-size:.85rem}
 
 <section id="acrobacias">
   <h2>Acrobacias y movimientos de piso</h2>
-  <p class="lead">Mejoran el control del cuerpo en el aire, las caídas y la reacción cuando te proyectan. Hacelas descansado: el sábado, entre los sprints cortos y la movilidad, o antes de la clase de judo. Nunca después de piernas pesadas. En tatami, pasto o arena, con las muñecas bien calentadas.</p>
+  <p class="lead">Mejoran el control del cuerpo en el aire, las caídas y la reacción cuando te proyectan. Hacelas descansado: el sábado, entre los sprints y la movilidad, o antes de la clase de judo. Nunca después de piernas pesadas. En tatami, pasto o arena, con las muñecas bien calentadas.</p>
   <h3>Movimientos de piso (8–10 min)</h3>
   <p class="lead">Son los desplazamientos que se usan en la preparación de lucha y de judo. 2 pasadas de 8–10 m de cada uno. Sirven de entrada en calor y te enseñan a moverte cómodo pegado al piso.</p>
   <div class="tbl"><table>
@@ -366,7 +405,7 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td><b>3 · Avanzado</b><br><span class="lead">Con entrenador y colchonetas</span></td><td>Paloma (flip hacia adelante con manos). Flic-flac (flip hacia atrás con manos). Mortal atrás. Mortal lateral.</td><td>Las primeras veces, siempre con alguien que te asista. Nunca solo.</td></tr>
     </tbody>
   </table></div>
-  <p class="lead">Los flips hacia atrás necesitan el puente completo y hombros abiertos: por eso el bloque 4 del sábado. El puente de cuello del judo (apoyado en la cabeza) es otra cosa: hacelo solo con tu entrenador.</p>
+  <p class="lead">Los flips hacia atrás necesitan el puente completo y hombros abiertos: por eso el bloque 5 del sábado. El puente de cuello del judo (apoyado en la cabeza) es otra cosa: hacelo solo con tu entrenador.</p>
 </section>
 
 <section id="comida">
@@ -408,6 +447,91 @@ footer{color:var(--muted);font-size:.85rem}
       <tr><td><b>Antes de dormir</b></td><td>Solo si ese día comiste de menos: leche con miel, o avena de la noche</td><td class="num">~300 kcal · 10 g</td></tr>
     </tbody>
   </table></div>
+
+  <h3>Días de ejemplo</h3>
+  <p class="lead">Ocho días ya armados con los platos de las tablas de abajo. Tocá uno para abrirlo. Si no sabés qué comer, elegí el que se parece a tu día y copialo tal cual.</p>
+  <div class="dias">
+    <details class="dia"><summary>Día de piernas <span>lunes y jueves · ~3650 kcal · 186 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Antes del gimnasio</b></td><td>Café, 1 banana y 2 tostadas con miel</td><td class="num">~350 · 6 g</td></tr>
+        <tr><td><b>Después del gimnasio</b></td><td>Batido banana doble con más proteína</td><td class="num">~970 · 35 g</td></tr>
+        <tr><td><b>Almuerzo</b></td><td>Bife con papas y huevos</td><td class="num">~900 · 65 g</td></tr>
+        <tr><td><b>Merienda</b></td><td>Yogur con avena</td><td class="num">~555 · 28 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Pasta con carne picada</td><td class="num">~890 · 52 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3650 · 186 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Día de tren superior <span>martes y viernes · ~3350 kcal · 201 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Antes del gimnasio</b></td><td>Café y 1 banana</td><td class="num">~110 · 1 g</td></tr>
+        <tr><td><b>Después del gimnasio</b></td><td>Desayuno clásico</td><td class="num">~930 · 42 g</td></tr>
+        <tr><td><b>Almuerzo</b></td><td>Arroz con pollo</td><td class="num">~780 · 49 g</td></tr>
+        <tr><td><b>Merienda</b></td><td>Sándwich de carne o pollo y un vaso de leche</td><td class="num">~660 · 50 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Hamburguesas caseras con boniato</td><td class="num">~890 · 59 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3350 · 201 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Miércoles atlético <span>sprints a la mañana · ~3450 kcal · 172 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Antes</b></td><td>Café, 1 banana y 2 tostadas con miel</td><td class="num">~350 · 6 g</td></tr>
+        <tr><td><b>Después</b></td><td>Batido de chocolate</td><td class="num">~880 · 35 g</td></tr>
+        <tr><td><b>Almuerzo</b></td><td>Pollo al horno con papas</td><td class="num">~780 · 51 g</td></tr>
+        <tr><td><b>Merienda</b></td><td>Huevos con queso</td><td class="num">~670 · 40 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Carne picada con papa</td><td class="num">~760 · 40 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3450 · 172 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Sábado atlético <span>sesión larga · ~3450 kcal · 144 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Antes</b></td><td>Café y 1 banana</td><td class="num">~110 · 1 g</td></tr>
+        <tr><td><b>Después</b></td><td>Batido de maní y banana</td><td class="num">~890 · 33 g</td></tr>
+        <tr><td><b>Almuerzo</b></td><td>Milanesa al horno con puré</td><td class="num">~900 · 47 g</td></tr>
+        <tr><td><b>Merienda</b></td><td>Tostadas con ricota</td><td class="num">~600 · 20 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Tortilla de papa con queso</td><td class="num">~930 · 43 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3450 · 144 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Domingo de descanso <span>sin entrenar: se puede comer un poco menos · ~3200 kcal · 180 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Desayuno</b></td><td>Omelette de jamón y queso</td><td class="num">~800 · 51 g</td></tr>
+        <tr><td><b>Almuerzo</b></td><td>Pasta con carne picada</td><td class="num">~890 · 52 g</td></tr>
+        <tr><td><b>Merienda</b></td><td>Arroz con leche</td><td class="num">~525 · 17 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Pescado con arroz</td><td class="num">~670 · 50 g</td></tr>
+        <tr><td><b>Antes de dormir</b></td><td>Leche con miel</td><td class="num">~300 · 10 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3200 · 180 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Día sin tiempo <span>facultad o trabajo: todo va en táper y mochila · ~3450 kcal · 162 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Antes del gimnasio</b></td><td>Café y 1 banana</td><td class="num">~110 · 1 g</td></tr>
+        <tr><td><b>Después, en casa (3 min)</b></td><td>Batido banana doble con más proteína</td><td class="num">~970 · 35 g</td></tr>
+        <tr><td><b>Almuerzo, en táper</b></td><td>Arroz con pollo, ya cocinado</td><td class="num">~780 · 49 g</td></tr>
+        <tr><td><b>Merienda, en la mochila</b></td><td>3 huevos duros, 1 banana, 40 g de queso y un puñado grande de fruta seca y nueces</td><td class="num">~830 · 37 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Carne picada con papa, ya cocinada</td><td class="num">~760 · 40 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3450 · 162 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Día sin hambre <span>dos comidas van tomadas · ~3550 kcal · 161 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>Antes del gimnasio</b></td><td>Café y 1 banana</td><td class="num">~110 · 1 g</td></tr>
+        <tr><td><b>Después del gimnasio</b></td><td>Batido banana doble con más proteína</td><td class="num">~970 · 35 g</td></tr>
+        <tr><td><b>Almuerzo</b></td><td>Carne picada con papa</td><td class="num">~760 · 40 g</td></tr>
+        <tr><td><b>Merienda</b></td><td>Batido de dulce de leche</td><td class="num">~920 · 36 g</td></tr>
+        <tr><td><b>Cena</b></td><td>Arroz con pollo</td><td class="num">~780 · 49 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3550 · 161 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+    <details class="dia"><summary>Día que te levantás tarde <span>sin gimnasio a la mañana: cuatro comidas grandes · ~3600 kcal · 197 g de proteína</span></summary>
+      <div class="tbl"><table><tbody>
+        <tr><td><b>11:30</b></td><td>Desayuno clásico</td><td class="num">~930 · 42 g</td></tr>
+        <tr><td><b>15:00</b></td><td>Pasta con carne picada</td><td class="num">~890 · 52 g</td></tr>
+        <tr><td><b>18:00, antes del judo</b></td><td>Yogur con avena</td><td class="num">~555 · 28 g</td></tr>
+        <tr><td><b>22:00, después del judo</b></td><td>Bife con papas y huevos</td><td class="num">~900 · 65 g</td></tr>
+        <tr><td><b>Antes de dormir</b></td><td>Leche con miel</td><td class="num">~300 · 10 g</td></tr>
+        <tr><td><b>Total</b></td><td></td><td class="num"><b>~3600 · 197 g</b></td></tr>
+      </tbody></table></div>
+    </details>
+  </div>
 
   <h3>Batidos</h3>
   <div class="tbl"><table>
@@ -480,14 +604,13 @@ footer{color:var(--muted);font-size:.85rem}
 
   <div class="two">
     <div class="panel">
-      <h3>Un día de ejemplo (~3400 kcal · 180 g)</h3>
-      <div class="tbl"><table><tbody>
-        <tr><td>Antes del gimnasio</td><td>Café + banana</td><td class="num">~110</td></tr>
-        <tr><td>Después del gimnasio</td><td>Banana doble con más proteína</td><td class="num">~970 · 35 g</td></tr>
-        <tr><td>Almuerzo</td><td>Pasta con carne picada</td><td class="num">~890 · 52 g</td></tr>
-        <tr><td>Merienda</td><td>Yogur con avena</td><td class="num">~555 · 28 g</td></tr>
-        <tr><td>Cena</td><td>Bife con papas y huevos</td><td class="num">~900 · 65 g</td></tr>
-      </tbody></table></div>
+      <h3>Cocina de la semana</h3>
+      <ul class="rules">
+        <li><b>Domingo:</b> 1 kg de carne picada (la mitad en hamburguesas, la otra mitad dorada), una bandeja de 1,5 kg de papa y boniato, una olla de arroz (400 g en crudo) y 10 huevos duros.</li>
+        <li><b>Miércoles:</b> 1 kg de muslos de pollo al horno con 1 kg de papas en la misma bandeja, y otra olla de arroz o pasta.</li>
+        <li><b>Compra de la semana, aprox.:</b> 7 litros de leche, 15 bananas, 30 huevos, 500 g de avena, 1 kg de yogur griego, 2 kg de carne, 1 kg de pollo, 3 kg de papa y boniato, 300 g de queso, pan de masa madre y miel.</li>
+        <li><b>Todas las noches:</b> dejás armado el táper de mañana y la merienda en la mochila. Son 5 minutos y es lo que hace que el día salga.</li>
+      </ul>
     </div>
     <div class="panel">
       <h3>Control de peso</h3>
@@ -697,6 +820,7 @@ footer{color:var(--muted);font-size:.85rem}
     <p><b>Desgarro de isquios:</b> lo que protege es tener el isquio fuerte mientras se estira. Eso sale del rumano, de la bajada lenta del curl femoral y de los sprints de todas las semanas.</p>
     <p><b>Hombro:</b> rotación de hombro acostado, con el brazo abierto a 90° y recorrido completo. Es la posición en que el hombro se luxa, así que el manguito rotador se fortalece justo ahí.</p>
     <p><b>Tendón de Aquiles:</b> pantorrilla pesada con pausa abajo y saltos canguro en dosis chicas.</p>
+    <p><b>Tobillo y pie:</b> equilibrio en un pie, pie corto y tibial. El equilibrio es lo que más baja el riesgo de esguince.</p>
     <p><b>Cuello, agarre y bíceps:</b> cuello directo, granjero, judogi y curl con recorrido completo.</p>
     <p><b>En el tatami:</b> si te tiran, caé con ukemi. Clavar la pierna para salvar el punto es como se rompe una rodilla.</p>
   </div>
@@ -751,6 +875,16 @@ footer{color:var(--muted);font-size:.85rem}
       <p>Filmate de costado las primeras sesiones de rumano y sentadilla para ver si arqueás de más.</p>
       <p>En el estiramiento, priorizá flexores de cadera y cuádriceps.</p>
     </div>
+  </div>
+  <div class="panel">
+    <h3>Qué corrige la anteversión en este plan</h3>
+    <ul class="rules">
+      <li><b>Glúteos e isquios fuertes</b> tiran la pelvis hacia atrás: rumano, sentadilla profunda, búlgara y curl femoral.</li>
+      <li><b>Abdomen fuerte</b> la sostiene de adelante: abdominales con peso los dos días de piernas y bicho muerto los días atléticos.</li>
+      <li><b>Flexores de cadera largos</b> dejan de tirarla hacia adelante: estiramiento de sofá después de piernas y en las dos sesiones de flexibilidad.</li>
+      <li><b>Costado de la espalda baja suelto:</b> inclinación lateral.</li>
+    </ul>
+    <p class="lead">La espalda baja fuerte te protege al levantar, pero sola no corrige la pelvis: los músculos de la espalda baja la inclinan hacia adelante. La corrección viene de las tres primeras cosas. Con esto alcanza: no hace falta sumar ejercicios al gimnasio.</p>
   </div>
 </section>
 
